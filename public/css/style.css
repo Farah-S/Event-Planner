@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,500i,600,700,700i,800,800i,900&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,500i,600,700,700i,800,800i,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cookie&display=swap"); 
 /* line 1, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_extend.scss */
 .flex-center-start {
   display: -webkit-box;
@@ -448,24 +449,24 @@ h3 {
 /* line 27, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_btn.scss */
 .boxed-btn-red {
   background: #fff;
-  color: #FF0000;
+  color: #db9797;
   display: inline-block;
   padding: 16px 44px;
   font-family: "Poppins", sans-serif;
   font-size: 16px;
   font-weight: 500;
   border: 0;
-  border: 2px solid #FF0000;
+  border: 2px solid #db9797;
   text-align: center;
-  color: #FF0000 !important;
+  color: #db9797 !important;
   text-transform: capitalize;
 }
 
 /* line 41, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_btn.scss */
 .boxed-btn-red:hover {
-  background: #FF0000;
+  background: #db9797;
   color: #fff !important;
-  border: 2px solid #FF0000;
+  border: 2px solid #fff;
 }
 
 /* line 46, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_btn.scss */
@@ -1064,8 +1065,10 @@ h3 {
 }
 
 /* line 1, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_slider.scss */
-.slider_bg_1 {
-  background-image: url(../img/banner/banner_1.png);
+.slider_bg_1 { /*really big image thing*/
+  /*background-image: url(../img/banner/banner_1.png);*/
+  background-image: url(../img/banner/colorful2.jpg);
+  background-position: right;
 }
 
 /* line 4, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_slider.scss */
@@ -1073,8 +1076,8 @@ h3 {
   background-size: cover;
   background-position: center  center;
   background-repeat: no-repeat;
-  padding-top: 300px;
-  padding-bottom: 100px;
+  padding-top: 185px; /*300*/
+  padding-bottom: 50px; /*100*/
 }
 
 @media (max-width: 767px) {
@@ -1104,6 +1107,16 @@ h3 {
   margin-bottom: 213px;
   z-index: 3;
   padding: 55px 8px 12px 0px;
+}
+
+.slider_text{
+  padding-bottom: 25%;
+}
+
+.slider{
+  font-size: 250px;
+  font-weight: 400;
+  font-family: "Cookie", 'cursive';
 }
 
 @media (max-width: 767px) {
@@ -1234,8 +1247,8 @@ h3 {
 
 /* line 97, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_slider.scss */
 .slider_area .title_text h3 {
-  font-size: 90px;
-  font-weight: 700;
+  font-size: 150px;
+  font-weight: 500;
   text-transform: capitalize;
   line-height: 100px;
   color: #fff;
@@ -1389,8 +1402,8 @@ h3 {
 
 /* line 1, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_about.scss */
 .about_area {
-  padding-top: 200px;
-  padding-bottom: 100px;
+  padding-top: 50px;
+  padding-bottom: 50px;
   position: relative;
 }
 
@@ -1440,12 +1453,14 @@ h3 {
 /* line 29, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_about.scss */
 .about_area .about_thumb img {
   width: 100%;
+  border-radius: 2em 0.5em 2em 0.5em;
 }
 
 /* line 32, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_about.scss */
 .about_area .about_thumb .exprience {
   position: absolute;
   top: 50%;
+ 
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
@@ -2243,7 +2258,8 @@ h3 {
 
 /* line 1, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_footer.scss */
 .footer_bg_1 {
-  background-image: url(../img/banner/footer_bg_1.png);
+  /*background-image: url(../img/banner/footer_bg_1.png);*/
+  background-image: url(../img/banner/istockphoto-1294763851-612x612.jpg);
 }
 
 /* line 4, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_footer.scss */
@@ -2264,8 +2280,8 @@ h3 {
 
 /* line 15, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_footer.scss */
 .footer .footer_top {
-  padding-top: 145px;
-  padding-bottom: 129px;
+  padding-top: 34px;
+  padding-bottom: 2px;
 }
 
 @media (max-width: 767px) {
@@ -2294,7 +2310,7 @@ h3 {
 .footer .footer_top .footer_widget .footer_title {
   font-size: 22px;
   font-weight: 400;
-  color: #fff;
+  color: rgb(0, 0, 0);
   text-transform: capitalize;
   margin-bottom: 40px;
 }
@@ -2310,7 +2326,7 @@ h3 {
 .footer .footer_top .footer_widget .footer_logo {
   font-size: 22px;
   font-weight: 400;
-  color: #fff;
+  color: rgb(0, 0, 0);
   text-transform: capitalize;
   margin-bottom: 40px;
 }
@@ -2324,7 +2340,7 @@ h3 {
 
 /* line 49, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_footer.scss */
 .footer .footer_top .footer_widget p {
-  color: #fff;
+  color: rgb(0, 0, 0);
   line-height: 42px;
   font-size: 16px;
   font-weight: 500;
@@ -2371,7 +2387,7 @@ h3 {
 /* line 87, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_footer.scss */
 .footer .footer_top .footer_widget ul li a {
   font-size: 16px;
-  color: #fff;
+  color: rgb(0, 0, 0);
   line-height: 42px;
 }
 
@@ -2738,8 +2754,8 @@ h3 {
 
 /* line 61, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_contact.scss */
 .form-contact .form-control {
-  border: 1px solid #e5e6e9;
-  border-radius: 0px;
+  border: 1px solid #07298f;
+  border-radius: 40px;
   height: 48px;
   padding-left: 18px;
   font-size: 13px;
