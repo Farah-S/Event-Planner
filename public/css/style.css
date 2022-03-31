@@ -234,6 +234,7 @@ h3 {
   background-image: url(../img/slider/slider-img-1.jpg);
 }
 
+
 /* line 138, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_reset.scss */
 .bg-img-2 {
   background-image: url(../img/background-img/bg-img-2.jpg);
@@ -424,17 +425,18 @@ h3 {
   font-size: 14px;
   font-weight: 400;
   border: 0;
-  border: 1px solid #0181F5;
+  border-radius: 5px;
+  border: 1px solid #9032a3;
   text-align: center;
-  color: #0181F5 !important;
+  color: #9032a3 !important;
   text-transform: uppercase;
 }
 
 /* line 15, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_btn.scss */
 .boxed-btn:hover {
-  background: #0181F5;
+  background: #9032a3;
   color: #fff !important;
-  border: 1px solid #0181F5;
+  border: 1px solid #9032a3;
 }
 
 /* line 20, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_btn.scss */
@@ -1082,6 +1084,11 @@ ul:hover>.submenu{
   background-position: right;
 }
 
+.bg-test-img {
+  
+  background-image: url(../img/banner/pineapple.jpg);
+}
+
 /* line 4, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_slider.scss */
 .slider_area {
   background-size: cover;
@@ -1262,7 +1269,7 @@ ul:hover>.submenu{
   font-weight: 500;
   text-transform: capitalize;
   line-height: 100px;
-  color: #fff;
+  color: #DFAE00;
   margin-bottom: 66px;
 }
 
@@ -2751,6 +2758,7 @@ ul:hover>.submenu{
   font-size: 27px;
   font-weight: 600;
   margin-bottom: 20px;
+  color: #9032a3;
 }
 
 /* line 53, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_contact.scss */
@@ -2765,8 +2773,8 @@ ul:hover>.submenu{
 
 /* line 61, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_contact.scss */
 .form-contact .form-control {
-  border: 1px solid #07298f;
-  border-radius: 40px;
+  border: 1px solid #9032a3;
+  border-radius: 10px;
   height: 48px;
   padding-left: 18px;
   font-size: 13px;
