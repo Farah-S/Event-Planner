@@ -10,7 +10,7 @@
                     <div class="row">
                             <div class="col-xl-8 col-lg-8">
                                 <div class="title_text title_text2 ">
-                                    <h3>contact</h3>
+                                    <h3 class='slider'>Contact</h3>
                                     <!--
                                     <a href="#" class="boxed-btn-white">Add to your Calendar</a>
                                     -->
@@ -56,7 +56,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <h2 class="contact-title">Get in Touch</h2>
+                        <h3 class="slider2">Get in Touch</h3>
                     </div>
                     <div class="col-lg-8">
                         <form class="form-contact contact_form" action="contact_process.php" method="post" id="contactForm" novalidate="novalidate">
