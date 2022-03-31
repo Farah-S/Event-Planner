@@ -5711,6 +5711,14 @@ h6 {
   transition: 0.8s;
 }
 
+input[type="file"] {
+  display: none;
+}
+.custom-file-upload {
+  border: 3px solid #ccc;
+  cursor: pointer;
+}
+
 /* line 76, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_blog_part.scss */
 .blog_part .single-home-blog .card .card-body a:hover {
   background: -webkit-linear-gradient(131deg, #ff7e5f 0%, #feb47b 99%);

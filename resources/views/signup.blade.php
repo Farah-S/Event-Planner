@@ -34,14 +34,14 @@
                                 </div>
                             </div>
                             <div class="form-group mt-3">
-                                <button type="submit" class="button button-contactForm boxed-btn sigup-button">Send</button>
+                               <!-- <input type="file" name="profilepic" class="form-control-file" > -->
+                                <label class="button button-contactForm boxed-btn custom-file-upload">
+                                    <input type="file"/>
+                                    <i class="fa fa-cloud-upload"></i> Upload Image
+                                </label>
                             </div>
                             <div class="form-group mt-3">
-                               <!-- <input type="file" name="profilepic" class="form-control-file" > -->
-                            <label class="custom-file-upload">
-                                <input type="file"/>
-                                <i class="fa fa-cloud-upload"></i> Custom Upload
-                            </label>
+                                <button type="submit" class="button button-contactForm boxed-btn sigup-button">Sign-Up</button>
                             </div>
                         </form>
                     </div>
