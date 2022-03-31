@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,500i,600,700,700i,800,800i,900&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,500i,600,700,700i,800,800i,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Cookie&display=swap"); 
+@import url('https://fonts.googleapis.com/css2?family=Cookie&family=Playfair+Display:ital@1&display=swap');
 /* line 1, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_extend.scss */
 .flex-center-start {
   display: -webkit-box;
@@ -807,7 +808,7 @@ h3 {
 
 /* line 6, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_header.scss */
 .header-area .main-header-area {
-  padding: 0 150px;
+  padding: 0 80px;
 }
 
 @media (max-width: 767px) {
@@ -848,7 +849,7 @@ h3 {
 @media (min-width: 992px) and (max-width: 1200px) {
   /* line 24, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_header.scss */
   .header-area .main-header-area .logo-img img {
-    width: 100px;
+    width: 50px;
   }
 }
 
@@ -869,7 +870,7 @@ h3 {
 /* line 36, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_header.scss */
 .header-area .main-header-area .main-menu {
   text-align: center;
-  padding: 12px 0;
+  padding: 20px 0;
 }
 
 /* line 40, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_header.scss */
@@ -878,17 +879,20 @@ h3 {
   position: relative;
 }
 
+
 /* line 43, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_header.scss */
 .header-area .main-header-area .main-menu ul li a {
   color: #fff;
-  font-size: 16px;
+  font-size: 21px;
   font-weight: 600;
   display: inline-block;
   padding: 35px 23px 35px 23px;
-  font-family: "Poppins", sans-serif;
+  /*font-family: "Poppins", sans-serif;*/
+  font-family: 'Playfair Display', serif;
   position: relative;
   text-transform: capitalize;
 }
+
 
 @media (min-width: 992px) and (max-width: 1200px) {
   /* line 43, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_header.scss */
@@ -925,12 +929,12 @@ h3 {
 
 /* line 92, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_header.scss */
 .header-area .main-header-area .main-menu ul li a:hover {
-  color: #0181F5;
+  color: #f50101;
 }
 
 /* line 95, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_header.scss */
 .header-area .main-header-area .main-menu ul li a.active {
-  color: #0181F5;
+  color: #f50101;
 }
 
 /* line 99, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_header.scss */
@@ -941,6 +945,7 @@ h3 {
   background: #fff;
   width: 200px;
   z-index: 2;
+  font-size: 19px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.02);
   opacity: 0;
   visibility: hidden;
@@ -958,8 +963,9 @@ h3 {
 
 /* line 113, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_header.scss */
 .header-area .main-header-area .main-menu ul li .submenu li a {
-  padding: 10px 15px;
+  padding: 6px 8px;
   position: inherit;
+  font-size: 16px;
   -webkit-transition: 0.3s;
   -moz-transition: 0.3s;
   -o-transition: 0.3s;
@@ -988,6 +994,11 @@ h3 {
   visibility: visible;
   top: 100%;
 }
+ul:hover>.submenu{
+  opacity: 1;
+  visibility: visible;
+  top: 100%;
+}
 
 /* line 133, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_header.scss */
 .header-area .main-header-area .main-menu ul li:hover > a::before {
@@ -1004,7 +1015,7 @@ h3 {
   left: 0;
   right: 0;
   z-index: 99;
-  background: #000;
+  background: #b61d1d;
   transform: translateY(70px);
   transition: transform 500ms ease, background 500ms ease;
   -webkit-transition: transform 500ms ease, background 500ms ease;
@@ -1042,7 +1053,7 @@ h3 {
 
 /* line 166, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_header.scss */
 .header-area .main-header-area.sticky .main-menu {
-  padding: 0;
+  padding-left: 0;
 }
 
 /* line 172, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_header.scss */
@@ -4184,7 +4195,7 @@ h6 {
 /* line 14, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_blog.scss */
 .blog_area a:hover, .blog_area a :hover {
   background: -webkit-linear-gradient(131deg, #0181F5 0%, #0181F5 99%);
-  -webkit-background-clip: text;
+  /*-webkit-background-clip: text;*/
   -webkit-text-fill-color: transparent;
   text-decoration: none;
   -webkit-transition: 0.5s;
@@ -4248,7 +4259,7 @@ h6 {
 .single-blog .tag {
   text-align: left;
   display: inline-block;
-  float: left;
+  /*float: left;*/
   font-size: 13px;
   font-weight: 300;
   margin-right: 22px;
@@ -5676,7 +5687,7 @@ h6 {
 /* line 76, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_blog_part.scss */
 .blog_part .single-home-blog .card .card-body a:hover {
   background: -webkit-linear-gradient(131deg, #ff7e5f 0%, #feb47b 99%);
-  -webkit-background-clip: text;
+  /*-webkit-background-clip: text;*/
   -webkit-text-fill-color: transparent;
 }
 
@@ -5784,9 +5795,9 @@ h6 {
   -webkit-transition: 0.8s;
   transition: 0.8s;
   background: -webkit-linear-gradient(131deg, #feb47b 0%, #ff7e5f 99%);
-  -webkit-background-clip: text;
+  /*-webkit-background-clip: text;*/
   -webkit-text-fill-color: transparent;
-  -webkit-animation: 1s;
+  /*-webkit-animation: 1s;*/
 }
 
 /* line 150, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_blog_part.scss */

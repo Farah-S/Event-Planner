@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\homeController;
 use App\Http\Controllers\loginController;
-
+use App\Http\Controllers\signupController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,7 +16,9 @@ use App\Http\Controllers\loginController;
 */
 
 Route::get('/login',[loginController::class,'index']);
-Route::get('/signup',[loginController::class,'index']);
-Route::get('/contact',[homeController::class,'contact']);
-Route::get('/about',[homeController::class,'about']);
-Route::get('/index',[homeController::class,'index']);
+Route::get('/signup',[signupController::class,'index']);
+Route::get('/contact',[homeController::class,'contact'])->name('home.contact');;
+Route::get('/about',[homeController::class,'about'])->name('home.about');;
+Route::get('/cancelpolicy',[homeController::class,'about'])->name('home.cancelpolicy');;
+Route::get('/',[homeController::class,'index']);
+

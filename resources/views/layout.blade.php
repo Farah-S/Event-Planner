@@ -30,48 +30,43 @@
 <body>
     <!-- header-start -->
     <header>
-        <div class="header-area ">
+        <div class="header-area"  style="background-color: rgb(0,0,0,0.1);">
             <div id="sticky-header" class="main-header-area">
                 <div class="container-fluid p-0">
-                    <div class="row align-items-center justify-content-between no-gutters">
+                    <div class="row align-items-center no-gutters">
                         <div class="col-xl-2 col-lg-2">
                             <div class="logo-img">
-                                <a href="index.html">
+                                <a href="/">
                                     <img src="img/logo.png" alt="">
                                 </a>
                             </div>
                         </div>
-                        <div class="col-xl-8 col-lg-8">
+                        <div>
                             <div class="main-menu  d-none d-lg-block">
                                 <nav>
                                     <ul id="navigation">
-                                        <li><a class="active" href="index.html">Home</a></li>
-                                        <li><a href="Schedule.html">Schedule</a></li>
-                                        <li><a href="#">blog <i class="ti-angle-down"></i></a>
+                                        <!--<li><a class="active" href="/">Home</a></li>-->
+                                        <li><a href="/events">Events<i class="ti-angle-down"></i></a>
                                             <ul class="submenu">
-                                                <li><a href="blog.html">blog</a></li>
-                                                <li><a href="single-blog.html">single-blog</a></li>
+                                                <li class='test-li'><a href="/corporate">Corporate Events</a></li>
+                                                <li class='test-li'><a href="/student">Student Events</a></li>
+                                                <li class='test-li'><a href="/conferences">Conferences</a></li>
                                             </ul>
                                         </li>
-                                        <li><a href="#">pages <i class="ti-angle-down"></i></a>
-                                            <ul class="submenu">
-                                                <li><a href="elements.html">elements</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="Speakers.html">Speakers</a></li>
-                                        <li><a href="Venue.html">Venue</a></li>
-                                        <li><a href="contact.html">Contact</a></li>
+                                        <li><a href="/productionhouse">Production House</a></li>
+                                        <li><a href="{{route('home.about')}}">About us</a></li>
+                                        <li><a href="{{route('home.contact')}}">Contact us</a></li>
+                                        <li><a href="{{route('home.cancelpolicy')}}">Cancel Policy</a></li>
+                                        <!-- if logged in
+                                        <li><a href="/profile"><span class="fa-solid fa-circle-user"></span> Profile</a></li>
+                                        <li><a href="/myorders"><span class="fa-solid fa-cart-shopping"></span> Orders</a></li>
+                                         -->
+                                        <!-- if not logged in-->
+                                        <li><a href="/login">Login</a></li>
+                                        <li><a href="/signup">SignUp</a></li>
                                     </ul>
                                 </nav>
                             </div>
-                        </div>
-                        <div class="col-xl-2 col-lg-2 d-none d-lg-block">
-                            <div class="buy_ticket">
-                                <a href="#" class="boxed-btn-white">Buy Ticket</a>
-                            </div>
-                        </div>
-                        <div class="col-12">
-                            <div class="mobile_menu d-block d-lg-none"></div>
                         </div>
                     </div>
                 </div>
@@ -150,7 +145,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 
 
     <!-- JS here -->
-    
+    <script src="https://kit.fontawesome.com/fa3e67e35b.js" crossorigin="anonymous"></script>
     <script src="{{url('js/vendor/modernizr-3.5.0.min.js')}}"></script>
     <script src="{{url('js/vendor/jquery-1.12.4.min.js')}}"></script>
     <script src="{{url('js/popper.min.js')}}"></script>

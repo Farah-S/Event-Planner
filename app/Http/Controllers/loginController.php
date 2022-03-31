@@ -16,6 +16,11 @@ class loginController extends Controller
         return view('login');
     }
 
+    public function logout()
+    {
+        //
+    }
+
     /**
      * Show the form for creating a new resource.
      *
