@@ -431,6 +431,11 @@ h3 {
   color: #131313 !important;
   text-transform: uppercase;
 }
+.sigup-button{
+  margin-left:40%
+}
+
+
 
 /* line 15, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_btn.scss */
 .boxed-btn:hover {
@@ -1139,10 +1144,13 @@ ul:hover>.submenu{
 
 .slider2{
   font-size: 50px;
-  font-weight: 400;
   color: #b61d1d;
-  font-family: "Cookie", 'cursive';
+  padding-left:270px
 }
+.slider3{
+  padding-left:300px
+}
+
 
 @media (max-width: 767px) {
   /* line 22, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_slider.scss */
@@ -1169,7 +1177,7 @@ ul:hover>.submenu{
 .slider_area .title_text.title_text2 {
   margin-bottom: 60px;
   padding: 55px 8px 25px 0px;
-  left: -70px;
+  left: -150px;
 }
 
 @media (max-width: 767px) {
