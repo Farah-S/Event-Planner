@@ -164,6 +164,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     <script src="{{url('js/jquery.magnific-popup.min.js')}}"></script>
     <script src="{{url('js/jquery.countdown.js')}}"></script>
     <script src="{{url('js/plugins.js')}}"></script>
+    <script src="{{url('js/passworTest.js')}}"></script>
 
     <!--contact js-->
     <script src="js/contact.js"></script>
