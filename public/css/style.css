@@ -65,6 +65,7 @@ body {
 
 /* line 15, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_reset.scss */
 .img {
+ 
   max-width: 100%;
   -webkit-transition: 0.3s;
   -moz-transition: 0.3s;
@@ -130,6 +131,7 @@ h6 a {
 ul {
   margin: 0px;
   padding: 0px;
+  margin-top: -13px;
 }
 
 /* line 61, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_reset.scss */
@@ -872,7 +874,7 @@ h3 {
 /* line 36, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_header.scss */
 .header-area .main-header-area .main-menu {
   text-align: center;
-  padding: 20px 0;
+  padding: 10px 0;
 }
 
 /* line 40, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_header.scss */
@@ -931,7 +933,7 @@ h3 {
 
 /* line 92, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_header.scss */
 .header-area .main-header-area .main-menu ul li a:hover {
-  color: #f50101;
+  color: #D73B37;
 }
 
 /* line 95, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_header.scss */
@@ -943,7 +945,7 @@ h3 {
 .header-area .main-header-area .main-menu ul li .submenu {
   position: absolute;
   left: 0;
-  top: 140%;
+  top: 110%;
   background: #fff;
   width: 200px;
   z-index: 2;
@@ -965,10 +967,11 @@ h3 {
 
 /* line 113, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_header.scss */
 .header-area .main-header-area .main-menu ul li .submenu li a {
-  padding: 6px 8px;
+  padding: 6px 10px;
   position: inherit;
   font-size: 16px;
-  -webkit-transition: 0.3s;
+  font-weight: 300;
+  /**/-webkit-transition: 0.3s;
   -moz-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
@@ -1269,7 +1272,7 @@ ul:hover>.submenu{
   font-weight: 500;
   text-transform: capitalize;
   line-height: 100px;
-  color: #DFAE00;
+  color: #ffffff;
   margin-bottom: 66px;
 }
 
@@ -2277,7 +2280,7 @@ ul:hover>.submenu{
 /* line 1, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_footer.scss */
 .footer_bg_1 {
   /*background-image: url(../img/banner/footer_bg_1.png);*/
-  background-image: url(../img/banner/istockphoto-1294763851-612x612.jpg);
+  background-image: url(../img/banner/beige.png);
 }
 
 /* line 4, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_footer.scss */

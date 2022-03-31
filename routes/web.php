@@ -17,8 +17,10 @@ use App\Http\Controllers\signupController;
 
 Route::get('/login',[loginController::class,'index']);
 Route::get('/signup',[signupController::class,'index']);
-Route::get('/contact',[homeController::class,'contact'])->name('home.contact');;
-Route::get('/about',[homeController::class,'about'])->name('home.about');;
-Route::get('/cancelpolicy',[homeController::class,'about'])->name('home.cancelpolicy');;
+Route::get('/contact',[homeController::class,'contact'])->name('home.contact');
+Route::get('/about',[homeController::class,'about'])->name('home.about');
+Route::get('/cancelpolicy',[homeController::class,'about'])->name('home.cancelpolicy');
 Route::get('/',[homeController::class,'index']);
+Route::get('/events',function(){return view('events/events');})->name('events.events');
+Route::get('/productionHouse',function(){return view('productionHouse/productionhouse');})->name('productionHouse.productionHouse');
 

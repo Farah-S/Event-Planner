@@ -37,7 +37,7 @@
                         <div class="col-xl-2 col-lg-2">
                             <div class="logo-img">
                                 <a href="/">
-                                    <img src="img/logo.png" alt="">
+                                    <img src="img/uku.png" width=150 alt="">
                                 </a>
                             </div>
                         </div>
@@ -46,14 +46,14 @@
                                 <nav>
                                     <ul id="navigation">
                                         <!--<li><a class="active" href="/">Home</a></li>-->
-                                        <li><a href="/events">Events<i class="ti-angle-down"></i></a>
+                                        <li><a href="{{route('events.events')}}">Events<i class="ti-angle-down"></i></a>
                                             <ul class="submenu">
-                                                <li class='test-li'><a href="/corporate">Corporate Events</a></li>
-                                                <li class='test-li'><a href="/student">Student Events</a></li>
                                                 <li class='test-li'><a href="/conferences">Conferences</a></li>
+                                                <li class='test-li'><a href="/student">Student Events</a></li>
+                                                <li class='test-li'><a href="/corporate">Corporate Events</a></li>
                                             </ul>
                                         </li>
-                                        <li><a href="/productionhouse">Production House</a></li>
+                                        <li><a href="{{route('productionHouse.productionHouse')}}">Production House</a></li>
                                         <li><a href="{{route('home.about')}}">About us</a></li>
                                         <li><a href="{{route('home.contact')}}">Contact us</a></li>
                                         <li><a href="{{route('home.cancelpolicy')}}">Cancel Policy</a></li>
@@ -62,8 +62,8 @@
                                         <li><a href="/myorders"><span class="fa-solid fa-cart-shopping"></span> Orders</a></li>
                                          -->
                                         <!-- if not logged in-->
-                                        <li><a href="/login">Login</a></li>
-                                        <li><a href="/signup">SignUp</a></li>
+                                        <li><a href="/login"><span class="fa-solid fa-arrow-right-to-bracket"></span> Login</a></li>
+                                        <li><a href="/signup"><span class="fa-solid fa-arrow-up-from-bracket"></span> SignUp</a></li>
                                     </ul>
                                 </nav>
                             </div>

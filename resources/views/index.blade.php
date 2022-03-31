@@ -35,34 +35,61 @@
                             <h3>Event Planning</h3>
                         </div>
                         <p>We offer many event types like conferences, corporate, graduation events and more</p>
-                        <a href="#" class="boxed-btn-red">Learn More</a>
+                        <a href="{{route('events.events')}}" class="boxed-btn-red">Learn More</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-     <div class="about_area">
+    <div class="about_area" style="background-color: #faf3e9;">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-xl-6 col-md-6">
-                    <div class="about_thumb">
-                        <img src="img/about/deco.jpg" alt="">
-                    </div>
-                </div>
+                
                 <div class="col-xl-5 offset-xl-1 col-md-6">
                     <div class="about_info">
                         <div class="section_title">
                             <h3>Production House</h3>
                         </div>
                         <p>As well as events we offer decoration services</p>
-                        <a href="#" class="boxed-btn-red">Learn More</a>
+                        <a href="{{route('productionHouse.productionHouse')}}" class="boxed-btn-red">Learn More</a>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-md-6">
+                    <div class="about_thumb">
+                        <img src="img/about/deco.jpg" alt="">
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- about_area_end -->
 
+    <!-- about_area_end -->
+    <section class="blog_area single-post-area section-padding">
+        <div class="container">
+            <div class="feature-img">
+                <img class="img-fluid img-about" width=800 src="img/about/team.jpg" alt="">
+            </div>
+            <div class="blog_details" style="text-align: center;">
+                <h1>Introducing Ukulele
+                </h1>
+                
+                <p class="excert">
+                This section shall contain some information about the company
+                </p>
+                <div class="quote-wrapper">
+                <div class="quotes">
+                    Placeholder for company motto
+                </div>
+                </div>
+                <p>
+                This section shall contain some information about the company
+                </p>
+            </div>
+        </div>
+   </section>
+   <!--================ Blog Area end =================-->
+
+    <!-- footer_start -->
     
     <!-- suppliers maybe who knows
     <div class="brand_area">
