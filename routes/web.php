@@ -26,6 +26,8 @@ Route::get('/productionHouse',function(){return view('productionHouse/production
 Route::get('/productionHouse/editPackage',function(){return view('productionHouse/editPackage');});
 Route::get('/profile',function(){return view('profile');});
 Route::get('/editprofile',function(){return view('editprofile');});
+Route::get('/adminviewprofile',function(){return view('adminviewprofile');});
+
 
 Route::get('/store',function(){
     $category = request('category');
