@@ -434,7 +434,7 @@ h3 {
   text-transform: uppercase;
 }
 .sigup-button{
-  margin-left:40%
+  margin-left:60%
 }
 
 
@@ -1151,7 +1151,7 @@ ul:hover>.submenu{
   padding-left:270px
 }
 .slider3{
-  padding-left:300px
+  padding-left:525px
 }
 
 
@@ -5717,6 +5717,7 @@ input[type="file"] {
 .custom-file-upload {
   border: 3px solid #ccc;
   cursor: pointer;
+  margin-left: 25%;
 }
 
 /* line 76, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_blog_part.scss */

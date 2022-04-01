@@ -643,6 +643,14 @@ pre code {
     margin-right: -15px;
     margin-left: -15px
 }
+.row2{
+    margin-right: -70px;
+    margin-left: 100px
+}
+.row3{
+    margin-right: -200px;
+    margin-left: 250px
+}
 
 .no-gutters {
     margin-right: 0;
