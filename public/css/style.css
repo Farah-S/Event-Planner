@@ -1199,7 +1199,7 @@ ul:hover>.submenu{
 /* line 46, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_slider.scss */
 .slider_area .title_text.title_text2:after {
   position: absolute;
-  background-image: url(../img/banner/path2.png);
+  /*background-image: url(../img/banner/path2.png);*/
   content: "";
   background-repeat: no-repeat;
   background-size: contain;
@@ -2345,11 +2345,20 @@ ul:hover>.submenu{
 
 /* line 29, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_footer.scss */
 .footer .footer_top .footer_widget .footer_title {
-  font-size: 22px;
-  font-weight: 400;
+  font-size: 18px;
+  font-weight: 500;
   color: rgb(0, 0, 0);
   text-transform: capitalize;
   margin-bottom: 40px;
+}
+
+.footer-container {
+    width: 100%;
+    padding-right: 55px;
+    padding-left: 55px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 0px;
 }
 
 @media (max-width: 767px) {
@@ -2378,8 +2387,8 @@ ul:hover>.submenu{
 /* line 49, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_footer.scss */
 .footer .footer_top .footer_widget p {
   color: rgb(0, 0, 0);
-  line-height: 42px;
-  font-size: 16px;
+  line-height: 13px;
+  font-size: 12px;
   font-weight: 500;
 }
 
@@ -2423,9 +2432,9 @@ ul:hover>.submenu{
 
 /* line 87, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_footer.scss */
 .footer .footer_top .footer_widget ul li a {
-  font-size: 16px;
+  font-size: 13px;
   color: rgb(0, 0, 0);
-  line-height: 42px;
+  line-height: 32px;
 }
 
 /* line 91, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_footer.scss */
@@ -2444,15 +2453,15 @@ ul:hover>.submenu{
   width: 100%;
   height: 45px;
   background: #fff;
-  padding-left: 20px;
-  font-size: 16px;
+  padding-left: 0px;
+  font-size: 12px;
   color: #000;
   border: none;
 }
 
 /* line 108, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_footer.scss */
 .footer .footer_top .footer_widget .newsletter_form input::placeholder {
-  font-size: 16px;
+  font-size: 12px;
   color: #fff;
 }
 
@@ -2463,23 +2472,23 @@ ul:hover>.submenu{
   right: 0;
   height: 100%;
   border: none;
-  font-size: 14px;
+  font-size: 12px;
   color: #fff;
   background: #fff;
   padding: 10px;
-  padding: 0 22px;
+  padding: 0 0px;
   cursor: pointer;
 }
 
 /* line 127, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_footer.scss */
 .footer .footer_top .footer_widget .newsletter_text {
-  font-size: 16px;
+  font-size: 10px;
   color: #fff;
 }
 
 /* line 133, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_footer.scss */
 .footer .copy-right_text {
-  padding-bottom: 30px;
+  padding-bottom: 10px;
 }
 
 /* line 135, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_footer.scss */
@@ -2490,8 +2499,8 @@ ul:hover>.submenu{
 
 /* line 139, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_footer.scss */
 .footer .copy-right_text .copy_right {
-  font-size: 16px;
-  color: #fff;
+  font-size: 13px;
+  color: rgb(0, 0, 0);
   margin-bottom: 0;
   font-weight: 400;
 }
@@ -2505,12 +2514,12 @@ ul:hover>.submenu{
 
 /* line 147, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_footer.scss */
 .footer .copy-right_text .copy_right a {
-  color: #fff;
+  color: rgb(0, 0, 0);
 }
 
 /* line 152, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_footer.scss */
 .footer .socail_links {
-  margin-top: 47px;
+  margin-top: 20px;
 }
 
 @media (max-width: 767px) {
@@ -2738,7 +2747,7 @@ ul:hover>.submenu{
 
 /* line 10, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_contact.scss */
 .contact-info {
-  margin-bottom: 25px;
+  margin-bottom: 15px;
 }
 
 /* line 13, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_contact.scss */
@@ -2752,11 +2761,24 @@ ul:hover>.submenu{
   font-size: 27px;
 }
 
+.contact-footer__icon {
+  margin-right: 0px;
+}
+
+.contact-footer__icon i, .contact-footer__icon span {
+  color: #b61d1d;
+  font-size: 27px;
+}
+
+.footer-padding{
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
 /* line 24, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_contact.scss */
 .contact-info .media-body h3 {
-  font-size: 16px;
+  font-size: 12px;
   margin-bottom: 0;
-  font-size: 16px;
   color: #2a2a2a;
 }
 
@@ -2785,6 +2807,15 @@ ul:hover>.submenu{
   font-size: 14px;
 }
 
+.image-label{
+  width:60px;
+  display: inline-block;
+}
+
+.form-title{
+  font-size: 50px;
+  color: #b61d1d;
+}
 /* line 57, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_contact.scss */
 .form-contact .form-group {
   margin-bottom: 30px;
@@ -4980,7 +5011,7 @@ h6 {
 .blog_right_sidebar .popular_post_widget .post_item .media-body {
   justify-content: center;
   align-self: center;
-  padding-left: 20px;
+  padding-left: 0px;
 }
 
 /* line 796, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_blog.scss */

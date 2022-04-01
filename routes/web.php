@@ -23,6 +23,7 @@ Route::get('/cancelpolicy',[homeController::class,'about'])->name('home.cancelpo
 Route::get('/',[homeController::class,'index']);
 Route::get('/events',function(){return view('events/events');})->name('events.events');
 Route::get('/productionHouse',function(){return view('productionHouse/productionhouse');})->name('productionHouse.productionHouse');
+Route::get('/productionHouse/editPackage',function(){return view('productionHouse/editPackage');});
 Route::get('/profile',function(){return view('profile');});
 Route::get('/editprofile',function(){return view('editprofile');});
 

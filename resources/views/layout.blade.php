@@ -30,14 +30,14 @@
 <body>
     <!-- header-start -->
     <header>
-        <div class="header-area"  style="background-color: rgb(0,0,0,0.1);">
+        <div class="header-area"  style="background-color: rgb(0,0,0,0.25);">
             <div id="sticky-header" class="main-header-area">
                 <div class="container-fluid p-0">
                     <div class="row align-items-center no-gutters">
                         <div class="col-xl-2 col-lg-2">
                             <div class="logo-img">
                                 <a href="/">
-                                    <img src="img/uku.png" width=150 alt="">
+                                    <img src="{{ asset('img/uku.png')}}" width=150 alt="">
                                 </a>
                             </div>
                         </div>
@@ -62,7 +62,7 @@
                                         <li><a href="/myorders"><span class="fa-solid fa-cart-shopping"></span> Orders</a></li>
                                          -->
                                         <!-- if not logged in-->
-                                        <li><a href="/login"><span class="fa-solid fa-arrow-right-to-bracket"></span> Login</a></li>
+                                        <li><a href="/login"><span class="fa-solid fa-arrow-right-to-bracket"></span> LogIn</a></li>
                                         <li><a href="/signup"><span class="fa-solid fa-arrow-up-from-bracket"></span> SignUp</a></li>
                                     </ul>
                                 </nav>
@@ -77,55 +77,72 @@
     @yield('content')
     @yield('scripts')
     <!-- footer_start -->
-    <footer class="footer footer_bg_1">
-        
+    <footer class="footer footer_bg_1" style="text-align: center">
             <div class="footer_top">
-                <div class="container">
+                <div class="footer-container">
                     <div class="row">
-                        <div class="col-xl-4 col-md-4 col-lg-4">
+                        <div class="col-xl-4 col-md-4 col-lg-4 footer-padding">
                             <div class="footer_widget">
                                 <h3 class="footer_title">
                                         Follow Us
                                 </h3>
                                 <ul>
-                                    <li><a target="_blank" href="#">Facebook</a></li>
-                                    <li><a target="_blank" href="#">Twitter</a></li>
-                                    <li><a target="_blank" href="#">Instagram</a></li>
-                                    <li><a target="_blank" href="#">Youtube</a></li>
+                                    <li><i class="ti-facebook"></i><a target="_blank" href="#"> Facebook</a></li>
+                                    <li><i class="ti-twitter"></i><a target="_blank" href="#"> Twitter</a></li>
+                                    <li><i class="ti-instagram"></i><a target="_blank" href="#"> Instagram</a></li>
+                                    <li><i class="ti-youtube"></i><a target="_blank" href="#"> Youtube</a></li>
                                 </ul>
     
                             </div>
                         </div>
-                        <div class="col-xl-4 col-md-4 col-lg-4">
+                        <div class="col-xl-4 col-md-4 col-lg-4 footer-padding">
                             <div class="footer_widget">
                                 <h3 class="footer_title">
                                         Links
                                 </h3>
                                 <ul>
-                                    <li><a target="_blank" href="schedule.html">Schedule</a></li>
-                                    <li><a target="_blank" href="speakers.html">Speakers</a></li>
-                                    <li><a target="_blank" href="contact.html">Contact</a></li>
+                                    <li><a target="_blank" href="schedule.html">Events</a></li>
+                                    <li><a target="_blank" href="speakers.html">Production House</a></li>
+                                    <li><a target="_blank" href="contact.html">Contact Us</a></li>
+                                    <li><a target="_blank" href="contact.html">Cancel Policy</a></li>
                                 </ul>
                             </div>
                         </div>
-                        <div class="col-xl-4 col-md-4 col-lg-4">
+                        <div class="col-xl-4 col-md-4 col-lg-4 footer-padding">
                             <div class="footer_widget">
                                 <h3 class="footer_title">
-                                        Contact us
+                                        Contact Info
                                 </h3>
-                                <p>
-                                    Placeholder
-                                    
-                                </p>
+                                <div class="media contact-info" style="justify-content: center">
+                                <span class="contact-footer__icon"><i class="ti-home"></i></span>
+                                <div class="media-body">
+                                    <h3>Buttonwood, California.</h3>
+                                    <p>Rosemead, CA 91770</p>
+                                </div>
                             </div>
-                        </div>
+                            <div class="media contact-info" style="justify-content: center">
+                                <span class="contact-footer__icon"><i class="ti-tablet"></i></span>
+                                <div class="media-body">
+                                    <h3>+1 253 565 2365</h3>
+                                    <p>Mon to Fri 9am to 6pm</p>
+                                </div>
+                            </div>
+                            <div class="media contact-info" style="justify-content: center">
+                                <span class="contact-footer__icon"><i class="ti-email"></i></span>
+                                <div class="media-body">
+                                    <h3>support@colorlib.com</h3>
+                                    <p>Send us your query anytime!</p>
+                                </div>
+                            </div>
+                                </div>
+                            </div>
                     </div>
                 </div>
             </div>
             <div class="copy-right_text">
-                <div class="container">
-                    <div class="footer_border"></div>
-                    <div class="row">
+                <div class="footer-container">
+                    <!--<div class="footer_border"></div>-->
+                   
                         <div class="col-xl-12">
                             <p class="copy_right text-center">
                                 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
@@ -133,7 +150,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                             </p>
                         </div>
-                    </div>
+                
                 </div>
             </div>
         </footer>
@@ -167,13 +184,12 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     <script src="{{url('js/passworTest.js')}}"></script>
 
     <!--contact js-->
-    <script src="js/contact.js"></script>
-    <script src="js/jquery.ajaxchimp.min.js"></script>
-    <script src="js/jquery.form.js"></script>
-    <script src="js/jquery.validate.min.js"></script>
-    <script src="js/mail-script.js"></script>
-
-    <script src="js/main.js"></script>
+    <script src="{{url('js/contact.js')}}"></script>
+    <script src="{{url('js/jquery.ajaxchimp.min.js')}}"></script>
+    <script src="{{url('js/jquery.form.js')}}"></script>
+    <script src="{{url('js/jquery.validate.min.js')}}"></script>
+    <script src="{{url('js/mail-script.js')}}"></script>
+    <script src="{{url('js/main.js')}}"></script>
 
 </body>
 
