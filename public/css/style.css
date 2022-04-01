@@ -1154,6 +1154,17 @@ ul:hover>.submenu{
   padding-left:525px
 }
 
+.center-title{
+  font-size: 55px;
+  color: #b61d1d;
+  text-align: center;
+}
+.form-item-title{
+  font-size: 35px;
+  color: black;
+  text-align: left;
+}
+
 
 @media (max-width: 767px) {
   /* line 22, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_slider.scss */
@@ -5749,6 +5760,12 @@ input[type="file"] {
   border: 3px solid #ccc;
   cursor: pointer;
   margin-left: 25%;
+}
+
+.custom-file-upload2 {
+  border: 3px solid #ccc;
+  cursor: pointer;
+  
 }
 
 /* line 76, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_blog_part.scss */
