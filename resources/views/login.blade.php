@@ -25,7 +25,7 @@
                                 </div>
                             </div>
                             <div class="form-group mt-3">
-                                <button type="submit" class="button button-contactForm boxed-btn sigup-button">Log In</button>
+                                <button type="submit" class="button button-contactForm boxed-btn login-button">Log In</button>
                             </div>
                         </form>
                     </div>

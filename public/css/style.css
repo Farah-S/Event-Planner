@@ -436,7 +436,9 @@ h3 {
 .sigup-button{
   margin-left:60%
 }
-
+.login-button{
+  margin-left:40%
+}
 
 
 /* line 15, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_btn.scss */
@@ -1151,7 +1153,7 @@ ul:hover>.submenu{
   padding-left:270px
 }
 .slider3{
-  padding-left:525px
+  padding-left:300px
 }
 
 .center-title{
