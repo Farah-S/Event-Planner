@@ -582,11 +582,12 @@ h3 {
 
 /* line 27, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_section_title.scss */
 .section_title h3 {
-  font-size: 46px;
+  font-size: 26px;
   font-weight: 500;
   line-height: 58px;
   margin-bottom: 0;
 }
+
 
 @media (max-width: 767px) {
   /* line 27, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_section_title.scss */
