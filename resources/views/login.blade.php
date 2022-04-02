@@ -24,8 +24,8 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="form-group mt-3">
-                                <button type="submit" class="button button-contactForm boxed-btn login-button">Log In</button>
+                            <div class="form-group mt-3 align-mid">
+                                <button type="submit" class="button button-contactForm boxed-btn">Log In</button>
                             </div>
                         </form>
                     </div>

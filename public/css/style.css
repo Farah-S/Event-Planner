@@ -433,13 +433,6 @@ h3 {
   color: #131313 !important;
   text-transform: uppercase;
 }
-.sigup-button{
-  margin-left:60%;
-}
-.login-button{
-  margin-left:40%;
-}
-
 
 /* line 15, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_btn.scss */
 .boxed-btn:hover {
