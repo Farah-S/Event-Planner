@@ -1841,7 +1841,7 @@ justify-content: center;
 
 /* line 58, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_speakers.scss */
 .speakers_area .single_speaker .speaker_thumb .hover_overlay .social_icon a {
-  width: 50px;
+  width: 110px;
   height: 50px;
   -webkit-transition: 0.3s;
   -moz-transition: 0.3s;
@@ -1849,7 +1849,7 @@ justify-content: center;
   transition: 0.3s;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
-  border-radius: 50%;
+  border-radius: 10%;
   background: #fff;
   display: inline-block;
   line-height: 50px;
@@ -5941,6 +5941,20 @@ body, html {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+/* Clearfix (clear floats) */
+.doqrow::after {
+  content: "";
+  clear: both;
+  display: table;
 }
 
 /*# sourceMappingURL=style.css.map */
