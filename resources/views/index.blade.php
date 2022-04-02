@@ -51,7 +51,7 @@
                             <h3>Production House</h3>
                         </div>
                         <p>As well as events we offer decoration services</p>
-                        <a href="{{route('productionHouse.productionHouse')}}" class="boxed-btn-red">Learn More</a>
+                        <a href="{{route('productionHouse.packages')}}" class="boxed-btn-red">Learn More</a>
                     </div>
                 </div>
                 <div class="col-xl-6 col-md-6">
