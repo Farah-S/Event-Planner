@@ -4,14 +4,14 @@
 
 <section class="contact-section">
             <div class="container">
-                <div class="row">
+                <div class="row justify-content-center">
                     <div class="col-12">
-                        <h3 class=" slider slider2 slider3">Sign Up</h3>
+                        <h3 class=" slider slider2 align-mid">Sign Up</h3>
                     </div>
                     <div class="col-lg-8">
                         <form class="form-contact contact_form" action="contact_process.php" method="post" id="contactForm" novalidate="novalidate">
-                            <div class="row row3">
-                            <div class="col-sm-6">
+                            <div class="row justify-content-center">
+                            <div class="col-sm-6 justify-content-center">
                                     <div class="form-group">
                                         <input class="form-control valid" name="fname" id="fname" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'First Name'" placeholder="First Name">
                                     </div>
@@ -33,15 +33,15 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="form-group mt-3 row2">
+                            <div class="form-group mt-3">
                                <!-- <input type="file" name="profilepic" class="form-control-file" > -->
                                 <label class="button button-contactForm boxed-btn custom-file-upload">
                                     <input type="file"/>
                                     <i class="fa fa-cloud-upload"></i> Upload Image
                                 </label>
                             </div>
-                            <div class="form-group mt-3 row2">
-                                <button type="submit" class="button button-contactForm boxed-btn sigup-button">Sign-Up</button>
+                            <div class="form-group mt-3 align-mid">
+                                <button type="submit" class="button button-contactForm boxed-btn">Sign-Up</button>
                             </div>
                         </form>
                     </div>

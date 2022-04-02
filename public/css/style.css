@@ -434,10 +434,10 @@ h3 {
   text-transform: uppercase;
 }
 .sigup-button{
-  margin-left:60%
+  margin-left:60%;
 }
 .login-button{
-  margin-left:40%
+  margin-left:40%;
 }
 
 
@@ -1150,12 +1150,15 @@ ul:hover>.submenu{
 .slider2{
   font-size: 50px;
   color: #b61d1d;
-  padding-left:270px
 }
 .slider3{
   padding-left:300px
 }
-
+.align-mid
+{
+text-align: center;
+justify-content: center;
+}
 .center-title{
   font-size: 55px;
   color: #b61d1d;
@@ -5764,7 +5767,6 @@ input[type="file"] {
 .custom-file-upload {
   border: 3px solid #ccc;
   cursor: pointer;
-  margin-left: 25%;
 }
 
 .custom-file-upload2 {
