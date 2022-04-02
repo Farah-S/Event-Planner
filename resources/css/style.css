@@ -5867,3 +5867,6 @@ body {
   box-shadow: 20px 20px 60px #913ca0, -20px -20px 60px #c552d8;
   border: none
 }
+.buttons-alpha {
+  padding-bottom: 20px;
+}
