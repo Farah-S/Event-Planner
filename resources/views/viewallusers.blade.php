@@ -2,11 +2,13 @@
 @section('title','View Users')
 @section('content')
 <section class="contact-section">
+<div class="slider_area bg-test-img">
     <div class="row justify-content-center">
                         <div class="col-12">
                             <h3 class=" slider slider2 align-mid">Users Table</h3>
                         </div>
                     </div>
+                    
 <div class="container">
     <table class="table table-bordered table-dark table-hover">
     <caption>List of users</caption>
@@ -107,6 +109,7 @@
         
     </tbody>
     </table>
+</div>
 </div>
 
 </section>
