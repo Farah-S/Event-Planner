@@ -56,7 +56,7 @@ Route::get('/editprofile',function(){return view('editprofile');});
 Route::get('/packagedetails',function(){return view('packagedetails');});
 
 Route::get('/admin/viewprofile',function(){return view('adminviewprofile');});
-Route::get('/productionHouse',function(){return view('decorationspage');})->name('productionHouse.packages');
+Route::get('/productionHouse',function(){return view('productionHouse/decorationspage');})->name('productionHouse.packages');
 
 Route::get('/store',function(){
     $category = request('category');
