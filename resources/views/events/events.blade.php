@@ -8,29 +8,29 @@
                 <div class="column">
                     <div class="single_speaker">
                         <div class="speaker_thumb">
-                            <img src="img/Decorations/Ramadan2.jpg" alt="">
+                            <img src="img/Events/welcome2.jpg" alt="">
                             <div class="hover_overlay">
                                 <div class="social_icon">
-                                    <a href="#">Read More</a>
+                                    <a href="#">Customize</a>
                                 </div>
                             </div>
                         </div>
                         <div class="speaker_name text-center">
-                            <h3>Ramadan</h3>
-                            <p>Pick the Ramadan Package you like with variable prices</p>
+                            <h3>WelcomeParties</h3>
+                            <p>Vustomize the Welcome Party you dream of</p>
                         </div>
                     </div>
                     <div class="single_speaker">
                         <div class="speaker_thumb">
-                            <img src="img/Decorations/Easter.jpg" alt="">
+                            <img src="img/Events/corp2.jpg" alt="">
                             <div class="hover_overlay">
                                 <div class="social_icon">
-                                <a href="#">Read More</a>
+                                <a href="#">Customise</a>
                                 </div>
                             </div>
                         </div>
                         <div class="speaker_name text-center">
-                            <h3>Easter</h3>
+                            <h3>Corprate</h3>
                             <p>Pick the Easter Package you like with variable prices</p>
                         </div>
                     </div>
@@ -40,15 +40,15 @@
                 <div class="column">
                     <div class="single_speaker">
                         <div class="speaker_thumb">
-                            <img src="img/Decorations/xmas3.jpg" alt="">
+                            <img src="img/Events/ani2.jpg" alt="">
                             <div class="hover_overlay">
                                 <div class="social_icon">
-                                <a href="#">Read More</a>
+                                <a href="#">Customise</a>
                                 </div>
                             </div>
                         </div>
                         <div class="speaker_name text-center">
-                            <h3>Christmas</h3>
+                            <h3>Aniversaries</h3>
                             <p>Pick the Ramadan Package you like with variable prices</p>
                         </div>
                     </div>
@@ -56,15 +56,15 @@
                 <div class="column">
                     <div class="single_speaker">
                         <div class="speaker_thumb">
-                            <img src="img/Decorations/h5.jpg" alt="">
+                            <img src="img/Events/grad2.jpg" alt="">
                             <div class="hover_overlay">
                                 <div class="social_icon">
-                                <a href="#">Read More</a>
+                                <a href="#" >Customise</a>
                                 </div>
                             </div>
                         </div>
                         <div class="speaker_name text-center">
-                            <h3>Halloween</h3>
+                            <h3>Graduation Parties</h3>
                             <p>Pick the Halloween Package you like with variable prices</p>
                         </div>
                     </div>
