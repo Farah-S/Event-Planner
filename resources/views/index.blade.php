@@ -35,13 +35,13 @@
                             <h3>Event Planning</h3>
                         </div>
                         <p>We offer many event types like conferences, corporate, graduation events and more</p>
-                        <a href="{{route('events.events')}}" class="boxed-btn-red">Learn More</a>
+                        <a href="{{route('events.events')}}" class="boxed-btn-red trnsp_bg">Learn More</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="about_area" style="background-color: #faf3e9;">
+    <div class="about_area" style="background-color: #e9eafa;"><!-- faf3e9-->
         <div class="container">
             <div class="row align-items-center">
                 
@@ -51,7 +51,7 @@
                             <h3>Production House</h3>
                         </div>
                         <p>As well as events we offer decoration services</p>
-                        <a href="{{route('productionHouse.packages')}}" class="boxed-btn-red">Learn More</a>
+                        <a href="{{route('productionHouse.packages')}}" class="boxed-btn-red trnsp_bg">Learn More</a>
                     </div>
                 </div>
                 <div class="col-xl-6 col-md-6">
