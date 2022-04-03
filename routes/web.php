@@ -41,7 +41,7 @@ Route::get('/editprofile',function(){return view('editprofile');});
 
 Route::get('/adminviewprofile',function(){return view('adminviewprofile');});
 Route::get('/decorationspage',function(){return view('decorationspage');});
-
+Route::get('/packagedetails',function(){return view('packagedetails');});
 Route::get('/store',function(){
     $category = request('category');
 
