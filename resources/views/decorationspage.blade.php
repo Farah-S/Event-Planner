@@ -39,7 +39,7 @@
                     </div>
                     <div class="single_speaker">
                         <div class="speaker_thumb">
-                            <img src="img/Decorations/3.png" alt="">
+                            <img src="img/Decorations/Easter.jpg" alt="">
                             <div class="hover_overlay">
                                 <div class="social_icon">
                                 <a href="#">Read More</a>
@@ -47,8 +47,8 @@
                             </div>
                         </div>
                         <div class="speaker_name text-center">
-                            <h3>Albert Jackey</h3>
-                            <p>Product Designer</p>
+                            <h3>Easter</h3>
+                            <p>Pick the Easter Package you like with variable prices</p>
                         </div>
                     </div>
         
@@ -69,25 +69,11 @@
                             <p>Pick the Ramadan Package you like with variable prices</p>
                         </div>
                     </div>
-                    <div class="single_speaker">
-                        <div class="speaker_thumb">
-                            <img src="img/Decorations/1.png" alt="">
-                            <div class="hover_overlay">
-                                <div class="social_icon">
-                                <a href="#">Read More</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="speaker_name text-center">
-                            <h3>Kelvin Cooper</h3>
-                            <p>Art Director</p>
-                        </div>
-                    </div>
                 </div>
                 <div class="column">
                     <div class="single_speaker">
                         <div class="speaker_thumb">
-                            <img src="img/Decorations/1.png" alt="">
+                            <img src="img/Decorations/h5.jpg" alt="">
                             <div class="hover_overlay">
                                 <div class="social_icon">
                                 <a href="#">Read More</a>
@@ -95,26 +81,10 @@
                             </div>
                         </div>
                         <div class="speaker_name text-center">
-                            <h3>Jonson Miller</h3>
-                            <p>Creative Director</p>
+                            <h3>Halloween</h3>
+                            <p>Pick the Halloween Package you like with variable prices</p>
                         </div>
                     </div>
-                    <div class="single_speaker">
-                        <div class="speaker_thumb">
-                            <img src="img/Decorations/3.png" alt="">
-                            <div class="hover_overlay">
-                                <div class="social_icon">
-                                <a href="#">Read More</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="speaker_name text-center">
-                            <h3>Albert Jackey</h3>
-                            <p>Product Designer</p>
-                        </div>
-                    </div>
-        
-
                 </div>
 
             </div>
