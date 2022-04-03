@@ -1849,7 +1849,9 @@ button.accordion:hover, button.accordion.is-open {
 .speakers_area.inc_padd {
   padding-top: 200px;
 }
-
+.ibspeakersarea{
+  position:relative;
+}
 @media (max-width: 767px) {
   /* line 5, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_speakers.scss */
   .speakers_area.inc_padd {
@@ -6057,5 +6059,26 @@ body, html {
   clear: both;
   display: table;
 }
+table, th, td {
+  border: 1px solid;
+  width: 1000px;
+  border-color: #666666;
+  text-align: center;
+  height: 50px;
+}
+tbody tr:nth-child(even) {
+  background-color: #eee;
+}
 
+tbody th {
+  background-color: rgb(170, 5, 5);
+  color: #fff;
+  text-align: center;
+}
+.downpadding{
+  padding-bottom: 200px;
+}
+.himasfont{
+  font-style: italic;
+}
 /*# sourceMappingURL=style.css.map */

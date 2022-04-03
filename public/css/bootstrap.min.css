@@ -601,6 +601,12 @@ pre code {
     margin-left: auto;
     padding-top: 50px;
 }
+.ibcontainer {
+  padding-bottom: 120px;
+    padding-left: 50px;
+    
+
+}
 
 @media (min-width:576px) {
     .container {
@@ -9272,17 +9278,7 @@ a.text-dark:hover {
     .badge {
         border: 1px solid #000
     }
-    .table {
-        border-collapse: collapse!important
-    }
-    .table td,
-    .table th {
-        background-color: #fff!important
-    }
-    .table-bordered td,
-    .table-bordered th {
-        border: 1px solid #ddd!important
-    }
+  
 }
 
 
