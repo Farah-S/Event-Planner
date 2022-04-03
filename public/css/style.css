@@ -1163,6 +1163,12 @@ ul:hover>.submenu{
 text-align: center;
 justify-content: center;
 }
+.align-left
+{
+text-align: left;
+justify-content: left;
+padding-left: 15%;
+}
 .center-title{
   font-size: 55px;
   color: #b61d1d;
