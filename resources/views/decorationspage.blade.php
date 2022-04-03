@@ -25,7 +25,7 @@
                 <div class="column">
                     <div class="single_speaker">
                         <div class="speaker_thumb">
-                            <img src="img/speakers/1.png" alt="">
+                            <img src="img/Decorations/Ramadan2.jpg" alt="">
                             <div class="hover_overlay">
                                 <div class="social_icon">
                                     <a href="#">Read More</a>
@@ -33,13 +33,13 @@
                             </div>
                         </div>
                         <div class="speaker_name text-center">
-                            <h3>Jonson Miller</h3>
-                            <p>Creative Director</p>
+                            <h3>Ramadan</h3>
+                            <p>Pick the Ramadan Package you like with variable prices</p>
                         </div>
                     </div>
                     <div class="single_speaker">
                         <div class="speaker_thumb">
-                            <img src="img/speakers/3.png" alt="">
+                            <img src="img/Decorations/3.png" alt="">
                             <div class="hover_overlay">
                                 <div class="social_icon">
                                 <a href="#">Read More</a>
@@ -57,7 +57,7 @@
                 <div class="column">
                     <div class="single_speaker">
                         <div class="speaker_thumb">
-                            <img src="img/speakers/2.png" alt="">
+                            <img src="img/Decorations/xmas3.jpg" alt="">
                             <div class="hover_overlay">
                                 <div class="social_icon">
                                 <a href="#">Read More</a>
@@ -65,13 +65,13 @@
                             </div>
                         </div>
                         <div class="speaker_name text-center">
-                            <h3>Marked Macau</h3>
-                            <p>UI/UX Designer</p>
+                            <h3>Christmas</h3>
+                            <p>Pick the Ramadan Package you like with variable prices</p>
                         </div>
                     </div>
                     <div class="single_speaker">
                         <div class="speaker_thumb">
-                            <img src="img/speakers/1.png" alt="">
+                            <img src="img/Decorations/1.png" alt="">
                             <div class="hover_overlay">
                                 <div class="social_icon">
                                 <a href="#">Read More</a>
@@ -87,7 +87,7 @@
                 <div class="column">
                     <div class="single_speaker">
                         <div class="speaker_thumb">
-                            <img src="img/speakers/1.png" alt="">
+                            <img src="img/Decorations/1.png" alt="">
                             <div class="hover_overlay">
                                 <div class="social_icon">
                                 <a href="#">Read More</a>
@@ -101,7 +101,7 @@
                     </div>
                     <div class="single_speaker">
                         <div class="speaker_thumb">
-                            <img src="img/speakers/3.png" alt="">
+                            <img src="img/Decorations/3.png" alt="">
                             <div class="hover_overlay">
                                 <div class="social_icon">
                                 <a href="#">Read More</a>

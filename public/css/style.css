@@ -20,13 +20,13 @@
   /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ff9600+0,fe531e+26,c022a5+57,1bb8f9+100 */
   background: #ff9600;
   /* Old browsers */
-  background: -moz-linear-gradient(top, #ff9600 0%, #fe531e 26%, #c022a5 57%, #1bb8f9 100%);
+  /*background: -moz-linear-gradient(top, #ff9600 0%, #fe531e 26%, #c022a5 57%, #1bb8f9 100%);*/
   /* FF3.6-15 */
-  background: -webkit-linear-gradient(top, #ff9600 0%, #fe531e 26%, #c022a5 57%, #1bb8f9 100%);
+  /*background: -webkit-linear-gradient(top, #ff9600 0%, #fe531e 26%, #c022a5 57%, #1bb8f9 100%);*/
   /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom, #ff9600 0%, #fe531e 26%, #c022a5 57%, #1bb8f9 100%);
+  /*background: linear-gradient(to bottom, #ff9600 0%, #fe531e 26%, #c022a5 57%, #1bb8f9 100%);*/
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff9600', endColorstr='#1bb8f9',GradientType=0 );
+  /*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff9600', endColorstr='#1bb8f9',GradientType=0 );*/
   /* IE6-9 */
 }
 
@@ -1917,7 +1917,7 @@ button.accordion:hover, button.accordion.is-open {
   height: 100%;
   left: 0;
   bottom: 0;
-  background: rgba(255, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.4);
   -webkit-transition: 0.3s;
   -moz-transition: 0.3s;
   -o-transition: 0.3s;
@@ -1957,7 +1957,7 @@ button.accordion:hover, button.accordion.is-open {
   display: inline-block;
   line-height: 50px;
   font-size: 17px;
-  color: #FF0000;
+  color: #ff9600;
   margin: 0 7px;
 }
 
@@ -1978,7 +1978,7 @@ button.accordion:hover, button.accordion.is-open {
 .speakers_area .single_speaker .speaker_name p {
   margin-bottom: 0;
   font-size: 16px;
-  color: #FF0000;
+  color: #000000;
   font-weight: 400;
 }
 
