@@ -53,17 +53,23 @@
                                                 <li class='test-li'><a href="/corporate">Corporate Events</a></li>
                                             </ul>
                                         </li>
-                                        <li><a href="{{route('productionHouse.productionHouse')}}">Production House</a></li>
+                                        <li><a href="{{route('productionHouse.packages')}}">Production House</a></li>
                                         <li><a href="{{route('home.about')}}">About us</a></li>
                                         <li><a href="{{route('home.contact')}}">Contact us</a></li>
                                         <li><a href="{{route('home.cancelpolicy')}}">Cancel Policy</a></li>
-                                        <!-- if logged in
-                                        <li><a href="/profile"><span class="fa-solid fa-circle-user"></span> Profile</a></li>
-                                        <li><a href="/myorders"><span class="fa-solid fa-cart-shopping"></span> Orders</a></li>
-                                         -->
+                                        <!-- if logged in Profile 
+                                        <li><a href="/myorders"><span class="fa-solid fa-cart-shopping"></span></a></li>
+                                        <li><a href="/profile"><span class="fa-solid fa-circle-user"></span></a>
+                                            <ul class="submenu">
+                                                <li class='test-li'><a href="{{route('user.profile')}}">My Profile</a></li>
+                                                <li class='test-li'><a href="{{route('user.myorders')}}">My Orders</a></li>
+                                                <li class='test-li'><a href="/">Sign Out</a></li>
+                                            </ul>
+                                        </li>-->
+                                        
                                         <!-- if not logged in-->
-                                        <li><a href="/login"><span class="fa-solid fa-arrow-right-to-bracket"></span> LogIn</a></li>
-                                        <li><a href="/signup"><span class="fa-solid fa-arrow-up-from-bracket"></span> SignUp</a></li>
+                                        <li><a href="{{route('user.login')}}"><span class="fa-solid fa-arrow-right-to-bracket"></span> LogIn</a></li>
+                                        <li><a href="{{route('user.signup')}}"><span class="fa-solid fa-arrow-up-from-bracket"></span> SignUp</a></li>
                                     </ul>
                                 </nav>
                             </div>
@@ -101,10 +107,10 @@
                                         Links
                                 </h3>
                                 <ul>
-                                    <li><a target="_blank" href="schedule.html">Events</a></li>
-                                    <li><a target="_blank" href="speakers.html">Production House</a></li>
-                                    <li><a target="_blank" href="contact.html">Contact Us</a></li>
-                                    <li><a target="_blank" href="contact.html">Cancel Policy</a></li>
+                                    <li><a target="_blank" href="{{route('events.events')}}">Events</a></li>
+                                    <li><a target="_blank" href="{{route('productionHouse.packages')}}">Production House</a></li>
+                                    <li><a target="_blank" href="{{route('home.contact')}}">Contact Us</a></li>
+                                    <li><a target="_blank" href="{{route('home.cancelpolicy')}}">Cancel Policy</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -190,6 +196,8 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     <script src="{{url('js/jquery.validate.min.js')}}"></script>
     <script src="{{url('js/mail-script.js')}}"></script>
     <script src="{{url('js/main.js')}}"></script>
+
+    <script src="{{url('js/order.js')}}"></script>
 
 </body>
 

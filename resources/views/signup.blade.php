@@ -2,7 +2,7 @@
 @section('title','Signup')
 @section('content')
 
-<section class="contact-section">
+<section class="contact-section signup_bg ">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-12">
