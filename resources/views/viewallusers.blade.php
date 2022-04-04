@@ -14,7 +14,7 @@
 <div class="col-md-12 text-right">
   <!-- <div class="dropdown">
     <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">User Type -->
-    <!--<span class="caret"></span>--></button>
+    <!--<span class="caret"></span></button>-->
     <!-- <ul class="dropdown-menu">
       <li>Admin</li>
       <li>Cleint</li>
