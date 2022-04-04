@@ -19,7 +19,7 @@
                 </div>
                 <div class="col-md-4 text-left">
 
-                <button type="submit" onclick="location.href = '{{route('user.editProfile')}}';" class="button button-contactForm boxed-btn">Edit profile</button>
+                <button type="submit" onclick="location.href = '';" class="button button-contactForm boxed-btn">Change User Type</button>
 </div>
                             
 <div class="col-md-4 text-left">

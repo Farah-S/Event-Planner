@@ -2,7 +2,7 @@
 @section('title','Log in')
 @section('content')
 <section class="contact-section">
-            <div class="container">
+            <div class="container border-right border-left">
                 <div class="row justify-content-center" >
                     <div class="col-8 align-self-center">
                         <h3 class=" slider slider2 slider3">Log In</h3><br>

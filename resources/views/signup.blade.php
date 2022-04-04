@@ -3,9 +3,9 @@
 @section('content')
 
 <section class="contact-section signup_bg ">
-            <div class="container">
+            <div class="container border-right border-left">
                 <div class="row justify-content-center">
-                    <div class="col-12">
+                    <div class="col-12 ">
                         <h3 class=" slider slider2 align-mid">Sign Up</h3>
                     </div>
                     <div class="col-lg-8">
