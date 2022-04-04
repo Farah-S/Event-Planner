@@ -1239,7 +1239,7 @@ padding-left: 15%;
 }
 
 button.accordion {
-  background: rgba(190, 95, 245, 0.3);
+  background: rgba(190, 95, 245, 0.2);
   color: rgb(0, 0, 0);
   border-radius: 1.5rem;
   padding: 18px;
@@ -1265,7 +1265,7 @@ button.accordion.is-open::before {
 
 
 button.accordion:hover, button.accordion.is-open {
-  background-color: rgb(160, 176, 255);
+  background-color: rgb(160 232 255 / 70%);
 }
 
 .accordion-content {
@@ -1309,6 +1309,11 @@ button.accordion:hover, button.accordion.is-open {
 .order-column {
   float: left;
   width: 33.33%;
+}
+
+.order-column2 {
+  float: left;
+  width: 25%;
 }
 
 /* Clear floats after the columns */

@@ -53,6 +53,8 @@ Route::get('/admin/viewprofile',function(){return view('adminviewprofile');})->n
 
 Route::get('/viewallusers',function(){return view('viewallusers');})->name('admin.viewUsers');
 
+Route::get('/allOrders',function(){return view('admins/allOrders');})->name('admin.allOrders');
+
 /*-----------------------------------------customer files-----------------------------------------*/
 
 Route::get('/myorders',function(){return view('customers/myorders');})->name('customer.myorders');
