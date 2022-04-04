@@ -9,7 +9,7 @@
                         <h3 class=" slider slider2 align-mid">Sign Up</h3>
                     </div>
                     <div class="col-lg-8">
-                        <form class="form-contact contact_form" action="contact_process.php" method="post" id="contactForm" novalidate="novalidate">
+                        <form class="form-contact contact_form" action="contact_process.php" method="post" id="signupForm" novalidate="novalidate">
                             <div class="row justify-content-center">
                             <div class="col-sm-6 justify-content-center">
                                     <div class="form-group">

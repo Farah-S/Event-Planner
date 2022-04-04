@@ -199,6 +199,9 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     <script src="{{url('js/mail-script.js')}}"></script>
     <script src="{{url('js/main.js')}}"></script>
 
+    <!--signup js-->
+    <script src="{{url('js/signup.js')}}"></script>
+
     <script src="{{url('js/order.js')}}"></script>
 
 </body>
