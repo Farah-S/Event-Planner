@@ -436,6 +436,7 @@ h3 {
 /* line 15, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_btn.scss */
 .boxed-btn:hover {
   background: #B61D1D;
+  cursor: pointer;
   color: #fff !important;
   border: 1px solid #B61D1D;
 }
@@ -1154,7 +1155,7 @@ ul:hover>.submenu{
 }
 
 .signup_bg{
-  background-image: url(../img/banner/champagne.jpg);
+  background-image: url(../img/banner/);
   background-size: auto;
 }
 

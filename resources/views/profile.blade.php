@@ -31,7 +31,7 @@
                      <div class="col-lg-4">
                             <div class="row justify-content-center ">
                                 
-                                <button type="submit" class="button button-contactForm boxed-btn">edit profile</button>
+                                <button type="submit" onclick="location.href = '{{route('user.editProfile')}}';" class="button button-contactForm boxed-btn">Edit profile</button>
                             </div>
                             <br>
                             <div class="row justify-content-center ">
@@ -41,7 +41,7 @@
                             </div><br>
                             <div class="row justify-content-center ">
                                 
-                                <button type="submit" class="button button-contactForm boxed-btn">Show Orders</button>
+                                <button type="submit" onclick="location.href = '{{route('customer.myorders')}}';" class="button button-contactForm boxed-btn">Show Orders</button>
                             
                             </div>
                             </div>

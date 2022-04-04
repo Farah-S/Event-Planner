@@ -58,11 +58,11 @@
                                         <li><a href="{{route('home.contact')}}">Contact us</a></li>
                                         <li><a href="{{route('home.cancelpolicy')}}">Cancel Policy</a></li>
                                         <!-- if logged in Profile 
-                                        <li><a href="/myorders"><span class="fa-solid fa-cart-shopping"></span></a></li>
-                                        <li><a href="/profile"><span class="fa-solid fa-circle-user"></span></a>
+                                        <li><a href="{{route('customer.myorders')}}"><span class="fa-solid fa-cart-shopping"></span></a></li>
+                                        <li><a href="{{route('user.profile')}}"><span class="fa-solid fa-circle-user"></span></a>
                                             <ul class="submenu">
                                                 <li class='test-li'><a href="{{route('user.profile')}}">My Profile</a></li>
-                                                <li class='test-li'><a href="{{route('user.myorders')}}">My Orders</a></li>
+                                                <li class='test-li'><a href="{{route('customer.myorders')}}">My Orders</a></li>
                                                 <li class='test-li'><a href="/">Sign Out</a></li>
                                             </ul>
                                         </li>-->
