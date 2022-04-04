@@ -3,7 +3,7 @@
 @section('content')
 
 <div class="contact-section">
-    <div class="container">
+    <div class="container border-right border-left">
         <div class="row" style="justify-content:center">
             <div class="col-12">
                 <h3 class="slider center-title">Package Name</h3><br>
