@@ -45,6 +45,8 @@ Route::get('/events/customevent',function(){return view('events/customEvent');})
 
 Route::get('/productionHouse',function(){return view('productionHouse/decorationspage');})->name('productionHouse.packages');
 
+Route::get('/productionHouse/addPackage',function(){return view('productionHouse/addPackage');})->name('productionHouse.addPackage');
+
 Route::get('/productionHouse/editPackage',function(){return view('productionHouse/editPackage');})->name('productionHouse.editPackage');
 
 Route::get('/packagedetails',function(){return view('packagedetails');})->name('productionHouse.packageDetails');

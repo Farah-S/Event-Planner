@@ -89,7 +89,7 @@
                             <img src="img/Events/2.jpg" alt="">
                             <div class="hover_overlay">
                                 <div class="social_icon">
-                                <a href="#" >Customise</a>
+                                <a href="{{route('events.custom')}}" >Customise</a>
                                 </div>
                             </div>
                         </div>

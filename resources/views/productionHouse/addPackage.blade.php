@@ -9,7 +9,7 @@
                 <h3 class="slider center-title">Package Name</h3><br>
             </div>
             <div class="col-lg-8">
-                <form class="form-contact contact_form" action="contact_process.php" method="post" id="contactForm" novalidate="novalidate">
+                <form class="form-contact contact_form" action="contact_process.php" method="post" id="addPackageForm" novalidate="novalidate">
                     <div class="row">
                         
                         <div class="form-group mt-3">
@@ -22,7 +22,7 @@
                   
                         <h3 class="slider form-item-title">Package Details</h3>
                             <div class="form-group">
-                                <textarea class="form-control w-100" name="message" id="message" cols="30" rows="9" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Package Description'" placeholder="Enter Package Description"></textarea>
+                                <textarea class="form-control w-100" minlength=20 name="message" id="message" cols="30" rows="9" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Package Description'" placeholder="Enter Package Description"></textarea>
                             </div>
                             <div class="form-group">
                                 <h3 class="slider form-item-title">Package Price</h3>
