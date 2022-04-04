@@ -13,12 +13,12 @@
                     <h3 class=" slider slider2 align-mid">Edit Profile</h3>
                     </div>
                 <div class="row mt-2">
-                    <div class="col-md-6"><label class="labels">Name</label><input type="text" class="form-control" placeholder="first name" value=""></div>
-                    <div class="col-md-6"><label class="labels">Surname</label><input type="text" class="form-control" value="" placeholder="surname"><br></div>
+                    <div class="col-md-6"><label class="labels">Name</label><input type="text" id="fname" class="form-control" placeholder="first name" value=""></div>
+                    <div class="col-md-6"><label class="labels">Surname</label><input type="text" id="lname" class="form-control" value="" placeholder="surname"><br></div>
                 </div>
                 <div class="row mt-3">
-                    <div class="col-md-12"><label class="labels">Email ID</label><input type="text" class="form-control" placeholder="enter email id" value=""><br></div>
-                    <div class="col-md-12"><label class="labels">Password</label><input type="text" class="form-control" placeholder="enter password" value=""><br></div>
+                    <div class="col-md-12"><label class="labels">Email ID</label><input type="text" id="email" class="form-control" placeholder="enter email id" value=""><br></div>
+                    <div class="col-md-12"><label class="labels">Password</label><input type="text" id="password" class="form-control" placeholder="enter password" value=""><br></div>
                     <div class="col-md-12"><label class="labels">Confirm Password</label><input type="text" class="form-control" placeholder="re-enter password" value=""><br></div>
 
                 </div>
