@@ -1097,6 +1097,10 @@ ul:hover>.submenu{
   
   background-image: url(../img/banner/pineapple.jpg);
 }
+.customEvent-bg {
+  background-image: url(../img/banner/flowerfooter.jpg);
+  background-size: cover;
+}
 
 /* line 4, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_slider.scss */
 .slider_area {
@@ -2967,14 +2971,33 @@ button.accordion:hover, button.accordion.is-open {
   background: transparent;
 }
 
+.form-contact .white-form{
+  border: 1px solid #131313;
+  border-radius: 10px;
+  height: 48px;
+  padding-left: 18px;
+  font-size: 13px;
+  background: white;
+  width: 100%;
+}
+
 /* line 69, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_contact.scss */
 .form-contact .form-control:focus {
+  outline: 0;
+  box-shadow: none;
+}
+.form-contact .white-form:focus {
   outline: 0;
   box-shadow: none;
 }
 
 /* line 74, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_contact.scss */
 .form-contact .form-control::placeholder {
+  font-weight: 300;
+  color: #999999;
+}
+
+.form-contact .white-form::placeholder {
   font-weight: 300;
   color: #999999;
 }

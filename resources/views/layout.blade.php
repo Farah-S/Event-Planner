@@ -48,9 +48,11 @@
                                         <!--<li><a class="active" href="/">Home</a></li>-->
                                         <li><a href="{{route('events.events')}}">Events<i class="ti-angle-down"></i></a>
                                             <ul class="submenu">
-                                                <li class='test-li'><a href="/conferences">Conferences</a></li>
-                                                <li class='test-li'><a href="/student">Student Events</a></li>
+                                                <!--<li class='test-li'><a href="/conferences">Conferences</a></li>-->
+                                                <li class='test-li'><a href="/anniversaries">Anniversaries</a></li>
                                                 <li class='test-li'><a href="/corporate">Corporate Events</a></li>
+                                                <li class='test-li'><a href="/welcomeParty">Welcome Parties</a></li>
+                                                <li class='test-li'><a href="/graduations">Graduations</a></li>
                                             </ul>
                                         </li>
                                         <li><a href="{{route('productionHouse.packages')}}">Production House</a></li>

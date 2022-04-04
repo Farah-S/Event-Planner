@@ -16,7 +16,7 @@
                             </div>
                         </div>
                         <div class="speaker_name text-center">
-                            <h3>WelcomeParties</h3>
+                            <h3>Welcome Parties</h3>
                             <p>Vustomize the Welcome Party you dream of</p>
                         </div>
                     </div>
@@ -30,7 +30,7 @@
                             </div>
                         </div>
                         <div class="speaker_name text-center">
-                            <h3>Corprate</h3>
+                            <h3>Corporate</h3>
                             <p>Pick the Easter Package you like with variable prices</p>
                         </div>
                     </div>
@@ -48,7 +48,7 @@
                             </div>
                         </div>
                         <div class="speaker_name text-center">
-                            <h3>Aniversaries</h3>
+                            <h3>Anniversaries</h3>
                             <p>Pick the Ramadan Package you like with variable prices</p>
                         </div>
                     </div>

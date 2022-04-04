@@ -39,6 +39,8 @@ Route::get('/editprofile',function(){return view('editprofile');})->name('user.e
 
 Route::get('/events',function(){return view('events/events');})->name('events.events');
 
+Route::get('/events/customevent',function(){return view('events/customEvent');})->name('events.custom');
+
 /*-----------------------------------------prod house files-----------------------------------------*/
 
 Route::get('/productionHouse',function(){return view('productionHouse/decorationspage');})->name('productionHouse.packages');
