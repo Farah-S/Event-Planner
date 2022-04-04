@@ -6114,7 +6114,7 @@ table, th, td {
   height: 50px;
 }
 tbody tr:nth-child(even) {
-  background-color: #eee;
+  background-color: #131313;
 }
 
 tbody th {

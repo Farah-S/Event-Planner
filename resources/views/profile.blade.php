@@ -17,15 +17,11 @@
                         <div class="section_title">
                             <h3 class="slider">Name</h3>
                             <p class="himasfont">Ibrahim Baher</p>
-                        </div>
-                    </div>
-                    <br>
-                    <div class="about_info">
-                        <div class="section_title">
                             <h3 class="slider">Email</h3>
                             <p class="himasfont">Ibrahim.baher@email.com</p>
                         </div>
                     </div>
+                    <br>
                  </div>
                      </div>
                      <div class="col-lg-4">
