@@ -52,6 +52,8 @@ Route::get('/packagedetails',function(){return view('packagedetails');})->name('
 /*-----------------------------------------admin files-----------------------------------------*/
 
 Route::get('/admin/viewprofile',function(){return view('adminviewprofile');})->name('admin.viewProfile');
+Route::get('/admin/viewprofiletst',function(){return view('testfile');})->name('admin.viewProfiletst');
+
 
 Route::get('/viewallusers',function(){return view('viewallusers');})->name('admin.viewUsers');
 
