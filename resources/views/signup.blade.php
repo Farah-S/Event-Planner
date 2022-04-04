@@ -28,8 +28,8 @@
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="form-group">
-                                        <input class="form-control valid" value="" id="password" input type="password" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your Password'" placeholder="Password">
-                                        <input type="checkbox" onclick="myFunction()"> Show Password
+                                        <input class="form-control valid" minlength=8 value="" id="password" input type="password" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your Password'" placeholder="Password">
+                                        <br><input type="checkbox" onclick="myFunction()"> Show Password
                                     </div>
                                 </div>
                             </div>
