@@ -602,10 +602,9 @@ pre code {
     padding-top: 50px;
 }
 .ibcontainer {
-  padding-bottom: 120px;
-    padding-left: 50px;
-    
-
+  padding-bottom: 200px;
+    padding-left: 150px;
+ 
 }
 
 @media (min-width:576px) {
