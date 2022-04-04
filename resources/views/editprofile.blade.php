@@ -12,6 +12,7 @@
             <div class="col-12">
                     <h3 class=" slider slider2 align-mid">Edit Profile</h3>
                     </div>
+            <form class="form-contact contact_form" action="" method="post" id="editProfileForm" novalidate="novalidate">
                 <div class="row mt-2">
                     <div class="col-md-6"><label class="labels">Name</label><input type="text" id="fname" class="form-control" placeholder="first name" value=""></div>
                     <div class="col-md-6"><label class="labels">Surname</label><input type="text" id="lname" class="form-control" value="" placeholder="surname"><br></div>
@@ -29,6 +30,7 @@
                                 </label>
                 </div>
                 <div class="mt-5 text-center"><button class="button button-contactForm boxed-btn" type="button">Save Changes</button></div>
+                </form>
             </div>
         </div>
     </div>
