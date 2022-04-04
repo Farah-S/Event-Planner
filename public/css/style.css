@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,500i,600,700,700i,800,800i,900&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,500i,600,700,700i,800,800i,900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Cookie&display=swap"); 
 @import url('https://fonts.googleapis.com/css2?family=Cookie&family=Playfair+Display:ital@1&display=swap');
 /* line 1, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_extend.scss */
 .flex-center-start {
@@ -437,6 +436,7 @@ h3 {
 /* line 15, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_btn.scss */
 .boxed-btn:hover {
   background: #B61D1D;
+  cursor: pointer;
   color: #fff !important;
   border: 1px solid #B61D1D;
 }
@@ -453,7 +453,7 @@ h3 {
 
 /* line 27, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_btn.scss */
 .boxed-btn-red {
-  background: #fff;
+  background: #e9eafa;
   color: #db9797;
   display: inline-block;
   padding: 16px 44px;
@@ -461,15 +461,16 @@ h3 {
   font-size: 16px;
   font-weight: 500;
   border: 0;
-  border: 2px solid #db9797;
+  border: 2px solid #d80000;
   text-align: center;
-  color: #db9797 !important;
+  color: #d80000 !important;
   text-transform: capitalize;
+  border-radius: 1px 12px;
 }
 
 /* line 41, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_btn.scss */
 .boxed-btn-red:hover {
-  background: #db9797;
+  background: #d80000;
   color: #fff !important;
   border: 2px solid #fff;
 }
@@ -487,20 +488,24 @@ h3 {
 /* line 53, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_btn.scss */
 .boxed-btn2 {
   background: transparent;
-  color: #fff;
+  color: #d80000;
   display: inline-block;
   padding: 18px 24px;
   font-family: "Poppins", sans-serif;
   font-size: 14px;
   font-weight: 400;
   border: 0;
-  border: 1px solid #fff;
+  border: 1px solid #d80000;
   text-transform: uppercase;
+}
+
+.trnsp_bg{
+  background: transparent;
 }
 
 /* line 64, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_btn.scss */
 .boxed-btn2:hover {
-  background: #fff;
+  background: #d80000;
   color: #131313 !important;
 }
 
@@ -808,6 +813,7 @@ h3 {
   left: 0;
   top: 0;
   width: 100%;
+  z-index: 100;
 }
 
 /* line 6, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_header.scss */
@@ -1091,6 +1097,10 @@ ul:hover>.submenu{
   
   background-image: url(../img/banner/pineapple.jpg);
 }
+.customEvent-bg {
+  background-image: url(../img/banner/flowerfooter.jpg);
+  background-size: cover;
+}
 
 /* line 4, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_slider.scss */
 .slider_area {
@@ -1147,10 +1157,22 @@ ul:hover>.submenu{
 .slider3{
   padding-left:300px
 }
+
+.signup_bg{
+  background-image: url(../img/banner/);
+  background-size: auto;
+}
+
 .align-mid
 {
 text-align: center;
 justify-content: center;
+}
+.align-left
+{
+text-align: left;
+justify-content: left;
+padding-left: 15%;
 }
 .center-title{
   font-size: 55px;
@@ -1221,7 +1243,7 @@ justify-content: center;
 }
 
 button.accordion {
-  background: rgba(190, 95, 245, 0.3);
+  background: rgba(190, 95, 245, 0.2);
   color: rgb(0, 0, 0);
   border-radius: 1.5rem;
   padding: 18px;
@@ -1247,7 +1269,7 @@ button.accordion.is-open::before {
 
 
 button.accordion:hover, button.accordion.is-open {
-  background-color: rgb(160, 176, 255);
+  background-color: rgb(160 232 255 / 70%);
 }
 
 .accordion-content {
@@ -1291,6 +1313,11 @@ button.accordion:hover, button.accordion.is-open {
 .order-column {
   float: left;
   width: 33.33%;
+}
+
+.order-column2 {
+  float: left;
+  width: 25%;
 }
 
 /* Clear floats after the columns */
@@ -1352,7 +1379,7 @@ button.accordion:hover, button.accordion.is-open {
 /* line 72, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_slider.scss */
 .slider_area .title_text::before {
   position: absolute;
-  background-image: url(../img/banner/path.png);
+  /*background-image: url(../img/banner/path.png);*/
   content: "";
   background-repeat: no-repeat;
   background-size: contain;
@@ -1944,7 +1971,7 @@ button.accordion:hover, button.accordion.is-open {
 
 /* line 58, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_speakers.scss */
 .speakers_area .single_speaker .speaker_thumb .hover_overlay .social_icon a {
-  width: 110px;
+  width: 100px;
   height: 50px;
   -webkit-transition: 0.3s;
   -moz-transition: 0.3s;
@@ -2457,11 +2484,12 @@ button.accordion:hover, button.accordion.is-open {
 
 /* line 29, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_footer.scss */
 .footer .footer_top .footer_widget .footer_title {
-  font-size: 18px;
+  font-size: 22px;
   font-weight: 500;
   color: rgb(0, 0, 0);
   text-transform: capitalize;
   margin-bottom: 40px;
+  font-family: "Playfair Display", serif;
 }
 
 .footer-container {
@@ -2943,14 +2971,33 @@ button.accordion:hover, button.accordion.is-open {
   background: transparent;
 }
 
+.form-contact .white-form{
+  border: 1px solid #131313;
+  border-radius: 10px;
+  height: 48px;
+  padding-left: 18px;
+  font-size: 13px;
+  background: white;
+  width: 100%;
+}
+
 /* line 69, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_contact.scss */
 .form-contact .form-control:focus {
+  outline: 0;
+  box-shadow: none;
+}
+.form-contact .white-form:focus {
   outline: 0;
   box-shadow: none;
 }
 
 /* line 74, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_contact.scss */
 .form-contact .form-control::placeholder {
+  font-weight: 300;
+  color: #999999;
+}
+
+.form-contact .white-form::placeholder {
   font-weight: 300;
   color: #999999;
 }
@@ -6071,7 +6118,7 @@ tbody tr:nth-child(even) {
 }
 
 tbody th {
-  background-color: rgb(156, 0, 0);
+  background-color: rgb(170, 5, 5);
   color: #fff;
   text-align: center;
 }
@@ -6080,5 +6127,11 @@ tbody th {
 }
 .himasfont{
   font-style: italic;
+}
+.custom-button-style
+{
+  width:70px;
+  height:30px;
+  text-align: center;
 }
 /*# sourceMappingURL=style.css.map */
