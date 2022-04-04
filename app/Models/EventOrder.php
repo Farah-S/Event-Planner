@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class EventOrder extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'order_id',
+        'event_id'
+    ];
 }
