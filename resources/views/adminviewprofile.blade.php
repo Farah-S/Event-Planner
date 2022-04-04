@@ -4,30 +4,35 @@
 <div class="speakers_area inc_padd ">
     <div class="container d-flex ">
         <div class="row test-pad">
-            <div class="col-lg-10 text-left">
+            <div class="col-lg-12 text-left">
                 <div class="card121">
                     <div class="single_speaker">
                         <div class="speaker_thumb">
                         <img src="{{ asset('img/speakers/1.png')}}" >
                         </div>
-                        <br>
-                        <div class="row justify-content-center test-pad ">
-                        <button type="submit" onclick="location.href = '{{route('user.editProfile')}}';" class="button button-contactForm boxed-btn">Edit profile</button>
-                        </div>
-                            <br>
-                            <div class="row justify-content-center test-pad ">
-                                
-                                <button type="submit" class="button button-contactForm boxed-btn">Delete Profile</button>
-                            
-                            </div><br>
-                            <div class="row justify-content-center test-pad ">
-                                
-                                <button type="submit" onclick="location.href = '{{route('customer.myorders')}}';" class="button button-contactForm boxed-btn">Show Orders</button>
-                            
-                            </div>
+                        
+                       
+                                        
                         </div>
                     </div>
+                    
                 </div>
+                <div class="col-md-4 text-left">
+
+                <button type="submit" onclick="location.href = '{{route('user.editProfile')}}';" class="button button-contactForm boxed-btn">Edit profile</button>
+</div>
+                            
+<div class="col-md-4 text-left">
+
+                                
+                        <button type="submit" class="button button-contactForm boxed-btn">Delete Profile</button>
+</div>
+                    
+                    
+<div class="col-md-4 text-left">
+
+                        <button type="submit" onclick="location.href = '{{route('customer.myorders')}}';" class="button button-contactForm boxed-btn">Show Orders</button>
+</div>
             </div>
             <div class = "col-lg-6 text-left">
                 <div class="card121">
