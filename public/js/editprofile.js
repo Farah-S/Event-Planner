@@ -27,11 +27,15 @@ $(document).ready(function(){
                 password: {
                     required: true,
                     minlength: 8
+                },
+                confirmpass: {
+                    required: true,
+                    minlength: 8
                 }
             },
             messages: {
                 fname: {
-                    required: "First name is required",
+                    required: "First name is requires",
                     minlength: "Your name must consist of at least 2 characters"
                 },
                 lname: {
@@ -42,6 +46,10 @@ $(document).ready(function(){
                     required: "Email is required"
                 },
                 password: {
+                    required: "Password is required",
+                    minlength: "Your password must consist of at least 8 characters"
+                },
+                confirmpass: {
                     required: "Password is required",
                     minlength: "Your password must consist of at least 8 characters"
                 }

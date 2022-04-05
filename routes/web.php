@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\homeController;
 use App\Http\Controllers\loginController;
-use App\Http\Controllers\signupController;
+use App\Http\Controllers\userController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,7 +17,7 @@ use App\Http\Controllers\signupController;
 
 /*-----------------------------------------shared files-----------------------------------------*/
 
-Route::get('/',[homeController::class,'index']);
+Route::get('/',[homeController::class,'index'])->name('home.home');
 
 Route::get('/cancelpolicy',[homeController::class,'cancelpolicy'])->name('home.cancelpolicy');
 
@@ -27,13 +27,13 @@ Route::get('/about',[homeController::class,'about'])->name('home.about');
 
 /*-----------------------------------------shared user files-----------------------------------------*/
 
-Route::get('signup',[signupController::class,'index'])->name('user.signup');
+Route::get('signup',[userController::class,'create'])->name('user.signup');
 
 Route::get('/login',[loginController::class,'index'])->name('user.login');
 
-Route::get('/myprofile',function(){return view('profile');})->name('user.profile');
+Route::get('/myprofile',[userController::class,'show'])->name('user.profile');
 
-Route::get('/editprofile',function(){return view('editprofile');})->name('user.editProfile');
+Route::get('/editprofile',[userController::class,'edit'])->name('user.editProfile');
 
 /*-----------------------------------------events files-----------------------------------------*/
 
@@ -65,3 +65,6 @@ Route::get('/allOrders',function(){return view('admins/allOrders');})->name('adm
 
 Route::get('/myorders',function(){return view('customers/myorders');})->name('customer.myorders');
 
+/*-----------------------------------------resources-----------------------------------------*/
+
+Route::resource('users',userController::class);

@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Requests\updateUser;
+use App\Http\Requests\createUser;
+use App\Models\User;
 
 class userController extends Controller
 {
@@ -11,7 +14,7 @@ class userController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()/*$id later it will display based on id*/
+    public function index($id)/* later it will display based on id*/
     {
         return view('profile');
     }
@@ -23,7 +26,9 @@ class userController extends Controller
      */
     public function create()
     {
-        //
+        //signup/creating a new user
+        return view('signup');
+        
     }
 
     /**
@@ -32,9 +37,18 @@ class userController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(createUser $request)
     {
-        //
+        $data=$request->validated();
+        $user=new User();
+        $user->first_name=$data['first_name']; 
+        $user->last_name=$data['last_name']; 
+        $user->email=$data['email'];
+        $user->password=$data['password'];
+        $user->image_id=1;
+        $user->user_type='customer';
+        $user->save();
+        return redirect()->route('home.home');
     }
 
     /**
@@ -43,9 +57,10 @@ class userController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show()
     {
-        //
+        $id=1;
+        return view('profile',['user'=>User::findOrFail($id)]);
     }
 
     /**
@@ -54,9 +69,9 @@ class userController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(User $user)
     {
-        //
+        return view('editProfile',['user'=>$user]);
     }
 
     /**
@@ -66,9 +81,17 @@ class userController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(updateUser $request,User $user)
     {
-        //
+        $data=$request->validated();
+        $user->first_name=$data['first_name']; 
+        $user->last_name=$data['last_name']; 
+        $user->email=$data['email'];
+        $user->password=$data['password'];
+        $user->image_id=1;
+        $user->user_type='admin'; 
+        $user->save();
+        return redirect()->route('user.profile');//,$user->id
     }
 
     /**
@@ -79,6 +102,9 @@ class userController extends Controller
      */
     public function destroy($id)
     {
-        //
+        
+        User::find($id)->delete();
+       
+        return redirect()->route('home.home');
     }
 }

@@ -50,7 +50,6 @@ $(document).ready(function(){
                 $(form).ajaxSubmit({
                     type:"POST",
                     data: $(form).serialize(),
-                    url:"contact_process.php",
                     success: function() {
                         $('#signupForm :input').attr('disabled', 'disabled');
                         $('#signupForm').fadeTo( "slow", 1, function() {
