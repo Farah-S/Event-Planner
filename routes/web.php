@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\homeController;
 use App\Http\Controllers\loginController;
 use App\Http\Controllers\userController;
+use App\Http\Controllers\customEventController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -31,7 +32,7 @@ Route::get('signup',[userController::class,'create'])->name('user.signup');
 
 Route::get('/login',[loginController::class,'index'])->name('user.login');
 
-Route::get('/myprofile',[userController::class,'show'])->name('user.profile');
+Route::get('/myprofile/{id}',[userController::class,'show'])->name('user.profile');
 
 Route::get('/editprofile',[userController::class,'edit'])->name('user.editProfile');
 
@@ -39,7 +40,7 @@ Route::get('/editprofile',[userController::class,'edit'])->name('user.editProfil
 
 Route::get('/events',function(){return view('events/events');})->name('events.events');
 
-Route::get('/events/customevent',function(){return view('events/customEvent');})->name('events.custom');
+Route::get('/events/customevent/{id}',[customEventController::class,'index'])->name('events.custom');
 
 /*-----------------------------------------prod house files-----------------------------------------*/
 
@@ -68,3 +69,4 @@ Route::get('/myorders',function(){return view('customers/myorders');})->name('cu
 /*-----------------------------------------resources-----------------------------------------*/
 
 Route::resource('users',userController::class);
+Route::resource('customEvents',customEventController::class);

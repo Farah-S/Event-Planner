@@ -62,13 +62,13 @@
                                         <li><a href="{{route('home.cancelpolicy')}}">Cancel Policy</a></li>
                                         <!-- if logged in Profile 
                                         <li><a href="{{route('customer.myorders')}}"><span class="fa-solid fa-cart-shopping"></span></a></li>
-                                        <li><a href="{{route('user.profile')}}"><span class="fa-solid fa-circle-user"></span></a>
+                                        --><li><a href="{{route('user.profile',[2])}}"><span class="fa-solid fa-circle-user"></span></a>
                                             <ul class="submenu">
-                                                <li class='test-li'><a href="{{route('user.profile')}}">My Profile</a></li>
+                                                <li class='test-li'><a href="{{ route('user.profile',[2]) }}">My Profile</a></li>
                                                 <li class='test-li'><a href="{{route('customer.myorders')}}">My Orders</a></li>
                                                 <li class='test-li'><a href="/">Sign Out</a></li>
                                             </ul>
-                                        </li>-->
+                                        </li>
                                         
                                         <!-- if not logged in-->
                                         <li><a href="{{route('user.login')}}"><span class="fa-solid fa-arrow-right-to-bracket"></span> LogIn</a></li>
@@ -202,7 +202,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 
     <!--validation js
     <script src="{{url('js/signup.js')}}"></script>
-<script src="{{url('js/editprofile.js')}}"></script>-->
+<script src="{{url('js/editprofile.js')}}"></script>    -->
     <script src="{{url('js/login.js')}}"></script>
     <script src="{{url('js/custom_event.js')}}"></script>
     <script src="{{url('js/addpackage.js')}}"></script>

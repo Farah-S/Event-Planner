@@ -5,7 +5,7 @@
 <div class="slider_area">
     </div>
 <div class="ibcontainer">
-                            <img src="img/speakers/1.png">
+                            <img src="{{ asset('img/speakers/1.png')}}">
                       
                         <div style = "position:relative; left:600px; bottom:450px;">
                         <div class="about_info">
@@ -28,9 +28,12 @@
                                 </div>
                             
                                 <div style = "position:relative; left:185px; bottom:210px;">
-                                
-                                <button type="submit" onclick="location.href = '{{route('users.destroy',['user'=>$user['id']])}}';" class="button button-contactForm boxed-btn">Delete Profile</button>
-                            
+                              
+                                <form action="{{route('users.destroy',['user'=>$user['id']])}}" method="POST">
+                                <input type="hidden" name="_method" value="DELETE">
+                                <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                                <input type="submit" class="button button-contactForm boxed-btn" value="Delete Profile">
+                                </form>
                                 </div>
                            
                                 <div style = "position:relative; left:385px; bottom:270px;">

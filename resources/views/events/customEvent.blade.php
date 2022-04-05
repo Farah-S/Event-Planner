@@ -9,7 +9,7 @@
                 <h3 class="slider center-title">Request a Custom Event</h3><br>
             </div>
             <div class="col-lg-8">
-                <form class="form-contact contact_form" action="contact_process.php" method="post" id="customEventForm" novalidate="novalidate">
+                <form class="form-contact contact_form" action="{{route('customEvents.store',[2])}}" method="post" id="customEventForm" novalidate="novalidate">
                     <div class="row">
                         <!-- diaplay current package image-->
                         <div class="form-group mt-3">

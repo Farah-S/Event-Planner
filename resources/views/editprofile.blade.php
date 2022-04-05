@@ -31,7 +31,7 @@
                                 </label>
                 </div>
                 <div class="form-group mt-3 align-mid">
-                                <button type="submit" class="button button-contactForm boxed-btn">Sign-Up</button>
+                                <button type="submit" class="button button-contactForm boxed-btn">Save</button>
                             </div>
                         </form>
             </div>

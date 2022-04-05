@@ -2,6 +2,7 @@
 
 namespace App\Http\Requests;
 
+
 use Illuminate\Foundation\Http\FormRequest;
 
 class createCustomEvent extends FormRequest
@@ -13,7 +14,7 @@ class createCustomEvent extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +25,14 @@ class createCustomEvent extends FormRequest
     public function rules()
     {
         return [
-            //
+            'details' => 'required|min:50',
+            'budget' => 'required'
         ];
+    }
+
+    protected function prepareForValidation(){
+        $this->merge([
+            'details' => strip_tags($this['details'])
+        ]);
     }
 }

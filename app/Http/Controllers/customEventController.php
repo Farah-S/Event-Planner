@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Http\Requests\createCustomEvent;
+use App\Models\customEvent;
 
 use Illuminate\Http\Request;
 
@@ -13,7 +15,7 @@ class customEventController extends Controller
      */
     public function index()
     {
-        //
+        return view('events.custom');
     }
 
     /**
@@ -32,9 +34,15 @@ class customEventController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(createCustomEvent $request, $id)
     {
-        //
+        $data=$request->validated();
+        $user=new customEvent();
+        $user->details=$data['details']; 
+        $user->budget=$data['budget']; 
+        $user->customer_id=$id;
+        $user->save();
+        return redirect()->route('home.home');
     }
 
     /**

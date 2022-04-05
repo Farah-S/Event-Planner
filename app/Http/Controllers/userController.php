@@ -57,9 +57,9 @@ class userController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show()
+    public function show($id)
     {
-        $id=1;
+        //$id=1;
         return view('profile',['user'=>User::findOrFail($id)]);
     }
 
@@ -102,9 +102,10 @@ class userController extends Controller
      */
     public function destroy($id)
     {
+        $category = User::find($id);
+        $category->delete();
+
+        return back()->with('success', 'Item is deleted successfully');
         
-        User::find($id)->delete();
-       
-        return redirect()->route('home.home');
     }
 }
