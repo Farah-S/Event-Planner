@@ -28,7 +28,7 @@ Route::get('/about',[homeController::class,'about'])->name('home.about');
 
 /*-----------------------------------------shared user files-----------------------------------------*/
 
-Route::get('signup',[userController::class,'create'])->name('user.signup');
+Route::get('/signup',[userController::class,'create'])->name('user.signup');
 
 Route::get('/login',[loginController::class,'index'])->name('user.login');
 
@@ -50,23 +50,24 @@ Route::get('/productionHouse/addPackage',function(){return view('productionHouse
 
 Route::get('/productionHouse/editPackage',function(){return view('productionHouse/editPackage');})->name('productionHouse.editPackage');
 
-Route::get('/packagedetails',function(){return view('packagedetails');})->name('productionHouse.packageDetails');
+Route::get('/productionHouse/packagedetails',function(){return view('packagedetails');})->name('productionHouse.packageDetails');
 
 /*-----------------------------------------admin files-----------------------------------------*/
 
 Route::get('/admin/viewprofile',function(){return view('adminviewprofile');})->name('admin.viewProfile');
 Route::get('/admin/viewprofiletst',function(){return view('testfile');})->name('admin.viewProfiletst');
 
+Route::get('/admin/viewallusers',function(){return view('viewallusers');})->name('admin.viewUsers');
 
-Route::get('/viewallusers',function(){return view('viewallusers');})->name('admin.viewUsers');
-
-Route::get('/allOrders',function(){return view('admins/allOrders');})->name('admin.allOrders');
+Route::get('/admin/allOrders',function(){return view('admins/allOrders');})->name('admin.allOrders');
 
 /*-----------------------------------------customer files-----------------------------------------*/
 
 Route::get('/myorders',function(){return view('customers/myorders');})->name('customer.myorders');
+Route::get('/test',function(){return view('test');})->name('test');
 
 /*-----------------------------------------resources-----------------------------------------*/
+
 
 Route::resource('users',userController::class);
 Route::resource('customEvents',customEventController::class);

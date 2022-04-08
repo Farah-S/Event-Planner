@@ -15,7 +15,7 @@ class customEventController extends Controller
      */
     public function index()
     {
-        return view('events.custom');
+        return view('events/customEvent');
     }
 
     /**

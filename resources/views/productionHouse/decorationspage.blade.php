@@ -34,7 +34,7 @@
                             <img src="img/Decorations/Ramadan2.jpg" alt="">
                             <div class="hover_overlay">
                                 <div class="social_icon">
-                                    <a href="#">Read More</a>
+                                    <a href="{{route('productionHouse.packageDetails')}}">Read More</a>
                                 </div>
                             </div>
                         </div>
@@ -48,7 +48,7 @@
                             <img src="img/Decorations/Easter.jpg" alt="">
                             <div class="hover_overlay">
                                 <div class="social_icon">
-                                <a href="#">Read More</a>
+                                <a href="{{route('productionHouse.packageDetails')}}">Read More</a>
                                 </div>
                             </div>
                         </div>
@@ -66,7 +66,7 @@
                             <img src="img/Decorations/xmas3.jpg" alt="">
                             <div class="hover_overlay">
                                 <div class="social_icon">
-                                <a href="#">Read More</a>
+                                <a href="{{route('productionHouse.packageDetails')}}">Read More</a>
                                 </div>
                             </div>
                         </div>
@@ -82,7 +82,7 @@
                             <img src="img/Decorations/h5.jpg" alt="">
                             <div class="hover_overlay">
                                 <div class="social_icon">
-                                <a href="#">Read More</a>
+                                <a href="{{route('productionHouse.packageDetails')}}">Read More</a>
                                 </div>
                             </div>
                         </div>

@@ -33,7 +33,7 @@ class createUser extends FormRequest
 
     protected function prepareForValidation(){
         $this->merge([
-            'first_name' => strip_tags($this['first_name']),
+            'firsame' => strip_tags($this['first_name']),
             'last_name' => strip_tags($this['last_name']),
             'email' => strip_tags($this->email),
             'password' => strip_tags($this->password)

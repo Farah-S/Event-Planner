@@ -59,13 +59,17 @@
                                         <li><a href="{{route('productionHouse.packages')}}">Production House</a></li>
                                         <li><a href="{{route('home.about')}}">About us</a></li>
                                         <li><a href="{{route('home.contact')}}">Contact us</a></li>
-                                        <li><a href="{{route('home.cancelpolicy')}}">Cancel Policy</a></li>
-                                        <!-- if logged in Profile 
+                                         <!--<li><a href="{{route('home.cancelpolicy')}}">Cancel Policy</a></li>
+                                        if logged in Profile 
                                         <li><a href="{{route('customer.myorders')}}"><span class="fa-solid fa-cart-shopping"></span></a></li>
                                         --><li><a href="{{route('user.profile',[2])}}"><span class="fa-solid fa-circle-user"></span></a>
                                             <ul class="submenu">
                                                 <li class='test-li'><a href="{{ route('user.profile',[2]) }}">My Profile</a></li>
+                                                <!-- if customer logged in-->
                                                 <li class='test-li'><a href="{{route('customer.myorders')}}">My Orders</a></li>
+                                                <!-- if admin logged in
+                                                <li class='test-li'><a href="{{route('admin.allOrders')}}">All Orders</a></li>
+                                                <li class='test-li'><a href="{{route('admin.viewUsers')}}">All Users</a></li>-->
                                                 <li class='test-li'><a href="/">Sign Out</a></li>
                                             </ul>
                                         </li>
