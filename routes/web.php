@@ -55,6 +55,7 @@ Route::get('/productionHouse/packagedetails',function(){return view('packagedeta
 /*-----------------------------------------admin files-----------------------------------------*/
 
 Route::get('/admin/viewprofile',function(){return view('adminviewprofile');})->name('admin.viewProfile');
+
 Route::get('/admin/viewprofiletst',function(){return view('testfile');})->name('admin.viewProfiletst');
 
 Route::get('/admin/viewallusers',function(){return view('viewallusers');})->name('admin.viewUsers');
@@ -68,6 +69,6 @@ Route::get('/test',function(){return view('test');})->name('test');
 
 /*-----------------------------------------resources-----------------------------------------*/
 
-
 Route::resource('users',userController::class);
+
 Route::resource('customEvents',customEventController::class);
