@@ -5,12 +5,18 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Item extends Model
+abstract class item extends baseEvent
 {
     use HasFactory;
 
-    protected $fillable = [
-        'price',
-        'color'
-    ];
+    protected $event;
+
+    public function setEvent($event)
+    {
+        $this->event=$event;
+    }
+
+    public function getEvent(){
+        return $this->event;
+    }
 }

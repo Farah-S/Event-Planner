@@ -19,6 +19,7 @@ return new class extends Migration
             $table->foreign('customer_id')->references('id')->on('users');
             $table->string('order_type');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
@@ -30,5 +31,6 @@ return new class extends Migration
     public function down()
     {
         Schema::dropIfExists('orders');
+        //$table->dropSoftDeletes();
     }
 };

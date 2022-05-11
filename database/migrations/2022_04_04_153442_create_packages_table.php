@@ -18,9 +18,10 @@ return new class extends Migration
             $table->string("name");
             $table->text("details");
             $table->float("price");
-            $table->boolean("hidden");
-            $table->string("season");
+            $table->boolean("hidden")->default(0);
+            $table->string("season")->default("None");
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
@@ -32,5 +33,6 @@ return new class extends Migration
     public function down()
     {
         Schema::dropIfExists('packages');
+        //$table->dropSoftDeletes();
     }
 };

@@ -13,12 +13,12 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('custom_orders', function (Blueprint $table) {
+        Schema::create('decorations', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('order_id');
-            $table->foreign('order_id')->references('id')->on('orders');
-            $table->foreignId('custom_event_id');
-            $table->foreign('custom_event_id')->references('id')->on('custom_events');
+            $table->unsignedBigInteger('event_id')->index();
+            $table->foreign('event_id')->references('id')->on('events')->onDelete('cascade');
+            $table->float('budget');
+            $table->text("details");
             $table->timestamps();
         });
     }
@@ -30,6 +30,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('custom_orders');
+        Schema::dropIfExists('decorations');
     }
 };

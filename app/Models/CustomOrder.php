@@ -9,6 +9,8 @@ class CustomOrder extends Model
 {
     use HasFactory;
 
+    protected $table='custom_event_order';
+
     protected $fillable = [
         'order_id',
         'custom_event_id'

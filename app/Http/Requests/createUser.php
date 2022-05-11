@@ -23,11 +23,31 @@ class createUser extends FormRequest
      */
     public function rules()
     {
+        if($this->hasFile('image')){
+            return [
+                        'first_name' => 'required|min:2',
+                        'last_name' => 'required|min:2',
+                        'email' => 'required|email|unique:users',
+                        'password' => 'required|min:8',
+                        'image' => 'mimes:jpeg,png,jpg,gif|size:1024'
+                    ];
+        }
+
         return [
             'first_name' => 'required|min:2',
             'last_name' => 'required|min:2',
             'email' => 'required|email|unique:users',
             'password' => 'required|min:8'
+        ];
+    }
+
+    public function messages()
+    {
+        return [
+            'first_name.required' => 'First name is required',
+            'last_name.required' => 'Last name is required',
+            'email.required' => 'Email is required',
+            'password.required' => 'Password is required'
         ];
     }
 

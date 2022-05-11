@@ -13,12 +13,12 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('package_orders', function (Blueprint $table) {
+        Schema::create('led_screens', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('order_id');
-            $table->foreign('order_id')->references('id')->on('orders');
-            $table->foreignId('package_id');
-            $table->foreign('package_id')->references('id')->on('packages');
+            $table->unsignedBigInteger('event_id')->index();
+            $table->foreign('event_id')->references('id')->on('events')->onDelete('cascade');
+            $table->string('size');
+            $table->integer('numberOfScreens');
             $table->timestamps();
         });
     }
@@ -30,6 +30,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('package_orders');
+        Schema::dropIfExists('led_screens');
     }
 };

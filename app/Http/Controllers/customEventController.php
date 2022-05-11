@@ -30,18 +30,27 @@ class customEventController extends Controller
 
     /**
      * Store a newly created resource in storage.
-     *
+     * 
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(createCustomEvent $request, $id)
+    public function store(createCustomEvent $request)
     {
         $data=$request->validated();
-        $user=new customEvent();
-        $user->details=$data['details']; 
-        $user->budget=$data['budget']; 
-        $user->customer_id=$id;
-        $user->save();
+        $event=new customEvent();
+        $event->details=strip_tags($data['details']); 
+        $event->budget=$data['budget'];
+         
+        if($request->has('indoors')){
+            $event->indoors=true;
+        }
+        else{
+            $event->indoors=false;
+        }
+        $userid=$request->id;
+        $event->save();
+        $eventid=$event->id;
+        app(orderController::class)->create($userid,$eventid,'customEvent');
         return redirect()->route('home.home');
     }
 
@@ -53,7 +62,7 @@ class customEventController extends Controller
      */
     public function show($id)
     {
-        //
+        return $event = customEvent::findOrFail($id);
     }
 
     /**

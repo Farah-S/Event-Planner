@@ -126,6 +126,32 @@ h6 a {
   color: inherit;
 }
 
+.link h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+  color: brown;
+}
+
+.checkbox-label form-contact  label{
+  color:black;
+  font-size: large;
+}
+
+
+.link{
+  color: #d1667a ; 
+  /* color: blue; */
+}
+.link:hover{
+  color: #d80000 !important;
+}
+.link:visited {
+  color: #d1667a;
+  /* color: blue; */
+}
 /* line 57, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_reset.scss */
 ul {
   margin: 0px;
@@ -147,13 +173,25 @@ p {
   margin-bottom: 13px;
   font-family: "Poppins", sans-serif;
 }
+.disable-select {
+  user-select: none; /* supported by Chrome and Opera */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+}
 
 /* line 73, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_reset.scss */
 label {
-  color: #7e7e7e;
+  color: #f50808;
   cursor: pointer;
   font-size: 14px;
   font-weight: 400;
+}
+
+.required{
+  font-size:16px; 
+  color:black;
 }
 
 /* line 79, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_reset.scss */
@@ -1179,12 +1217,50 @@ padding-left: 15%;
   color: #b61d1d;
   text-align: center;
 }
+.center-title-events{
+  font-size: 75px;
+  color: #b61d1d;
+  text-align: center;
+  user-select: none; /* supported by Chrome and Opera */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+}
 .form-item-title{
   font-size: 35px;
   color: black;
   text-align: left;
+  user-select: none; /* supported by Chrome and Opera */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
 }
 
+.inner-form-item-title{
+  font-size: 30px;
+  /* font-family: "Playfair Display", serif; */
+  color: black;
+  text-align: left;
+  user-select: none; /* supported by Chrome and Opera */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+}
+
+.outer-div {
+  /* width: 200px; */
+  margin: 0 auto;
+  /* background-color: yellow; */
+}
+
+.inner-div {
+  margin-left: 9%;
+  /* display:none; */
+  /* background-color: orange; */
+}
 
 @media (max-width: 767px) {
   /* line 22, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_slider.scss */
@@ -2640,7 +2716,7 @@ button.accordion:hover, button.accordion.is-open {
 /* line 139, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_footer.scss */
 .footer .copy-right_text .copy_right {
   font-size: 13px;
-  color: rgb(0, 0, 0);
+  color: rgb(0, 0, 0,0.2);
   margin-bottom: 0;
   font-weight: 400;
 }
@@ -2654,7 +2730,7 @@ button.accordion:hover, button.accordion.is-open {
 
 /* line 147, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_footer.scss */
 .footer .copy-right_text .copy_right a {
-  color: rgb(0, 0, 0);
+  color: rgb(0, 0, 0,0.2);
 }
 
 /* line 152, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_footer.scss */
@@ -2947,6 +3023,29 @@ button.accordion:hover, button.accordion.is-open {
   font-size: 14px;
 }
 
+label.checkbox-label {
+  font-size: 35px;
+  color: black;
+  font-family: "Cookie", 'cursive';
+  user-select: none; /* supported by Chrome and Opera */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+}
+
+label.radio-label {
+  font-size: 28px;
+  color: black;
+  font-family: "Cookie", 'cursive';
+  user-select: none; /* supported by Chrome and Opera */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+}
+
+
 .image-label{
   width:60px;
   display: inline-block;
@@ -2975,7 +3074,17 @@ button.accordion:hover, button.accordion.is-open {
   border: 1px solid #131313;
   border-radius: 10px;
   height: 48px;
-  padding-left: 18px;
+  padding-left: 3%;
+  font-size: 13px;
+  background: white;
+  width: 100%;
+}
+
+.form-contact .white-form-inner{
+  border: 1px solid #131313;
+  border-radius: 10px;
+  height: 42px;
+  padding-left: 3%;
   font-size: 13px;
   background: white;
   width: 100%;
@@ -6133,5 +6242,24 @@ tbody th {
   width:70px;
   height:30px;
   text-align: center;
+}
+
+table.order-table{
+  clear: both;
+  border: none;
+  border-style: none;
+  background-color: transparent;
+}
+tr.order-table{
+  border: none;
+  background-color: transparent;
+}
+td.order-table{
+  border: none;
+  background-color: transparent;
+}
+tbody tr:nth-child(even).order-table {
+  border: none;
+  background-color: transparent;
 }
 /*# sourceMappingURL=style.css.map */

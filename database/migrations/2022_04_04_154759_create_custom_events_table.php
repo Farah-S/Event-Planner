@@ -17,9 +17,11 @@ return new class extends Migration
             $table->id();
             $table->text("details");
             $table->float("budget");
-            $table->foreignId('customer_id');
-            $table->foreign('customer_id')->references('id')->on('users');
+            $table->boolean("indoors")->default(0);
+            //$table->foreignId('customer_id');
+            //$table->foreign('customer_id')->references('id')->on('users');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
@@ -31,5 +33,6 @@ return new class extends Migration
     public function down()
     {
         Schema::dropIfExists('custom_events');
+        //$table->dropSoftDeletes();
     }
 };

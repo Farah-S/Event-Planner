@@ -45,17 +45,18 @@
                             <div class="main-menu  d-none d-lg-block">
                                 <nav>
                                     <ul id="navigation">
-                                        <!--<li><a class="active" href="/">Home</a></li>
+                                        <li><a class="active" href="/">Home</a></li>
                                         <li><a href="{{route('events.events')}}">Events<i class="ti-angle-down"></i></a>
                                             <ul class="submenu">
-                                                <li class='test-li'><a href="/conferences">Conferences</a></li>
-                                                <li class='test-li'><a href="#">Anniversaries</a></li>
-                                                <li class='test-li'><a href="#">Corporate Events</a></li>
-                                                <li class='test-li'><a href="#">Welcome Parties</a></li>
+                                                <li class='test-li'><a href="#">Conferences</a></li>
+                                                <li class='test-li'><a href="{{route('events.anniversary')}}">Anniversaries</a></li>
+                                                <li class='test-li'><a href="#">Branding</a></li>
+                                                <li class='test-li'><a href="{{route('events.welcomeparty')}}">Welcome Parties</a></li>
                                                 <li class='test-li'><a href="#">Graduations</a></li>
+                                                <li class='test-li'><a href="{{route('events.events')}}">View All</a></li>
                                             </ul>
-                                        </li>-->
-                                        <li><a href="{{route('events.events')}}">Events</a></li>
+                                        </li>
+                                        <!-- <li><a href="{{route('events.events')}}">Events</a></li> -->
                                         <li><a href="{{route('productionHouse.packages')}}">Production House</a></li>
                                         <li><a href="{{route('home.about')}}">About us</a></li>
                                         <li><a href="{{route('home.contact')}}">Contact us</a></li>
@@ -206,9 +207,9 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 
     <!--validation js
     <script src="{{url('js/signup.js')}}"></script>
-<script src="{{url('js/editprofile.js')}}"></script>    -->
+    <script src="{{url('js/editprofile.js')}}"></script>
+    <script src="{{url('js/custom_event.js')}}"></script>    -->
     <script src="{{url('js/login.js')}}"></script>
-    <script src="{{url('js/custom_event.js')}}"></script>
     <script src="{{url('js/addpackage.js')}}"></script>
     <script src="{{url('js/editPackage.js')}}"></script>
     

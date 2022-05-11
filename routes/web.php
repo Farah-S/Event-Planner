@@ -5,6 +5,8 @@ use App\Http\Controllers\homeController;
 use App\Http\Controllers\loginController;
 use App\Http\Controllers\userController;
 use App\Http\Controllers\customEventController;
+use App\Http\Controllers\eventController;
+use App\Http\Controllers\orderController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -38,10 +40,26 @@ Route::get('/editprofile',[userController::class,'edit'])->name('user.editProfil
 
 /*-----------------------------------------events files-----------------------------------------*/
 
-Route::get('/events',function(){return view('events/events');})->name('events.events');
+Route::get('/events',[eventController::class,'index'])->name('events.events');
+
+Route::get('/events/welcomeparty',[eventController::class,'welcomePartyForm'])->name('events.welcomeparty');
+
+Route::post('/storeWelcomeParty',[eventController::class,'storeWelcomeParty'])->name('events.storeWelcomeParty');
+
+Route::get('/events/anniversary',[eventController::class,'anniversaryForm'])->name('events.anniversary');
+
+Route::post('/storeAnniversary',[eventController::class,'storeAnniversary'])->name('events.storeAnniversary');
+
+Route::get('/events/newproduct',[eventController::class,'newProductForm'])->name('events.newproduct');
+
+Route::post('/storeNewProduct',[eventController::class,'storeNewProduct'])->name('events.storeNewProduct');
 
 Route::get('/events/customevent/{id}',[customEventController::class,'index'])->name('events.custom');
 
+/* Route::controller(customEventController::class)->group(function () {
+    Route::post('/events/customevent/', 'store')->name('custom.store');
+});
+ */
 /*-----------------------------------------prod house files-----------------------------------------*/
 
 Route::get('/productionHouse',function(){return view('productionHouse/decorationspage');})->name('productionHouse.packages');
@@ -60,7 +78,7 @@ Route::get('/admin/viewprofiletst',function(){return view('testfile');})->name('
 
 Route::get('/admin/viewallusers',function(){return view('viewallusers');})->name('admin.viewUsers');
 
-Route::get('/admin/allOrders',function(){return view('admins/allOrders');})->name('admin.allOrders');
+Route::get('/admin/allOrders',[orderController::class,'index'])->name('admin.allOrders');
 
 /*-----------------------------------------customer files-----------------------------------------*/
 

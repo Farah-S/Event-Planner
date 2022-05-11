@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::table('users', function (Blueprint $table) {
             $table->string('last_name');
             $table->foreignId('image_id');
-            $table->foreign('image_id')->references('id')->on('images');
+            $table->foreign('image_id')->references('id')->on('images')->onDelete('cascade');
             $table->string('user_type');
         });
     }
@@ -30,7 +30,8 @@ return new class extends Migration
     {
         Schema::table('users', function (Blueprint $table) {
             $table->dropColumn('last_name');
-            $table->dropColumn('image_id');
+            //$table->dropColumn('image_id');
+            $table->dropForeign(['image_id']);
             $table->dropColumn('user_type');
         });
     }

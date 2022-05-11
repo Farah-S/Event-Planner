@@ -15,9 +15,18 @@ return new class extends Migration
     {
         Schema::create('events', function (Blueprint $table) {
             $table->id();
-            $table->boolean("indoors");
-            $table->float("price");
+            $table->boolean("indoors")->default(0);
+            $table->boolean("soundSetup")->default(0);
+            $table->float("stageLength")->default(0);
+            $table->float("stageWidth")->default(0);
+            $table->string("lightsColor")->default("None");
+            $table->boolean("photo")->default(0);
+            $table->boolean("video")->default(0);
+            $table->float("budget")->default(0);
+            $table->boolean("plixie")->default(0);
+            $table->string("type")->default("None");
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
@@ -29,5 +38,6 @@ return new class extends Migration
     public function down()
     {
         Schema::dropIfExists('events');
+        //$table->dropSoftDeletes();
     }
 };
