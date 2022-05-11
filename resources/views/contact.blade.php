@@ -10,7 +10,7 @@
                     <div class="row">
                             <div class="col-xl-8 col-lg-8">
                                 <div class="title_text title_text2 ">
-                                    <h3 class='slider'>Contact Us</h3>
+                                    <h3 class='slider' style="color:#b61d1d">Contact Us</h3>
                                     <!--
                                     <a href="#" class="boxed-btn-white">Add to your Calendar</a>
                                     -->
