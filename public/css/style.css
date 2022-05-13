@@ -1188,6 +1188,7 @@ ul:hover>.submenu{
   font-family: "Cookie", 'cursive';
 }
 
+
 .slider2{
   font-size: 50px;
   color: #b61d1d;
@@ -1206,17 +1207,42 @@ ul:hover>.submenu{
 text-align: center;
 justify-content: center;
 }
+
 .align-left
 {
 text-align: left;
 justify-content: left;
 padding-left: 15%;
 }
+
 .center-title{
   font-size: 55px;
   color: #b61d1d;
   text-align: center;
 }
+
+.orders-title{
+  font-size: 100px;
+  font-weight: 400;
+  font-family: "Cookie", 'cursive';
+}
+
+.orders-sections{
+  font-size: 45px;
+  font-weight: 200;
+  color: black;
+  text-align: center;
+  font-family: "Cookie", 'cursive';
+}
+
+/* .orders-details{
+  font-size: larger;
+  font-weight: 450;
+  color: black;
+  text-align: center;
+  font-family: "Cookie", 'cursive';
+} */
+
 .center-title-events{
   font-size: 75px;
   color: #b61d1d;
@@ -1350,6 +1376,8 @@ button.accordion:hover, button.accordion.is-open {
 
 .accordion-content {
   background-color: white;
+  background-color: azure;
+  border-radius: 3.5rem;
   border-left: 1px solid whitesmoke;
   border-right: 1px solid whitesmoke;
   padding: 0 20px;
@@ -6264,6 +6292,10 @@ td.order-table{
   word-wrap: break-word;       /* Internet Explorer 5.5+ */
   word-break: break-all;
   white-space: normal;
+  font-size: larger;
+  font-weight: 400;
+  color: black;
+  text-align: center;
 }
 tbody tr:nth-child(even).order-table {
   border: none;

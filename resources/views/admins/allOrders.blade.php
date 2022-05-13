@@ -5,7 +5,7 @@
     <div class="container">
         <div class="row" style="justify-content:center">
             <div class="col-12">
-                <h3 class="slider center-title">All Orders</h3><br>
+                <h3 class=" center-title orders-title">All Orders</h3><br>
             </div>
             @if(count($orders)>0)
             <?php $j=0; ?>
@@ -24,7 +24,11 @@
                                 <a class="order-button"> Date created: {{ $order->created_at }}</a>
                             </div>  
                             <div class="order-column2">
+                                @if($order->order_type=='event')
+                                <a class="order-button"> Order Type: {{ $order->type }}</a>
+                                @else
                                 <a class="order-button"> Order Type: {{ $order->order_type }}</a>
+                                @endif
                             </div>    
                         </div>
                     </button>
@@ -41,10 +45,10 @@
                                         $table=$event->getType();
                                     }
                                 ?>
-                                <h3 style='text-align:center'>{{$order->type}}</h3>
+                                <!-- <h3 style='text-align:center'>{{$order->type}}</h3> -->
                                 <br>
                                 <table class='order-table'>
-                                    <h3 style='text-align:center'>General</h3>
+                                    <h3 class='orders-sections'>General</h3>
                                     <tr class='order-table'>
                                         <td class='order-table'>
                                         Indoors Event: 
@@ -123,7 +127,7 @@
                                 @if(array_key_exists("table",$items))
                                     <br>
                                     <table class='order-table'>
-                                        <h3 style='text-align:center'>Tables & Chairs</h3>
+                                        <h3  class='orders-sections'>Tables & Chairs</h3>
                                         <tr class='order-table'>
                                             <td class='order-table'>
                                                 Number of Chairs:
@@ -169,7 +173,7 @@
                                 @if(array_key_exists("marketing",$items))
                                     <br>
                                     <table class='order-table'>
-                                        <h3 style='text-align:center'>Marketing</h3>
+                                        <h3  class='orders-sections'>Marketing</h3>
                                         <tr class='order-table'>
                                             <td class='order-table'>
                                                 Online Advertisement:
@@ -199,7 +203,7 @@
                                 @if(array_key_exists("ledScreen",$items))
                                     <br>
                                     <table class='order-table'>
-                                        <h3 style='text-align:center'>LED Screens</h3>
+                                        <h3  class='orders-sections'>LED Screens</h3>
                                         <tr class='order-table'>
                                             <td class='order-table'>
                                                 Size:
@@ -221,7 +225,7 @@
                                 @if(array_key_exists("centerpiece",$items))
                                     <br>
                                     <table class='order-table'>
-                                        <h3 style='text-align:center'>Centerpiece</h3>
+                                        <h3  class='orders-sections'>Centerpiece</h3>
                                         <tr class='order-table'>
                                             <td class='order-table'>
                                                 Flowers color:
@@ -242,7 +246,7 @@
                                 @endif
                                 @if(array_key_exists("decoration",$items))
                                     <br>
-                                    <h3 style='text-align:center'>Decorations</h3>
+                                    <h3  class='orders-sections'>Decorations</h3>
                                     <table class='order-table'>
                                         <tr class='order-table'>
                                             <td class='order-table'>
@@ -268,7 +272,7 @@
                     @elseif($order->order_type=='customEvent')
                         <div class="accordion-content">
                             <p>
-                                <h3 style='text-align:center'>Custom Event</h3>
+                                <h3  class='orders-sections'>Custom Event</h3>
                                 <table class='order-table'>
                                     <tr class='order-table'>
                                         <td class='order-table'>
@@ -300,7 +304,7 @@
                     @else
                         <div class="accordion-content">
                             <p>
-                                <h3 style='text-align:center'>Package</h3>
+                                <h3  class='orders-sections'>Package</h3>
                                 <table class='order-table'>
                                     <tr class='order-table'>
                                         <td class='order-table'>
