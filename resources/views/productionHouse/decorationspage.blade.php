@@ -1,5 +1,5 @@
 @extends('layout')
-@section('title','Decoration Page')
+@section('title','Production House Packages')
 @section('content')
 
 <!-- slider_area_start
@@ -25,7 +25,7 @@
                     <h3 class=" slider slider2 align-left" style="color:black;font-size:70px">Production House</h3>
                 </div>
             </div>
-
+        
         <div class="container">
             <div class="doqrow">
                 <div class="column">
@@ -57,8 +57,20 @@
                             <p>Pick the Easter Package you like with variable prices</p>
                         </div>
                     </div>
-        
-
+                    <div class="single_speaker">
+                        <div class="speaker_thumb">
+                            <img src="img/Decorations/Easter.jpg" alt="">
+                            <div class="hover_overlay">
+                                <div class="social_icon">
+                                <a href="{{route('productionHouse.packageDetails')}}">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="speaker_name text-center">
+                            <h3>Easter</h3>
+                            <p>Pick the Easter Package you like with variable prices</p>
+                        </div>
+                    </div>
                 </div>
                 <div class="column">
                     <div class="single_speaker">

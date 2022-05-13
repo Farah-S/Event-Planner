@@ -6,10 +6,10 @@
     <div class="container border-right border-left">
         <div class="row" style="justify-content:center">
             <div class="col-12">
-                <h3 class="slider center-title">Package Name</h3><br>
+                <h3 class="slider center-title">{{$package->name}}</h3><br>
             </div>
             <div class="col-lg-8">
-                <form class="form-contact contact_form" action="#" method="post" id="editPackageForm" novalidate="novalidate">
+                <form class="form-contact contact_form" action="{{route('productionHouse.updatePackage')}}" method="post" id="editPackageForm" novalidate="novalidate">
                     <div class="row">
                         <!-- diaplay current package image-->
                         <div class="form-group mt-3">

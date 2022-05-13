@@ -7,6 +7,8 @@ use App\Http\Controllers\userController;
 use App\Http\Controllers\customEventController;
 use App\Http\Controllers\eventController;
 use App\Http\Controllers\orderController;
+use App\Http\Controllers\packageController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -62,11 +64,13 @@ Route::get('/events/customevent/{id}',[customEventController::class,'index'])->n
  */
 /*-----------------------------------------prod house files-----------------------------------------*/
 
-Route::get('/productionHouse',function(){return view('productionHouse/decorationspage');})->name('productionHouse.packages');
+Route::get('/productionHouse',[packageController::class,'index'])->name('productionHouse.packages');
 
 Route::get('/productionHouse/addPackage',function(){return view('productionHouse/addPackage');})->name('productionHouse.addPackage');
 
-Route::get('/productionHouse/editPackage',function(){return view('productionHouse/editPackage');})->name('productionHouse.editPackage');
+Route::get('/productionHouse/editPackage',[packageController::class,'edit'])->name('productionHouse.editPackage');
+
+Route::get('/updatePackage',[packageController::class,'update'])->name('productionHouse.updatePackage');
 
 Route::get('/productionHouse/packagedetails',function(){return view('packagedetails');})->name('productionHouse.packageDetails');
 
