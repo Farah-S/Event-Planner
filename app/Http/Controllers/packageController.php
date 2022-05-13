@@ -69,9 +69,17 @@ class packageController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(packageRequest $request, $id)
+    public function update(packageRequest $request, package $package)
     {
+        $data=$request->validated();
         
+        $package = package::find($package->id);
+        $package->name=$data['name']; 
+        $package->price=$data['price']; 
+        $package->season=$data['season'];
+        $package->details=$data['details'];
+        $package->save();
+        return redirect()->route('productionHouse.packages');//,$package->id
     }
 
     /**

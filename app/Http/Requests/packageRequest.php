@@ -13,7 +13,7 @@ class packageRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,18 @@ class packageRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'name' => 'required|string|min:2',
+            'details'=> 'required|min:20|max:250',
+            'price'=> 'required',
+            'season'=> 'required|string|min:3'
         ];
+    }
+    
+    protected function prepareForValidation(){
+        $this->merge([
+            'name' => strip_tags($this['name']),
+            'details' => strip_tags($this['details']),
+            'season' => strip_tags($this['season'])
+        ]);
     }
 }

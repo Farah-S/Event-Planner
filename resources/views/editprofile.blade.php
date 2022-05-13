@@ -12,7 +12,7 @@
             <div class="col-12">
                     <h3 class=" slider slider2 align-mid">Edit Profile</h3>
                     </div>
-            <form class="form-contact contact_form" action="{{route('users.update',['user'=>$user->id])}}" method="post" id="editProfileForm" novalidate="novalidate">
+            <form class="form-contact contact_form" action="{{route('users.update',['user'=>$user])}}" method="post" id="editProfileForm" novalidate="novalidate">
                 @csrf
                 @method('PUT')       
                 <div class="row mt-2">

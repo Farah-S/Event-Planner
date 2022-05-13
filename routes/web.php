@@ -68,9 +68,9 @@ Route::get('/productionHouse',[packageController::class,'index'])->name('product
 
 Route::get('/productionHouse/addPackage',function(){return view('productionHouse/addPackage');})->name('productionHouse.addPackage');
 
-Route::get('/productionHouse/editPackage',[packageController::class,'edit'])->name('productionHouse.editPackage');
+Route::get('/productionHouse/editPackage/{package}',[packageController::class,'edit'])->name('productionHouse.editPackage');
 
-Route::get('/updatePackage',[packageController::class,'update'])->name('productionHouse.updatePackage');
+Route::post('/updatePackage/{package}',[packageController::class,'update'])->name('productionHouse.updatePackage');
 
 Route::get('/productionHouse/packagedetails',function(){return view('packagedetails');})->name('productionHouse.packageDetails');
 
