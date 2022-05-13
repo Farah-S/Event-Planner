@@ -34,7 +34,7 @@ class orderController extends Controller
             ->join('event_order', 'event_order.order_id', '=', 'orders.id')
             ->join('events', 'event_order.event_id', '=', 'events.id')
             ->select('users.first_name','users.last_name', 'orders.id AS orderID','events.*','orders.order_type')
-            ->orderBy('orders.id', 'asc')
+            ->orderBy('orders.id', 'desc')
             ->get(); 
         $wrapped_events=array();
         $i=0;
@@ -115,7 +115,7 @@ class orderController extends Controller
             ->join('custom_event_order', 'custom_event_order.order_id', '=', 'orders.id')
             ->join('custom_events', 'custom_event_order.custom_event_id', '=', 'custom_events.id')
             ->select('users.first_name','users.last_name', 'orders.id AS orderID','custom_events.*','orders.order_type')
-            ->orderBy('orders.id', 'asc')
+            ->orderBy('orders.id', 'desc')
             ->get(); 
         
         $packages = DB::table('users')
@@ -123,12 +123,12 @@ class orderController extends Controller
             ->join('order_package', 'order_package.order_id', '=', 'orders.id')
             ->join('packages', 'order_package.package_id', '=', 'packages.id')
             ->select('users.first_name','users.last_name', 'orders.id AS orderID','packages.*','orders.order_type')
-            ->orderBy('orders.id', 'asc')
+            ->orderBy('orders.id', 'desc')
             ->get(); 
 
         $orders=$events->merge($customs);
-        $orders=$orders->merge($packages);
-        //$orders=$orders->merge($packages)->sortByDesc('orderID')->values();
+        //$orders=$orders->merge($packages);
+        $orders=$orders->merge($packages)->sortByDesc('orderID')->values();
         
         //dd($orders);
         //$orders=Order::all();
