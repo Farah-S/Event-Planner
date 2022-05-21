@@ -15,8 +15,8 @@ class packageController extends Controller
      */
     public function index()
     {
-        $packages=package::all();
-        return view('/productionHouse/decorationspage',['packages'=>$packages]);
+        //$packages=package::all();
+        return view('/productionHouse/decorationspage'); //,['packages'=>$packages]
     }
 
     /**

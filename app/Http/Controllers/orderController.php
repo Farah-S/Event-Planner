@@ -38,7 +38,6 @@ class orderController extends Controller
             ->get(); 
         $wrapped_events=array();
         $i=0;
-        //$events=$events->sortByDesc('orderID')->values();
         foreach($events as $e){
             $array=(array)$e;
             $array['type']='event';
@@ -47,48 +46,28 @@ class orderController extends Controller
             $wrapped_events[$i]=$event;
             $deco=decoration::where('event_id', '=', $e->id)->first();
             if($deco!=NULL){
-                /* if(!empty($wrapped_events)){
-                    $deco->setEvent($wrapped_events[$i]);
-                }
-                else{
-                    $deco->setEvent($event);
-                } */
+                
                 $deco->setEvent($wrapped_events[$i]);
                 $deco->setType("decoration");
                 $wrapped_events[$i]=$deco;
             }  
             $cp=centerpiece::where('event_id', '=', $e->id)->first();
             if($cp!=NULL){
-                /* if(!empty($wrapped_events)){
-                    $cp->setEvent($wrapped_events[$i]);
-                }
-                else{
-                    $cp->setEvent($event);
-                } */
+                
                 $cp->setEvent($wrapped_events[$i]);
                 $cp->setType("centerpiece");
                 $wrapped_events[$i]=$cp;
             }
             $led=ledScreen::where('event_id', '=', $e->id)->first();
             if($led!=NULL){
-                /* if(!empty($wrapped_events)){
-                    $led->setEvent($wrapped_events[$i]);
-                }
-                else{
-                    $led->setEvent($event);
-                } */
+                
                 $led->setEvent($wrapped_events[$i]);
                 $led->setType("ledScreen");
                 $wrapped_events[$i]=$led;
             } 
             $marketing=marketing::where('event_id', '=', $e->id)->first();
             if($marketing!=NULL){
-                /* if(!empty($wrapped_events)){
-                    $marketing->setEvent($wrapped_events[$i]);
-                }
-                else{
-                    $marketing->setEvent($event);
-                } */
+                
                 $marketing->setEvent($wrapped_events[$i]);
                 $marketing->setType("marketing");
                 $wrapped_events[$i]=$marketing;
@@ -96,12 +75,7 @@ class orderController extends Controller
             } 
             $tables=table::where('event_id', '=', $e->id)->first();
             if($tables!=NULL){
-                /* if(!empty($wrapped_events)){
-                    $tables->setEvent($wrapped_events[$i]);
-                }
-                else{
-                    $tables->setEvent($event);
-                } */
+                
                 $tables->setEvent($wrapped_events[$i]);
                 $tables->setType("table");
                 $wrapped_events[$i]=$tables;
@@ -109,7 +83,6 @@ class orderController extends Controller
             $i+=1;
         }
         
-        //dd($wrapped_events);
         $customs = DB::table('users')
             ->join('orders', 'users.id', '=', 'orders.customer_id')
             ->join('custom_event_order', 'custom_event_order.order_id', '=', 'orders.id')
@@ -127,19 +100,8 @@ class orderController extends Controller
             ->get(); 
 
         $orders=$events->merge($customs);
-        //$orders=$orders->merge($packages);
         $orders=$orders->merge($packages)->sortByDesc('orderID')->values();
         
-        //dd($orders);
-        //$orders=Order::all();
-        /*View('admins/allOrders')
-        ->with('orders', Order::all())
-        ->with('users', User::all())
-        ->with('event', Event::all())
-        ->with('custom', customEvent::all())
-        ->with('package', package::all()); */
-        //return view('admins/allOrders',['orders'=>Order::all()]);
-        //if($wrapped_events)
         return view('admins/allOrders',['events'=>$wrapped_events,'orders'=>$orders]);
     }
 
