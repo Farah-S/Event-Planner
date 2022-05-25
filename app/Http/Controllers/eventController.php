@@ -122,20 +122,36 @@ class eventController extends Controller
     public function storeAnniversary(newAnniversaryRequest $request)
     {
         $data=$request->validated();
-        $event=new Event();
-        /* $event->details=strip_tags($data['details']); 
-        $event->budget=$data['budget'];
-         
-        if($request->has('indoors')){
-            $event->indoors=true;
+        $eventID=$this->store($request,'New Product');
+        $event = Event::find($eventID);
+        
+        $data['event_id'] = $eventID;
+
+        if($request->has('table')){
+            $tables=table::create($data);
+
+            if($request->elseTableShape!=''){
+                $tables->tableShape=$data['elseTableShape'];
+            }
+            else if($request->tableShape=='else'){
+                $tables->tableShape='any';
+            }
+
+            $event->tables()->save($tables);
         }
-        else{
-            $event->indoors=false;
+
+        if($request->has('cp')){
+            $centerpiece=centerpiece::create($data);
+            $event->centerpiece()->save($centerpiece);
         }
-        $userid=$request->id;
-        $event->save();
-        $eventid=$event->id;
-        app(orderController::class)->create($userid,$eventid,'customEvent'); */
+
+        if($request->has('decorations')){
+            $decorations=new decoration();
+            $decorations->details=$data['decodetails'];
+            $decorations->budget=$data['decoBudget'];
+            $event->decoration()->save($decorations);
+        }
+    
         return redirect()->route('home.home');
     }
 

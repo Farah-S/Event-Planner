@@ -30,11 +30,6 @@ class newAnniversaryRequest extends FormRequest
             'numberOfTables'=> 'required_with:table,on',
             'clothColor'=> 'required_with:table,on',
             'chairColor'=> 'required_with:table,on',
-            // 'else'=> 'required_without:rectangular,round,square|string',
-            // 'else'=> 'sometimes',
-            // 'elseTableShape'=> [Rule::when('required_with:else,on', ['required'])],
-            // 'else'=> ['required',Rule::when(true, ['required_without:rectangular,round,square'])],
-            
 
             'cp' => 'sometimes',
             'flowersColor'=> 'required_with:cp,on',
@@ -61,9 +56,6 @@ class newAnniversaryRequest extends FormRequest
             'numberOfTables.required_with' => "The :attribute is required if 'Tables & Chairs' is selected",
             'clothColor.required_with' => "The :attribute is required if 'Tables & Chairs' is selected",
             'chairColor.required_with' => "The :attribute is required if 'Tables & Chairs' is selected",
-            // 'elseTableShape.string' => "Please enter your desired shape or select one of the options",
-            // 'elseTableShape.required_with' => "required_with",
-            // 'elseTableShape.required' => "required",
 
             'flowersColor.required_with' => "The color of flowers is required if 'Centerpiece' is selected",
             'vaseShape.required_with' => "The :attribute is required if 'Centerpiece' is selected",
@@ -84,7 +76,6 @@ class newAnniversaryRequest extends FormRequest
             'decodetails' => strip_tags($this['decodetails']),
             'clothColor' => strip_tags($this['clothColor']),
             'chairColor' => strip_tags($this['chairColor']),
-            // 'elseTableShape' => strip_tags($this['elseTableShape']),
             'flowersColor' => strip_tags($this['flowersColor']),
             'vaseShape' => strip_tags($this['vaseShape']),
             'lightsColor' => strip_tags($this['lightsColor'])
