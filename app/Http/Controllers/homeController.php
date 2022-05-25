@@ -18,7 +18,7 @@ class homeController extends Controller
         return view('about');
     }
     public function cancelpolicy(){ //cancel policy
-        return view('cancel');
+        return view('cancelpolicy');
     }
     
 }
