@@ -41,17 +41,15 @@ class eventController extends Controller
         return view('/events/newProduct');
     }
 
-<<<<<<< Updated upstream
+
     public function brandingEventForm()
     {
         return view('/events/brandingevent');
-=======
+    }
     public function openingForm()
     {
         return view('/events/opening');
->>>>>>> Stashed changes
     }
-
     public function storeNewProduct(newProductRequest $request)
     {
         $data=$request->validated();

@@ -57,14 +57,12 @@ Route::post('/storeNewProduct',[eventController::class,'storeNewProduct'])->name
 
 Route::get('/events/customevent/{id}',[customEventController::class,'index'])->name('events.custom');
 
-<<<<<<< Updated upstream
 Route::get('/events/brandingevent',[eventController::class,'brandingEventForm'])->name('events.branding');
 
-=======
 Route::get('/events/opening',[eventController::class,'openingForm'])->name('events.opening');
 
 Route::post('/storeOpening',[eventController::class,'storeOpening'])->name('events.storeOpening');
->>>>>>> Stashed changes
+
 /* Route::controller(customEventController::class)->group(function () {
     Route::post('/events/customevent/', 'store')->name('custom.store');
 });
