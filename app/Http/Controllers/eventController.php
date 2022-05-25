@@ -40,6 +40,11 @@ class eventController extends Controller
         return view('/events/newProduct');
     }
 
+    public function brandingEventForm()
+    {
+        return view('/events/brandingevent');
+    }
+
     public function storeNewProduct(newProductRequest $request)
     {
         $data=$request->validated();

@@ -56,6 +56,8 @@ Route::post('/storeNewProduct',[eventController::class,'storeNewProduct'])->name
 
 Route::get('/events/customevent/{id}',[customEventController::class,'index'])->name('events.custom');
 
+Route::get('/events/brandingevent',[eventController::class,'brandingEventForm'])->name('events.branding');
+
 /* Route::controller(customEventController::class)->group(function () {
     Route::post('/events/customevent/', 'store')->name('custom.store');
 });

@@ -50,7 +50,7 @@
                                             <ul class="submenu">
                                                 <li class='test-li'><a href="#">Conferences</a></li>
                                                 <li class='test-li'><a href="{{route('events.anniversary')}}">Anniversaries</a></li>
-                                                <li class='test-li'><a href="#">Branding</a></li>
+                                                <li class='test-li'><a href="{{route('events.branding')}}">Branding</a></li>
                                                 <li class='test-li'><a href="{{route('events.welcomeparty')}}">Welcome Parties</a></li>
                                                 <li class='test-li'><a href="#">Graduations</a></li>
                                                 <li class='test-li'><a href="{{route('events.events')}}">View All</a></li>
