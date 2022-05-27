@@ -8,6 +8,7 @@ use App\Http\Requests\newProductRequest;
 use App\Http\Requests\newWelcomePartyRequest;
 use App\Http\Requests\newAnniversaryRequest;
 use App\Http\Requests\OpeningRequest;
+use App\Http\Requests\brandingFormRequest;
 use App\Models\table;
 use App\Models\centerpiece;
 use App\Models\ledScreen;
@@ -50,6 +51,68 @@ class eventController extends Controller
     {
         return view('/events/opening');
     }
+
+
+    public function storeBrandingForm(brandingFormRequest $request)
+    {
+        $data=$request->validated();
+        $eventID=$this->store($request,'New Product');
+        // $eventID=12;
+        $event = Event::find($eventID);
+        
+        // $data = $request->all();
+        $data['event_id'] = $eventID;
+
+        if($request->has('table')){
+            //$tables=new table();
+            //$data['event_id']=
+            $tables=table::create($data);
+            //$tables->event_id=$eventID;
+            //dd($data);
+            if($request->elseTableShape!=''){
+                $tables->tableShape=$data['elseTableShape'];
+            }
+            else if($request->tableShape=='else'){
+                $tables->tableShape='any';
+            }
+
+            $event->tables()->save($tables);
+        }
+
+        if($request->has('cp')){
+            $centerpiece=centerpiece::create($data);
+            // $centerpiece->event_id=$eventID;
+            $event->centerpiece()->save($centerpiece);
+        }
+
+        if($request->has('ledScreen')){
+            $ledScreen=ledScreen::create($data);
+            //dd($ledScreen);
+            // $ledScreen->event_id=$eventID;
+            $event->ledScreen()->save($ledScreen);
+        }
+
+        if($request->has('decorations')){
+            $decorations=new decoration();
+            $decorations->details=$data['decodetails'];
+            $decorations->budget=$data['decoBudget'];
+            $event->decoration()->save($decorations);
+        }
+        
+        if($request->has('market')){
+            // $marketing=marketing::create($data);
+            $marketing=new marketing();
+            //dd($request);
+            $marketing->budget=$data['marketingBudget'];
+            $marketing->billboardAD=($request->has('billboardAD') ? true : false);
+            $marketing->onlineAD=($request->has('onlineAD') ? true : false);
+            $event->marketing()->save($marketing);
+        } 
+        
+        return redirect()->route('home.home');
+    }
+
+
     public function storeNewProduct(newProductRequest $request)
     {
         $data=$request->validated();
