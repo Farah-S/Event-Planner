@@ -76,7 +76,7 @@
                                         </li>
                                         
                                         <!-- if not logged in-->
-                                        <li><a href="{{route('user.login')}}"><span class="fa-solid fa-arrow-right-to-bracket"></span> LogIn</a></li>
+                                        <li><a href="{{route('login')}}"><span class="fa-solid fa-arrow-right-to-bracket"></span> LogIn</a></li>
                                         <li><a href="{{route('user.signup')}}"><span class="fa-solid fa-arrow-up-from-bracket"></span> SignUp</a></li>
                                     </ul>
                                 </nav>
@@ -209,8 +209,8 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     <script src="{{url('js/signup.js')}}"></script>
     <script src="{{url('js/editprofile.js')}}"></script>
     <script src="{{url('js/custom_event.js')}}"></script>    
-    <script src="{{url('js/editPackage.js')}}"></script>-->
-    <script src="{{url('js/login.js')}}"></script>
+    <script src="{{url('js/editPackage.js')}}"></script>
+    <script src="{{url('js/login.js')}}"></script>-->
     <script src="{{url('js/addpackage.js')}}"></script>
 
     

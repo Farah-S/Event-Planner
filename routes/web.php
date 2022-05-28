@@ -8,6 +8,7 @@ use App\Http\Controllers\customEventController;
 use App\Http\Controllers\eventController;
 use App\Http\Controllers\orderController;
 use App\Http\Controllers\packageController;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,7 +35,7 @@ Route::get('/about',[homeController::class,'about'])->name('home.about');
 
 Route::get('/signup',[userController::class,'create'])->name('user.signup');
 
-Route::get('/login',[loginController::class,'index'])->name('user.login');
+#Route::get('/login',[loginController::class,'index'])->name('user.login');
 
 Route::get('/myprofile/{id}',[userController::class,'show'])->name('user.profile');
 
@@ -94,3 +95,14 @@ Route::get('/test',function(){return view('test');})->name('test');
 Route::resource('users',userController::class);
 
 Route::resource('customEvents',customEventController::class);
+Auth::routes();
+
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+
+Route::view('/home', 'home')->middleware('auth');
+Route::view('/admin', 'admin');
+Route::view('/owner', 'owner');
+Route::view('/customer', 'customer');
+
