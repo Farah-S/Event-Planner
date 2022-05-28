@@ -41,6 +41,7 @@
         foreach ($users as $users){
             echo "<tr><td>{$row['users.first_name']}</td><td>{$row['users.last_name']}</td><td>{$row['users.user_type']}</td></tr>\n";
         }
+        
         ?>
     </tbody>
 </table>
