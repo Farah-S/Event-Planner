@@ -2,13 +2,14 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\homeController;
-use App\Http\Controllers\loginController;
+use App\Http\Controllers\Auth\loginController;
 use App\Http\Controllers\userController;
 use App\Http\Controllers\customEventController;
 use App\Http\Controllers\eventController;
 use App\Http\Controllers\orderController;
 use App\Http\Controllers\packageController;
 use Illuminate\Support\Facades\Auth;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -84,6 +85,7 @@ Route::get('/admin/viewprofiletst',function(){return view('testfile');})->name('
 Route::get('/admin/viewallusers',function(){return view('viewallusers');})->name('admin.viewUsers');
 
 Route::get('/admin/allOrders',[orderController::class,'index'])->name('admin.allOrders');
+Route::get('/logout',[loginController::class,'logout'])->name('user.logout');
 
 /*-----------------------------------------customer files-----------------------------------------*/
 

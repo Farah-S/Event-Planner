@@ -71,7 +71,7 @@
                                                 <!-- if admin logged in
                                                 <li class='test-li'><a href="{{route('admin.allOrders')}}">All Orders</a></li>
                                                 <li class='test-li'><a href="{{route('admin.viewUsers')}}">All Users</a></li>-->
-                                                <li class='test-li'><a href="/">Sign Out</a></li>
+                                                <li class='test-li'><a href="{{route('user.logout')}}">log Out</a></li>
                                             </ul>
                                         </li>
                                         
