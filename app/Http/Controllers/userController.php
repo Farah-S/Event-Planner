@@ -2,13 +2,25 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Http\Request;
 use App\Http\Requests\updateUser;
 use App\Http\Requests\createUser;
 use App\Models\User;
+use App\Admin;
+use App\Writer;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Validator;
+use Illuminate\Foundation\Auth\RegistersUsers;
+use App\Providers\RouteServiceProvider;
+
+
 
 class userController extends Controller
 {
+    use RegistersUsers;
+
+    protected $redirectTo = RouteServiceProvider::HOME;
     /**
      * Display a listing of the resource.
      *
@@ -17,6 +29,15 @@ class userController extends Controller
     public function index($id)/* later it will display based on id*/
     {
         return view('profile');
+    }
+    
+
+    public function __construct()
+    {
+        $this->middleware('guest');
+        $this->middleware('guest:admin');
+        $this->middleware('guest:owner');
+        $this->middleware('guest:customer');
     }
 
     /**
@@ -27,7 +48,7 @@ class userController extends Controller
     public function create()
     {
         //signup/creating a new user
-        return view('signup');
+        return view('auth.register');
         
     }
 
@@ -44,8 +65,15 @@ class userController extends Controller
         $user->first_name=$data['first_name']; 
         $user->last_name=$data['last_name']; 
         $user->email=$data['email'];
-        $user->password=$data['password'];
-        $user->image_id=1;
+        $user->password=Hash::make($data['password']);
+        if($request->file('image')!=NULL){
+            $image=$request->file('image');
+            $user->image_id = app(imageController::class)->store($image);
+        }
+        else{
+            $user->image_id=1;
+        }
+        
         $user->user_type='customer';
         $user->save();
         return redirect()->route('home.home');
@@ -84,6 +112,7 @@ class userController extends Controller
     public function update(updateUser $request,User $user)
     {
         $data=$request->validated();
+        $user = user::find($user->id);
         $user->first_name=$data['first_name']; 
         $user->last_name=$data['last_name']; 
         $user->email=$data['email'];

@@ -1,5 +1,5 @@
 @extends('layout')
-@section('title','Decoration Page')
+@section('title','Production House Packages')
 @section('content')
 
 <!-- slider_area_start
@@ -22,10 +22,9 @@
     <div class="speakers_area inc_padd">
             <div class="row">
                 <div class="col-12">
-                    <h3 class=" slider slider2 align-left" style="color:black;font-size:70px">Production House</h3>
+                    <h3 class=" slider slider2" style="color:black;font-size:70px;text-align:center">Production House</h3>
                 </div>
             </div>
-
         <div class="container">
             <div class="doqrow">
                 <div class="column">
@@ -57,9 +56,8 @@
                             <p>Pick the Easter Package you like with variable prices</p>
                         </div>
                     </div>
-        
-
                 </div>
+                
                 <div class="column">
                     <div class="single_speaker">
                         <div class="speaker_thumb">

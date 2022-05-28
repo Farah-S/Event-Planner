@@ -7,6 +7,9 @@ use App\Http\Controllers\userController;
 use App\Http\Controllers\customEventController;
 use App\Http\Controllers\eventController;
 use App\Http\Controllers\orderController;
+use App\Http\Controllers\packageController;
+use Illuminate\Support\Facades\Auth;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -33,7 +36,7 @@ Route::get('/about',[homeController::class,'about'])->name('home.about');
 
 Route::get('/signup',[userController::class,'create'])->name('user.signup');
 
-Route::get('/login',[loginController::class,'index'])->name('user.login');
+#Route::get('/login',[loginController::class,'index'])->name('user.login');
 
 Route::get('/myprofile/{id}',[userController::class,'show'])->name('user.profile');
 
@@ -69,11 +72,13 @@ Route::post('/storeOpening',[eventController::class,'storeOpening'])->name('even
  */
 /*-----------------------------------------prod house files-----------------------------------------*/
 
-Route::get('/productionHouse',function(){return view('productionHouse/decorationspage');})->name('productionHouse.packages');
+Route::get('/productionHouse',[packageController::class,'index'])->name('productionHouse.packages');
 
 Route::get('/productionHouse/addPackage',function(){return view('productionHouse/addPackage');})->name('productionHouse.addPackage');
 
-Route::get('/productionHouse/editPackage',function(){return view('productionHouse/editPackage');})->name('productionHouse.editPackage');
+Route::get('/productionHouse/editPackage/{package}',[packageController::class,'edit'])->name('productionHouse.editPackage');
+
+Route::post('/updatePackage/{package}',[packageController::class,'update'])->name('productionHouse.updatePackage');
 
 Route::get('/productionHouse/packagedetails',function(){return view('packagedetails');})->name('productionHouse.packageDetails');
 
@@ -97,3 +102,14 @@ Route::get('/test',function(){return view('test');})->name('test');
 Route::resource('users',userController::class);
 
 Route::resource('customEvents',customEventController::class);
+Auth::routes();
+
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+
+Route::view('/home', 'home')->middleware('auth');
+Route::view('/admin', 'admin');
+Route::view('/owner', 'owner');
+Route::view('/customer', 'customer');
+

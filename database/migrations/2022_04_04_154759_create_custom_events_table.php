@@ -18,8 +18,8 @@ return new class extends Migration
             $table->text("details");
             $table->float("budget");
             $table->boolean("indoors")->default(0);
-            //$table->foreignId('customer_id');
-            //$table->foreign('customer_id')->references('id')->on('users');
+            // $table->foreignId('customer_id');
+            // $table->foreign('customer_id')->references('id')->on('users');
             $table->timestamps();
             $table->softDeletes();
         });
