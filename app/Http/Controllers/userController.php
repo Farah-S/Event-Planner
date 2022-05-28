@@ -40,6 +40,26 @@ class userController extends Controller
         $this->middleware('guest:customer');
     }
 
+       /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function show_users_table()
+    {
+        //return all users
+        
+        $users = DB::table('users')
+            ->select('users.first_name','users.last_name', 'users.user_type')
+            ->where('user_type', '=' , 'customer')
+            ->get(); 
+        $admins = DB::table('users')
+            ->select('users.first_name','users.last_name', 'users.user_type')
+            ->where('user_type', '=' , 'administrator')
+            ->get(); 
+            return view('admin/viewallusers',['users'=>$users,'admins'=>$admins]);
+    }
+
     /**
      * Show the form for creating a new resource.
      *
