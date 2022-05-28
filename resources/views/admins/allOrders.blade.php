@@ -40,7 +40,7 @@
                                     $event=$events[$j];
                                     $table=$event->getType();
                                     while($table!='event'){
-                                        $items[$table]=$event;
+                                        $items[$table]=$event; 
                                         $event=$event->getEvent();
                                         $table=$event->getType();
                                     }

@@ -66,7 +66,14 @@ class userController extends Controller
         $user->last_name=$data['last_name']; 
         $user->email=$data['email'];
         $user->password=Hash::make($data['password']);
-        $user->image_id=1;
+        if($request->file('image')!=NULL){
+            $image=$request->file('image');
+            $user->image_id = app(imageController::class)->store($image);
+        }
+        else{
+            $user->image_id=1;
+        }
+        
         $user->user_type='customer';
         $user->save();
         return redirect()->route('home.home');

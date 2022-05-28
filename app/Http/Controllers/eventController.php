@@ -44,18 +44,16 @@ class eventController extends Controller
     {
         $data=$request->validated();
         $eventID=$this->store($request,'New Product');
-        // $eventID=12;
+      
         $event = Event::find($eventID);
         
-        // $data = $request->all();
+      
         $data['event_id'] = $eventID;
 
         if($request->has('table')){
-            //$tables=new table();
-            //$data['event_id']=
+            
             $tables=table::create($data);
-            //$tables->event_id=$eventID;
-            //dd($data);
+            
             if($request->elseTableShape!=''){
                 $tables->tableShape=$data['elseTableShape'];
             }
@@ -68,14 +66,13 @@ class eventController extends Controller
 
         if($request->has('cp')){
             $centerpiece=centerpiece::create($data);
-            // $centerpiece->event_id=$eventID;
+            
             $event->centerpiece()->save($centerpiece);
         }
 
         if($request->has('ledScreen')){
             $ledScreen=ledScreen::create($data);
-            //dd($ledScreen);
-            // $ledScreen->event_id=$eventID;
+            
             $event->ledScreen()->save($ledScreen);
         }
 
@@ -87,9 +84,8 @@ class eventController extends Controller
         }
         
         if($request->has('market')){
-            // $marketing=marketing::create($data);
+        
             $marketing=new marketing();
-            //dd($request);
             $marketing->budget=$data['marketingBudget'];
             $marketing->billboardAD=($request->has('billboardAD') ? true : false);
             $marketing->onlineAD=($request->has('onlineAD') ? true : false);
@@ -103,26 +99,14 @@ class eventController extends Controller
     {
         $data=$request->validated();
         $event=new Event();
-        /* $event->details=strip_tags($data['details']); 
-        $event->budget=$data['budget'];
-         
-        if($request->has('indoors')){
-            $event->indoors=true;
-        }
-        else{
-            $event->indoors=false;
-        }
-        $userid=$request->id;
-        $event->save();
-        $eventid=$event->id;
-        app(orderController::class)->create($userid,$eventid,'customEvent'); */
+        
         return redirect()->route('home.home');
     }
 
     public function storeAnniversary(newAnniversaryRequest $request)
     {
         $data=$request->validated();
-        $eventID=$this->store($request,'New Product');
+        $eventID=$this->store($request,'Anniversary');
         $event = Event::find($eventID);
         
         $data['event_id'] = $eventID;
@@ -151,7 +135,7 @@ class eventController extends Controller
             $decorations->budget=$data['decoBudget'];
             $event->decoration()->save($decorations);
         }
-    
+     
         return redirect()->route('home.home');
     }
 
@@ -176,21 +160,25 @@ class eventController extends Controller
     public function store(Request $request, $eventType)
     {
         $data=$request->validated();
-        //$event=Event::create($data);
+      
         
         $event=new Event();
+
         $event->type=$eventType;
+
         if($request->has('stage')){
             $event->stageLength=$data['stageLength'];
             $event->stageWidth=$data['stageWidth'];
         }
+
         if($request->has('plixie')){
             $event->plixie=$data['plixie'];
         }
-        //dd($data);
+        
         if($request->has('lightsColor')){
             $event->lightsColor=$data['lightsColor'];
         }
+        
         if($request->has('budget')){
             $event->budget=$data['budget'];
         }
@@ -203,7 +191,7 @@ class eventController extends Controller
         $event->save();
         $eventID= $event->id;
         $userid=$request->id;
-        //dd($request);
+        
         app(orderController::class)->create($userid,$eventID,'event');
         return $eventID;
     }

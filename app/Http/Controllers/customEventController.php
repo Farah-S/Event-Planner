@@ -38,7 +38,7 @@ class customEventController extends Controller
     {
         $data=$request->validated();
         $event=new customEvent();
-        $event->details=strip_tags($data['details']); 
+        $event->details=$data['details']; 
         $event->budget=$data['budget'];
          
         if($request->has('indoors')){
@@ -50,6 +50,10 @@ class customEventController extends Controller
         $userid=$request->id;
         $event->save();
         $eventid=$event->id;
+        if($request->file('image')!=NULL){
+            $image=$request->file('image');
+            app(imageController::class)->customEventImageStore($image,$eventid);
+        }
         app(orderController::class)->create($userid,$eventid,'customEvent');
         return redirect()->route('home.home');
     }

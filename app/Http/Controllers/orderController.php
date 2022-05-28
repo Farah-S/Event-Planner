@@ -46,7 +46,6 @@ class orderController extends Controller
             $wrapped_events[$i]=$event;
             $deco=decoration::where('event_id', '=', $e->id)->first();
             if($deco!=NULL){
-                
                 $deco->setEvent($wrapped_events[$i]);
                 $deco->setType("decoration");
                 $wrapped_events[$i]=$deco;
