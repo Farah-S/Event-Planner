@@ -37,7 +37,15 @@ class packageController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data=$request->validated();
+        
+        $package = package::create($package->id);
+        $package->name=$data['name']; 
+        $package->price=$data['price']; 
+        $package->season=$data['season'];
+        $package->details=$data['details'];
+        $package->save();
+        return redirect()->route('productionHouse.packages');//,$package->id
     }
 
     /**
