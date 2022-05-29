@@ -26,6 +26,32 @@
 <div class="container">
 <div class="row">
 <div class="col-md-6">
+<table class="table table-bordered table-dark table-hover">
+    <caption>List of Client</caption>
+    <thead>
+        <tr>
+        <th scope="col">#</th>
+        <th scope="col">First Name</th>
+        <th scope="col">Last Name</th>
+        <th scope="col">User Type</th>
+        </tr>
+    </thead>
+    <tbody>
+        <?php
+        foreach ($users as $users){
+            echo "<tr><td>{$row['users.first_name']}</td><td>{$row['users.last_name']}</td><td>{$row['users.user_type']}</td></tr>\n";
+        }
+        
+        ?>
+    </tbody>
+</table>
+</div>
+
+
+
+
+
+
     <table class="table table-bordered table-dark table-hover">
     <caption>List of Client</caption>
     <thead>
