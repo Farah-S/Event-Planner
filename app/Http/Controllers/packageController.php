@@ -35,11 +35,11 @@ class packageController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(packageRequest $request)
     {
         $data=$request->validated();
         
-        $package = package::create($package->id);
+        $package = new package();
         $package->name=$data['name']; 
         $package->price=$data['price']; 
         $package->season=$data['season'];
