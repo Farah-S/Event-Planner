@@ -63,21 +63,61 @@
                                          <!--<li><a href="{{route('home.cancelpolicy')}}">Cancel Policy</a></li>
                                         if logged in Profile 
                                         <li><a href="{{route('customer.myorders')}}"><span class="fa-solid fa-cart-shopping"></span></a></li>
-                                        --><li><a href="{{route('user.profile',[2])}}"><span class="fa-solid fa-circle-user"></span></a>
-                                            <ul class="submenu">
-                                                <li class='test-li'><a href="{{ route('user.profile',[2]) }}">My Profile</a></li>
-                                                <!-- if customer logged in-->
-                                                <li class='test-li'><a href="{{route('customer.myorders')}}">My Orders</a></li>
-                                                <!-- if admin logged in
-                                                <li class='test-li'><a href="{{route('admin.allOrders')}}">All Orders</a></li>
-                                                <li class='test-li'><a href="{{route('admin.viewUsers')}}">All Users</a></li>-->
+                                        -->
+                                    
+                                            @auth('customer')
+                                            <li><a href="{{route('user.profile')}}"><span class="fa-solid fa-circle-user"></span></a>
+                                                <ul class="submenu">
+                                                    <li class='test-li'><a href="{{ route('user.profile') }}">My Profile</a></li>
+                                                    <!-- if customer logged in-->
+                                                    <li class='test-li'><a href="{{route('customer.myorders')}}">My Orders</a></li>
+                                                    <!-- if admin logged in
+                                                    <li class='test-li'><a href="{{route('admin.allOrders')}}">All Orders</a></li>
+                                                    <li class='test-li'><a href="{{route('admin.viewUsers')}}">All Users</a></li>-->
+                                                    
+                                                </ul>
                                                 <li class='test-li'><a href="{{route('user.logout')}}">log Out</a></li>
-                                            </ul>
-                                        </li>
-                                        
+                                            </li>
+                                            @endauth
+                                            @auth('admin')
+                                            <li><a href="{{route('user.profile')}}"><span class="fa-solid fa-circle-user"></span></a>
+                                                <ul class="submenu">
+                                                    <li class='test-li'><a href="{{ route('user.profile') }}">My Profile</a></li>
+                                                    <!-- if customer logged in
+                                                    <li class='test-li'><a href="{{route('customer.myorders')}}">My Orders</a></li>-->
+                                                    <!-- if admin logged in-->
+                                                    <li class='test-li'><a href="{{route('admin.allOrders')}}">All Orders</a></li>
+                                                    <li class='test-li'><a href="{{route('admin.viewUsers')}}">All Users</a></li>
+                                                    
+                                                </ul>
+                                                <li class='test-li'><a href="{{route('user.logout')}}">log Out</a></li>
+                                            </li>
+                                            @endauth
+                                            @auth('owner')
+                                            <li><a href="{{route('user.profile')}}"><span class="fa-solid fa-circle-user"></span></a>
+                                                <ul class="submenu">
+                                                    <li class='test-li'><a href="{{ route('user.profile') }}">My Profile</a></li>
+                                                    <!-- if customer logged in
+                                                    <li class='test-li'><a href="{{route('customer.myorders')}}">My Orders</a></li>-->
+                                                    <!-- if admin logged in-->
+                                                    <li class='test-li'><a href="{{route('admin.allOrders')}}">All Orders</a></li>
+                                                    <li class='test-li'><a href="{{route('admin.viewUsers')}}">All Users</a></li>
+                                                    
+                                                </ul>
+                                                <li class='test-li'><a href="{{route('user.logout')}}">log Out</a></li>
+                                            </li>
+                                            @endauth
+                                            
+ 
                                         <!-- if not logged in-->
-                                        <li><a href="{{route('login')}}"><span class="fa-solid fa-arrow-right-to-bracket"></span> LogIn</a></li>
+                                        @guest('customer')
+                                        @guest('admin')
+                                        @guest('owner')
+                                        <li><a href="{{route('login')}}"><span class="fa-solid fa-arrow-right-to-bracket"></span> login</a></li>
                                         <li><a href="{{route('user.signup')}}"><span class="fa-solid fa-arrow-up-from-bracket"></span> SignUp</a></li>
+                                        @endguest
+                                        @endguest
+                                        @endguest
                                     </ul>
                                 </nav>
                             </div>

@@ -1,12 +1,11 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Http\Requests\createCustomEvent;
-use App\Models\customEvent;
 
 use Illuminate\Http\Request;
+use App\Models\User;
 
-class customEventController extends Controller
+class profileController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,7 +14,7 @@ class customEventController extends Controller
      */
     public function index()
     {
-        return view('events/customEvent');
+        //
     }
 
     /**
@@ -30,32 +29,13 @@ class customEventController extends Controller
 
     /**
      * Store a newly created resource in storage.
-     * 
+     *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(createCustomEvent $request)
+    public function store(Request $request)
     {
-        $data=$request->validated();
-        $event=new customEvent();
-        $event->details=$data['details']; 
-        $event->budget=$data['budget'];
-         
-        if($request->has('indoors')){
-            $event->indoors=true;
-        }
-        else{
-            $event->indoors=false;
-        }
-        $userid=Auth::guard('customer')->user()->id;
-        $event->save();
-        $eventid=$event->id;
-        if($request->file('image')!=NULL){
-            $image=$request->file('image');
-            app(imageController::class)->customEventImageStore($image,$eventid);
-        }
-        app(orderController::class)->create($userid,$eventid,'customEvent');
-        return redirect()->route('home.home');
+        //
     }
 
     /**
@@ -64,9 +44,9 @@ class customEventController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show()
     {
-        return $event = customEvent::findOrFail($id);
+        return view('profile');
     }
 
     /**
@@ -75,9 +55,9 @@ class customEventController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit() //User $user
     {
-        //
+        return view('editProfile'); //,['user'=>$user]
     }
 
     /**
@@ -87,9 +67,18 @@ class customEventController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(updateUser $request)//   ,User $user
     {
-        //
+        $data=$request->validated();
+        $user = user::find($user->id);
+        $user->first_name=$data['first_name']; 
+        $user->last_name=$data['last_name']; 
+        $user->email=$data['email'];
+        $user->password=$data['password'];
+        $user->image_id=1;
+        $user->user_type='admin'; 
+        $user->save();
+        return redirect()->route('user.profile');//,$user->id
     }
 
     /**
@@ -100,6 +89,10 @@ class customEventController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $category = User::find($id);
+        $category->delete();
+
+        return back()->with('success', 'Item is deleted successfully');
+        
     }
 }

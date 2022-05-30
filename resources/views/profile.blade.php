@@ -1,7 +1,7 @@
 @extends('layout')
 @section('title','Profile')
 @section('content')
-
+@auth
 <div class="slider_area">
     </div>
 <div class="ibcontainer">
@@ -11,25 +11,25 @@
                         <div class="about_info">
                         <div class="section_title">
                             <h3 class="slider">Name</h3>
-                            <p class="himasfont">{{$user['first_name']}} {{$user['last_name']}}</p>
+                            <p class="himasfont"></p>
                         <br><br>
                         
                   
                        
                             <h3 class="slider">Email</h3>
-                            <p class="himasfont">{{$user['email']}}</p>
+                            <p class="himasfont"></p>
                         </div>
                        
       </div>
                         </div>
                         <div style = "position:relative; left:0px; bottom:150px;">
                                 
-                                <button type="submit" onclick="location.href = '{{route('users.edit',['user'=>$user['id']])}}';" class="button button-contactForm boxed-btn">Edit profile</button>
+                                <button type="submit" onclick="location.href = '';" class="button button-contactForm boxed-btn">Edit profile</button>
                                 </div>
                             
                                 <div style = "position:relative; left:185px; bottom:210px;">
                               
-                                <form action="{{route('users.destroy',['user'=>$user['id']])}}" method="POST">
+                                <form action="" method="POST">
                                 <input type="hidden" name="_method" value="DELETE">
                                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
                                 <input type="submit" class="button button-contactForm boxed-btn" value="Delete Profile">
@@ -44,7 +44,6 @@
     </div>
     
 
-                
-  
 
+@endauth
 @endsection

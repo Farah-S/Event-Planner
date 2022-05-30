@@ -7,9 +7,6 @@ use Illuminate\Http\Request;
 use App\Http\Requests\updateUser;
 use App\Http\Requests\createUser;
 use App\Models\User;
-use App\Admin;
-use App\Writer;
-use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use App\Providers\RouteServiceProvider;
@@ -87,9 +84,10 @@ class userController extends Controller
      */
     public function show($id)
     {
-        //$id=1;
-        return view('profile',['user'=>User::findOrFail($id)]);
+        
     }
+
+    
 
     /**
      * Show the form for editing the specified resource.
@@ -116,9 +114,15 @@ class userController extends Controller
         $user->first_name=$data['first_name']; 
         $user->last_name=$data['last_name']; 
         $user->email=$data['email'];
-        $user->password=$data['password'];
-        $user->image_id=1;
-        $user->user_type='admin'; 
+        $user->password=Hash::make($data['password']);
+        if($request->file('image')!=NULL){
+            $image=$request->file('image');
+            $user->image_id = app(imageController::class)->store($image);
+        }
+        else{
+            $user->image_id=1;
+        }
+        $user->user_type='customer'; 
         $user->save();
         return redirect()->route('user.profile');//,$user->id
     }
