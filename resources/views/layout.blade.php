@@ -1,9 +1,10 @@
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-     <title>@yield('title')</title>
+    <title>@yield('title')</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -23,14 +24,14 @@
     <link rel="stylesheet" href="{{url('css/slicknav.css')}}">
     <link rel="stylesheet" href="{{url('css/style.css')}}">
 
-    
+
     <!-- <link rel="stylesheet" href="css/responsive.css"> -->
 </head>
 
 <body>
     <!-- header-start -->
     <header>
-        <div class="header-area"  style="background-color: rgb(0,0,0,0.25);">
+        <div class="header-area" style="background-color: rgb(0,0,0,0.25);">
             <div id="sticky-header" class="main-header-area">
                 <div class="container-fluid p-0">
                     <div class="row align-items-center no-gutters">
@@ -60,61 +61,52 @@
                                         <li><a href="{{route('productionHouse.packages')}}">Production House</a></li>
                                         <li><a href="{{route('home.about')}}">About us</a></li>
                                         <li><a href="{{route('home.contact')}}">Contact us</a></li>
-                                         <!--<li><a href="{{route('home.cancelpolicy')}}">Cancel Policy</a></li>
-                                        if logged in Profile 
-                                        <li><a href="{{route('customer.myorders')}}"><span class="fa-solid fa-cart-shopping"></span></a></li>
-                                        -->
-                                    
-                                            @auth('customer')
-                                            <li><a href="{{route('user.profile')}}"><span class="fa-solid fa-circle-user"></span></a>
-                                                <ul class="submenu">
-                                                    <li class='test-li'><a href="{{ route('user.profile') }}">My Profile</a></li>
-                                                    <!-- if customer logged in-->
-                                                    <li class='test-li'><a href="{{route('customer.myorders')}}">My Orders</a></li>
-                                                    <!-- if admin logged in
-                                                    <li class='test-li'><a href="{{route('admin.allOrders')}}">All Orders</a></li>
-                                                    <li class='test-li'><a href="{{route('admin.viewUsers')}}">All Users</a></li>-->
-                                                    
-                                                </ul>
-                                                <li class='test-li'><a href="{{route('user.logout')}}">log Out</a></li>
-                                            </li>
-                                            @endauth
-                                            @auth('admin')
-                                            <li><a href="{{route('user.profile')}}"><span class="fa-solid fa-circle-user"></span></a>
-                                                <ul class="submenu">
-                                                    <li class='test-li'><a href="{{ route('user.profile') }}">My Profile</a></li>
-                                                    <!-- if customer logged in
-                                                    <li class='test-li'><a href="{{route('customer.myorders')}}">My Orders</a></li>-->
-                                                    <!-- if admin logged in-->
-                                                    <li class='test-li'><a href="{{route('admin.allOrders')}}">All Orders</a></li>
-                                                    <li class='test-li'><a href="{{route('admin.viewUsers')}}">All Users</a></li>
-                                                    
-                                                </ul>
-                                                <li class='test-li'><a href="{{route('user.logout')}}">log Out</a></li>
-                                            </li>
-                                            @endauth
-                                            @auth('owner')
-                                            <li><a href="{{route('user.profile')}}"><span class="fa-solid fa-circle-user"></span></a>
-                                                <ul class="submenu">
-                                                    <li class='test-li'><a href="{{ route('user.profile') }}">My Profile</a></li>
-                                                    <!-- if customer logged in
-                                                    <li class='test-li'><a href="{{route('customer.myorders')}}">My Orders</a></li>-->
-                                                    <!-- if admin logged in-->
-                                                    <li class='test-li'><a href="{{route('admin.allOrders')}}">All Orders</a></li>
-                                                    <li class='test-li'><a href="{{route('admin.viewUsers')}}">All Users</a></li>
-                                                    
-                                                </ul>
-                                                <li class='test-li'><a href="{{route('user.logout')}}">log Out</a></li>
-                                            </li>
-                                            @endauth
+                                        <!--<li><a href="{{route('home.cancelpolicy')}}">Cancel Policy</a></li>-->
+
+                                        @auth('customer')
+                                        <li><a href="{{route('user.profile')}}"><span class="fa-solid fa-circle-user"></span></a>
+                                            <!-- <ul class="submenu">
+                                                <li class='test-li'><a href="{{ route('user.profile') }}">My Profile</a></li>
+                                                
+                                                <li class='test-li'><a href="{{route('customer.myorders')}}">My Orders</a></li>
                                             
- 
+                                            </ul> -->
+                                            <li><a href="{{route('customer.myorders')}}"><span class="fa-solid fa-cart-shopping"></span></a></li>
+                                            <li class='test-li'><a href="{{route('user.logout')}}">log Out</a></li>
+                                        </li>
+                                        @endauth
+                                        @auth('admin')
+                                        <li><a href="{{route('user.profile')}}"><span class="fa-solid fa-circle-user"></span></a>
+                                            <ul class="submenu">
+                                                <li class='test-li'><a href="{{ route('user.profile') }}">My Profile</a></li>
+                                                <!-- if admin logged in-->
+                                                <li class='test-li'><a href="{{route('admin.allOrders')}}">All Orders</a></li>
+                                                <li class='test-li'><a href="{{route('admin.viewUsers')}}">All Users</a></li>
+
+                                            </ul>
+                                            <li class='test-li'><a href="{{route('user.logout')}}">log Out</a></li>
+                                        </li>
+                                        @endauth
+                                        @auth('owner')
+                                        <li><a href="{{route('user.profile')}}"><span class="fa-solid fa-circle-user"></span></a>
+                                            <ul class="submenu">
+                                                <li class='test-li'><a href="{{ route('user.profile') }}">My Profile</a></li>
+                                                <!-- if admin logged in-->
+                                                <li class='test-li'><a href="{{route('admin.allOrders')}}">All Orders</a></li>
+                                                <li class='test-li'><a href="{{route('admin.viewUsers')}}">All Users</a></li>
+
+                                            </ul>
+                                            <li class='test-li'><a href="{{route('user.logout')}}">log Out</a></li>
+                                        </li>
+                                        @endauth
+
+
                                         <!-- if not logged in-->
                                         @guest('customer')
                                         @guest('admin')
                                         @guest('owner')
-                                        <li><a href="{{route('login')}}"><span class="fa-solid fa-arrow-right-to-bracket"></span> login</a></li>
-                                        <li><a href="{{route('user.signup')}}"><span class="fa-solid fa-arrow-up-from-bracket"></span> SignUp</a></li>
+                                            <li><a href="{{route('login')}}"><span class="fa-solid fa-arrow-right-to-bracket"></span> login</a></li>
+                                            <li><a href="{{route('user.signup')}}"><span class="fa-solid fa-arrow-up-from-bracket"></span> SignUp</a></li>
                                         @endguest
                                         @endguest
                                         @endguest
@@ -132,42 +124,42 @@
     @yield('scripts')
     <!-- footer_start -->
     <footer class="footer footer_bg_1" style="text-align: center">
-            <div class="footer_top">
-                <div class="footer-container">
-                    <div class="row">
-                        <div class="col-xl-4 col-md-4 col-lg-4 footer-padding">
-                            <div class="footer_widget">
-                                <h3 class="footer_title">
-                                        Follow Us
-                                </h3>
-                                <ul>
-                                    <li><i class="ti-facebook"></i><a target="_blank" href="#"> Facebook</a></li>
-                                    <li><i class="ti-twitter"></i><a target="_blank" href="#"> Twitter</a></li>
-                                    <li><i class="ti-instagram"></i><a target="_blank" href="#"> Instagram</a></li>
-                                    <li><i class="ti-youtube"></i><a target="_blank" href="#"> Youtube</a></li>
-                                </ul>
-    
-                            </div>
+        <div class="footer_top">
+            <div class="footer-container">
+                <div class="row">
+                    <div class="col-xl-4 col-md-4 col-lg-4 footer-padding">
+                        <div class="footer_widget">
+                            <h3 class="footer_title">
+                                Follow Us
+                            </h3>
+                            <ul>
+                                <li><i class="ti-facebook"></i><a target="_blank" href="#"> Facebook</a></li>
+                                <li><i class="ti-twitter"></i><a target="_blank" href="#"> Twitter</a></li>
+                                <li><i class="ti-instagram"></i><a target="_blank" href="#"> Instagram</a></li>
+                                <li><i class="ti-youtube"></i><a target="_blank" href="#"> Youtube</a></li>
+                            </ul>
+
                         </div>
-                        <div class="col-xl-4 col-md-4 col-lg-4 footer-padding">
-                            <div class="footer_widget">
-                                <h3 class="footer_title">
-                                        Links
-                                </h3>
-                                <ul>
-                                    <li><a target="_blank" href="{{route('events.events')}}">Events</a></li>
-                                    <li><a target="_blank" href="{{route('productionHouse.packages')}}">Production House</a></li>
-                                    <li><a target="_blank" href="{{route('home.contact')}}">Contact Us</a></li>
-                                    <li><a target="_blank" href="{{route('home.cancelpolicy')}}">Cancel Policy</a></li>
-                                </ul>
-                            </div>
+                    </div>
+                    <div class="col-xl-4 col-md-4 col-lg-4 footer-padding">
+                        <div class="footer_widget">
+                            <h3 class="footer_title">
+                                Links
+                            </h3>
+                            <ul>
+                                <li><a target="_blank" href="{{route('events.events')}}">Events</a></li>
+                                <li><a target="_blank" href="{{route('productionHouse.packages')}}">Production House</a></li>
+                                <li><a target="_blank" href="{{route('home.contact')}}">Contact Us</a></li>
+                                <li><a target="_blank" href="{{route('home.cancelpolicy')}}">Cancel Policy</a></li>
+                            </ul>
                         </div>
-                        <div class="col-xl-4 col-md-4 col-lg-4 footer-padding">
-                            <div class="footer_widget">
-                                <h3 class="footer_title">
-                                        Contact Info
-                                </h3>
-                                <div class="media contact-info" style="justify-content: center">
+                    </div>
+                    <div class="col-xl-4 col-md-4 col-lg-4 footer-padding">
+                        <div class="footer_widget">
+                            <h3 class="footer_title">
+                                Contact Info
+                            </h3>
+                            <div class="media contact-info" style="justify-content: center">
                                 <span class="contact-footer__icon"><i class="ti-home"></i></span>
                                 <div class="media-body">
                                     <h3>Buttonwood, California.</h3>
@@ -188,26 +180,28 @@
                                     <p>Send us your query anytime!</p>
                                 </div>
                             </div>
-                                </div>
-                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="copy-right_text">
-                <div class="footer-container">
-                    <!--<div class="footer_border"></div>-->
-                   
-                        <div class="col-xl-12">
-                            <p class="copy_right text-center">
-                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                            </p>
-                        </div>
-                
+        </div>
+        <div class="copy-right_text">
+            <div class="footer-container">
+                <!--<div class="footer_border"></div>-->
+
+                <div class="col-xl-12">
+                    <p class="copy_right text-center">
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                        Copyright &copy;<script>
+                        document.write(new Date().getFullYear());
+                        </script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                    </p>
                 </div>
+
             </div>
-        </footer>
+        </div>
+    </footer>
     <!-- footer_end -->
 
 
@@ -238,7 +232,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     <script src="{{url('js/passworTest.js')}}"></script>
 
     <!--contact js-->
-    <script src="{{url('js/contact.js')}}"></script>
+    <!-- <script src="{{url('js/contact.js')}}"></script> -->
     <script src="{{url('js/jquery.ajaxchimp.min.js')}}"></script>
     <script src="{{url('js/jquery.form.js')}}"></script>
     <script src="{{url('js/jquery.validate.min.js')}}"></script>
@@ -253,7 +247,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     <script src="{{url('js/login.js')}}"></script>-->
     <script src="{{url('js/addpackage.js')}}"></script>
 
-    
+
 
     <script src="{{url('js/order.js')}}"></script>
 

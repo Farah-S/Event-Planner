@@ -29,7 +29,7 @@
                             @enderror
                         </div>
                     </div>
-                  
+
                     <h3 class="slider form-item-title">Event Details *</h3>
                     <div class="form-group">
                         <textarea class="white-form w-100" style="padding:1.5%" value="{{old('details')}}" name="details" id='details' minlength=50 cols="30" rows="9" placeholder='Write your event description here'>{{ old('details') }}</textarea>
@@ -61,7 +61,7 @@
                         </label>
                         @enderror
                         <label for="cancel" class="error" style="display: inline-block;"></label>
-                    <p class="required">Fields with * are required</p>
+                        <p class="required">Fields with * are required</p>
                     </div>
                     <div class="form-group mt-3" style="text-align:center">
                         <button type="submit" class="button button-contactForm boxed-btn">Request</button>
