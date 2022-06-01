@@ -11,6 +11,7 @@ use App\Http\Controllers\packageController;
 use Illuminate\Support\Facades\Auth;
 
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -108,3 +109,6 @@ Route::view('/admin', 'admin');
 Route::view('/owner', 'owner');
 Route::view('/customer', 'customer');
 
+/*-----------------------------------------Customer files-----------------------------------------*/
+
+Route::get('/customer/allOrders',[orderController::class,'showCustomerOrders'])->name('cutomer.allOrders');

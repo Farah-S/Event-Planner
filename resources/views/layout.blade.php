@@ -67,7 +67,7 @@
                                             <ul class="submenu">
                                                 <li class='test-li'><a href="{{ route('user.profile',[2]) }}">My Profile</a></li>
                                                 <!-- if customer logged in-->
-                                                <li class='test-li'><a href="{{route('customer.myorders')}}">My Orders</a></li>
+                                                <li class='test-li'><a href="{{route('cutomer.allOrders')}}">My Orders</a></li>
                                                 <!-- if admin logged in
                                                 <li class='test-li'><a href="{{route('admin.allOrders')}}">All Orders</a></li>
                                                 <li class='test-li'><a href="{{route('admin.viewUsers')}}">All Users</a></li>-->

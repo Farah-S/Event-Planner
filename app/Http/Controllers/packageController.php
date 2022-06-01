@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\package;
 use App\Http\Requests\packageRequest;
+use Illuminate\Support\Facades\DB;
 
 class packageController extends Controller
 {
@@ -15,8 +16,13 @@ class packageController extends Controller
      */
     public function index()
     {
-        //$packages=package::all();
-        return view('/productionHouse/decorationspage'); //,['packages'=>$packages]
+        $package = DB::table('packages')
+            ->join('image_package', 'packages.id', '=', 'image_package.package_id')
+            ->join('images', 'image_package.image_id', '=', 'images.id')
+            ->select('packages.*','images.*')
+            ->get();
+
+        return view('/productionHouse/decorationspage',['package'=>$package]);
     }
 
     /**
