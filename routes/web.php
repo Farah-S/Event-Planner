@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\homeController;
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\loginController;
 use App\Http\Controllers\userController;
 use App\Http\Controllers\customEventController;
@@ -27,7 +28,9 @@ Route::get('/',[homeController::class,'index'])->name('home.home');
 
 Route::get('/cancelpolicy',[homeController::class,'cancelpolicy'])->name('home.cancelpolicy');
 
-Route::get('/contact',[homeController::class,'contact'])->name('home.contact');
+Route::get('/contact',[ContactController::class,'contact'])->name('home.contact');
+
+Route::post('/contact', [ContactController::class, 'save'])->name('contact.store');
 
 Route::get('/about',[homeController::class,'about'])->name('home.about');
 
@@ -36,7 +39,7 @@ Route::get('/about',[homeController::class,'about'])->name('home.about');
 
 Route::get('/signup',[userController::class,'create'])->name('user.signup');
 
-#Route::get('/login',[loginController::class,'index'])->name('user.login');
+Route::get('/login',[loginController::class,'index'])->name('user.login');
 
 Route::get('/myprofile/{id}',[userController::class,'show'])->name('user.profile');
 

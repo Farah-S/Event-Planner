@@ -18,7 +18,7 @@
                         <div class="section_title">
                             <h3>Package Details</h3>
                         </div>
-                        <p class="ibfontsize">this package is a great one cause it includes ramadan's theme DUUHHH</p>
+                        <p class="ibfontsize">Some info about the package</p>
                        
                     </div>
                 </div>

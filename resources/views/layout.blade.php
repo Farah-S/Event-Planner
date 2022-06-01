@@ -76,7 +76,7 @@
                                         </li>
                                         
                                         <!-- if not logged in-->
-                                        <li><a href="{{route('login')}}"><span class="fa-solid fa-arrow-right-to-bracket"></span> LogIn</a></li>
+                                       <!-- <li><span class="fa-solid fa-arrow-right-to-bracket"></span> LogIn</a></li>-->
                                         <li><a href="{{route('user.signup')}}"><span class="fa-solid fa-arrow-up-from-bracket"></span> SignUp</a></li>
                                     </ul>
                                 </nav>
@@ -198,7 +198,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     <script src="{{url('js/passworTest.js')}}"></script>
 
     <!--contact js-->
-    <script src="{{url('js/contact.js')}}"></script>
+    <!--<script src="{{url('js/contact.js')}}"></script>-->
     <script src="{{url('js/jquery.ajaxchimp.min.js')}}"></script>
     <script src="{{url('js/jquery.form.js')}}"></script>
     <script src="{{url('js/jquery.validate.min.js')}}"></script>
