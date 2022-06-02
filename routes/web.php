@@ -77,6 +77,11 @@ Route::get('/productionHouse/packagedetails',function(){return view('packagedeta
 
 /*-----------------------------------------admin files-----------------------------------------*/
 
+
+// NOTE THE ADMIN AND ADMINS DIFFERENCE IN URL!!!!
+
+Route::get('/admins/viewallusers',[userController::class,'showuserstable'])->name('admin.viewUsers');
+
 Route::get('/admin/viewprofile',function(){return view('adminviewprofile');})->name('admin.viewProfile');
 
 Route::get('/admin/viewprofiletst',function(){return view('testfile');})->name('admin.viewProfiletst');

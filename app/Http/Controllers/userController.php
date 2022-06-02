@@ -13,7 +13,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use App\Providers\RouteServiceProvider;
-
+use Illuminate\Support\Facades\DB;
 
 
 class userController extends Controller
@@ -45,19 +45,20 @@ class userController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function show_users_table()
+    public function showuserstable()
     {
         //return all users
         
         $users = DB::table('users')
-            ->select('users.first_name','users.last_name', 'users.user_type')
+            ->select('users.first_name','users.last_name', 'users.user_type','users.id')
             ->where('user_type', '=' , 'customer')
             ->get(); 
         $admins = DB::table('users')
-            ->select('users.first_name','users.last_name', 'users.user_type')
+            ->select('users.first_name','users.last_name', 'users.user_type','users.id')
             ->where('user_type', '=' , 'administrator')
-            ->get(); 
-            return view('admin/viewallusers',['users'=>$users,'admins'=>$admins]);
+            ->get();
+            
+            return view('admins/viewallusers',['users'=>$users,'admins'=>$admins]);
     }
 
     /**

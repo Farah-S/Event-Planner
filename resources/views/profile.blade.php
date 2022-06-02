@@ -32,7 +32,7 @@
                                 <form action="{{route('users.destroy',['user'=>$user['id']])}}" method="POST">
                                 <input type="hidden" name="_method" value="DELETE">
                                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                                <input type="submit" class="button button-contactForm boxed-btn" value="Delete Profile">
+                                <button type="submit" class="button button-contactForm boxed-btn" value="Delete Profile" onclick="return confirm('Are you sure you want to delete this profile?')">Delete Profile</button>
                                 </form>
                                 </div>
                            
