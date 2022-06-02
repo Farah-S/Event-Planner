@@ -57,23 +57,29 @@ Route::group(['middleware' => 'auth'], function() {
 
 Route::get('/events',[eventController::class,'index'])->name('events.events');
 
+Route::post('/storeWelcomeParty',[eventController::class,'storeWelcomeParty'])->name('events.storeWelcomeParty');
 Route::get('/events/welcomeparty',[eventController::class,'welcomePartyForm'])->name('events.welcomeparty');
 
-Route::post('/storeWelcomeParty',[eventController::class,'storeWelcomeParty'])->name('events.storeWelcomeParty');
-
+Route::post('/storeAnniversary',[eventController::class,'storeAnniversary'])->name('events.storeAnniversary');
 Route::get('/events/anniversary',[eventController::class,'anniversaryForm'])->name('events.anniversary');
 
-Route::post('/storeAnniversary',[eventController::class,'storeAnniversary'])->name('events.storeAnniversary');
-
 Route::get('/events/newproduct',[eventController::class,'newProductForm'])->name('events.newproduct');
-
 Route::post('/storeNewProduct',[eventController::class,'storeNewProduct'])->name('events.storeNewProduct');
 
 Route::get('/events/customevent',[customEventController::class,'index'])->name('events.custom');
 
 Route::post('/storeGraduation',[eventController::class,'storeNewGraduation'])->name('events.storeNewGraduation');
-
 Route::get('/events/graduationParty',[eventController::class,'graduationForm'])->name('events.graduation');
+
+Route::post('/storeNewConferences',[eventController::class,'storeNewConferences'])->name('events.storeNewConferences');
+Route::get('/events/conferences',[eventController::class,'ConferencesForm'])->name('events.conferences');
+
+Route::post('/storeOpeningEvent',[eventController::class,'storeOpeningEvent'])->name('events.storeOpeningEvent');
+Route::get('/events/OpeningEvent',[eventController::class,'OpeningEventForm'])->name('events.OpeningEvent');
+
+Route::post('/storeBranding',[eventController::class,'storeBranding'])->name('events.storeBranding');
+Route::get('/events/Branding',[eventController::class,'BrandingForm'])->name('events.Branding');
+
 
 /* Route::controller(customEventController::class)->group(function () {
     Route::post('/events/customevent/', 'store')->name('custom.store');

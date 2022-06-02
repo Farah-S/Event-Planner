@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Requests\updateUser;
+use App\Http\Requests\createUser;
 use App\Models\User;
 
 class profileController extends Controller
@@ -70,7 +72,7 @@ class profileController extends Controller
     public function update(updateUser $request)//   ,User $user
     {
         $data=$request->validated();
-        $user = user::find($user->id);
+        $user = user::find($data['id']);
         $user->first_name=$data['first_name']; 
         $user->last_name=$data['last_name']; 
         $user->email=$data['email'];

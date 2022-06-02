@@ -1,7 +1,6 @@
 @extends('layout')
 @section('title','Production House Packages')
 @section('content')
-
          
     <div class="speakers_area inc_padd">
             <div class="row">
@@ -42,16 +41,17 @@
         @endauth
 </div>
         <div class="container">
-            
-        @php                                
-                $num_of_rows= ceil(sizeof($package)/3);
-                $package_size=sizeof($package);
-        @endphp 
+            @php                                
+                    $num_of_rows= ceil(sizeof($package)/3);
+                    $package_size=sizeof($package);
+            @endphp 
 
-                @for($i=0;$i<$package_size;$i++)
-                    @if($i%3==0)
-                        <div class="doqrow">  
-                    @endif
+                    @for($i=0;$i<$package_size;$i++)
+                        @if($i%3==0)
+                            <div class="doqrow">
+                            @php $counter=0; @endphp
+                        @endif
+
                         <div class="column">
                             <div class="single_speaker">
                                 <div class="speaker_thumb">
@@ -74,10 +74,17 @@
                                 </div>
                             </div>
                         </div>
-                @endfor 
-        
-                 
-                </div>
+                        
+                            @if($counter==3)
+                                </div>
+                            else
+                                {{$counter++;}}
+                            @endif
+
+                    @endfor 
+            
+                    
+        </div>
               
         </div> 
 

@@ -12,10 +12,32 @@
             <div class="col-12">
                     <h3 class=" slider slider2 align-mid">Edit Profile</h3>
                     </div>
-            <form class="form-contact contact_form" action="{{route('users.update',['user'=>$user])}}" method="post" id="editProfileForm" novalidate="novalidate">
-                @csrf
-                @method('PUT')       
+            @php
+                
+                $user=Auth::guard('admin')->user();
+                $user=Auth::guard('owner')->user();
+    
+            @endphp
+
+            <form class="form-contact contact_form" action="{{route('user.update')}}" method="post" id="editProfileForm" novalidate="novalidate">
+                @csrf    
                 <div class="row mt-2">
+                    @php
+                        if (Auth::guard('customer')->check())
+                        {
+                            $user=Auth::guard('customer')->user();
+                        }
+                        else if (Auth::guard('admin')->check())
+                        {
+                            $user=Auth::guard('admin')->user();
+                        }
+                        else if (Auth::guard('owner')->check())
+                        {
+                            $user=Auth::guard('owner')->user();
+                        }
+                    $userId= $user->id;
+                    @endphp
+                    <input type="hidden" id="id" name="id" value="{{$userId}}">
                     <div class="col-md-6"><label class="labels">Name</label><input type="text" id="first_name" name="first_name" class="form-control" value="{{$user->first_name}}" value=""></div>
                     <div class="col-md-6"><label class="labels">Surname</label><input type="text" id="last_name" name="last_name" class="form-control" value="{{$user->last_name}}" placeholder="surname"><br></div>
                 </div>

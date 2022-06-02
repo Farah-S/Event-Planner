@@ -24,6 +24,7 @@ class updateUser extends FormRequest
     public function rules()
     {
         return [
+            'id'=>'sometimes',
             'first_name' => 'required|min:2',
             'last_name' => 'required|min:2',
             'email' => 'required|email',

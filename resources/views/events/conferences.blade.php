@@ -1,15 +1,15 @@
 @extends('layout')
-@section('title','Graduation')
+@section('title','Conferences')
 @section('content')
 
 <div class="contact-section">
     <div class="container border-right border-left">
         <div class="row" style="justify-content:center">
             <div class="col-12">
-                <h3 class="slider center-title-events">Graduation</h3><br>
+                <h3 class="slider center-title-events">Conferences</h3><br>
             </div>
             <div class="col-lg-8">
-                <form class="form-contact contact_form" action="{{route('events.storeNewGraduation')}}" method="post" id="graduationForm" enctype="multipart/form-data" novalidate="novalidate">
+                <form class="form-contact contact_form" action="{{route('events.storeNewConferences')}}" method="post" id="ConferencesForm" enctype="multipart/form-data" novalidate="novalidate">
                     @csrf
                     <!-- user id sent as hidden param -->
                     <input type="hidden" id="id" name="id" value="2"> 
@@ -68,7 +68,8 @@
                                     <label for='else' class="radio-label" style='display: inline-block;'> Else</label><br>
                                     <div class="form-group outer-div" id='elseTextbox' name='elseTextbox' style='display:none;'>
                                         <!-- <div class='inner-div'> -->
-                                            <input class="white-form-inner valid" name="elseTableShape" id="tableShape" value="{{old('elseTableShape')}}" minlength='1' type="text" placeholder="Enter desired shape">
+                                            <input class="white-form-inner valid" name="elseTableShape" id="elseTableShape" value="{{old('elseTableShape')}}" minlength='5' type="text"  placeholder="Enter desired shape">
+                                            <label class='error' for='elseTableShape' id='tableShapeError'></label>
                                             @error('elseTableShape')
                                             <label class='error'>
                                                 {{$message}}
@@ -155,35 +156,6 @@
                     </div>
                     <!-- end of lights colors -->
 
-                    <!-- led screens -->
-                    <div class="form-group">
-                        <input type="checkbox" id="ledScreen" name="ledScreen" value="yes" {{ old('ledScreen') == 'yes' ? 'checked' : '' }}/>
-                        <label for="ledScreen" class="checkbox-label" style='display: inline-block;'>LED Screens</label>
-                        <!-- start of hidden div -->
-                        <div class="form-group outer-div" id='ledOptions' name='ledOptions'  style='display:none;'>
-                            <div class="form-group inner-div">
-                                <h3 class="slider inner-form-item-title">Size of Each Screen *</h3>
-                                <input class="white-form-inner valid" name="size" id="size" value="{{old('size')}}" minlength='3' maxlength='10' type="text" placeholder="Ex: 1280 x 720">
-                                @error('size')
-                                <label class='error'>
-                                    {{$message}}
-                                </label>
-                                @enderror
-                            </div>
-                            <div class="form-group inner-div">
-                                <h3 class="slider inner-form-item-title">Number of Screens *</h3>
-                                <input class="white-form-inner valid" name="numberOfScreens" id="numberOfScreens" value="{{old('numberOfScreens')}}" min=0 type="number" step=1 onfocus="this.placeholder = ''" onblur="this.placeholder = '0'" placeholder="0">
-                                @error('numberOfScreens')
-                                <label class='error'>
-                                    {{$message}}
-                                </label>
-                                @enderror
-                            </div>
-                        </div>
-                        <!-- end of hidden div -->
-                    </div>
-                    <!-- end of led screens -->
-
                     <!-- decoration -->
                     <div class="form-group">
                         <input type="checkbox" id="decorations" name="decorations" value="yes" {{ old('decorations') == 'yes' ? 'checked' : '' }}/>
@@ -202,7 +174,7 @@
                             <div class="form-group inner-div">
                                 <h3 class="slider inner-form-item-title">Decoration Details *</h3>
                                 <div class="form-group">
-                                    <textarea class="white-form w-100" style="padding:1.5%" name="decodetails" value="{{old('decodetails')}}" id='decodetails' minlength="50" cols="30" rows="9" placeholder='Write the details of your desired decoration here'>{{old('decodetails')}}</textarea>
+                                    <textarea class="white-form w-100" style="padding:1.5%" value="{{old('decodetails')}}" name="decodetails" id='decodetails' minlength=50 cols="30" rows="9" placeholder='Write the details of your desired decoration here'>{{ old('decodetails') }}</textarea>
                                     @error('decodetails')
                                     <label class='error'>
                                         {{$message='You must write at least 50 characters'}}
@@ -213,7 +185,18 @@
                         </div>
                         <!-- end of hidden div -->
                     </div>
-                    <!-- end of decoration -->    
+                    <!-- end of led screens -->
+
+                    <!-- media production -->
+                    <h3 class="slider form-item-title">Media Production :</h3>
+                    <div class="form-group inner-div">
+                        <input class="valid" value="yes" {{ old('photo') == 'yes' ? 'checked' : '' }} name="photo" id="photo" type="checkbox">
+                        <label for='photo' class="checkbox-label" style='display: inline-block;'> Photo</label>
+                        <br>
+                        <input class="valid" value="yes" {{ old('video') == 'yes' ? 'checked' : '' }} name="video" id="video" type="checkbox">
+                        <label for='video' class="checkbox-label" style='display: inline-block;'> Video</label>
+                    </div>
+                    <!-- end of media production -->
 
                     <!-- total budget -->
                     <div class="form-group">
@@ -233,14 +216,7 @@
                         <label for='indoors' class="checkbox-label" style='display: inline-block;'> Indoors Event</label>
                     </div>
                     <!-- end of indoors -->
-
-                    <!-- start of plixie -->
-                    <div class="form-group">
-                        <input class="valid" value="yes" {{ old('plixie') == 'yes' ? 'checked' : '' }} name="plixie" id="plixie" type="checkbox">
-                        <label for='plixie' class="checkbox-label" style='display: inline-block;'> Plixie</label>
-                    </div>
-                    <!-- end of plixie -->
-
+                    
                     <!-- cancel policy check -->
                     <div class="form-group">
                         <input class="valid" value="yes" {{ old('cancel') == 'yes' ? 'checked' : '' }} name="cancel" id="cancel" type="checkbox">
@@ -253,7 +229,7 @@
                     <p class="required">Fields with * are required</p>
                     </div>
                     <div class="form-group mt-3" style="text-align:center">
-                        <button type="submit" name='submit' class="button button-contactForm boxed-btn">Request</button>
+                        <button type="submit" class="button button-contactForm boxed-btn">Request</button>
                     </div>
                 </form>
             </div>
@@ -263,5 +239,5 @@
 
 @endsection
 @section('scripts')
-    <script src="{{url('js/checkboxShowProduct.js')}}"></script>
+    <script src="{{url('js/checkboxShowAnniversary.js')}}"></script>
 @endsection

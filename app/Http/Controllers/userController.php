@@ -10,8 +10,7 @@ use App\Models\User;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use App\Providers\RouteServiceProvider;
-
-
+use Illuminate\Support\Facades\Auth;
 
 class userController extends Controller
 {
@@ -135,8 +134,17 @@ class userController extends Controller
      */
     public function destroy()
     {
-        $category = User::find($id);
-        $category->delete();
+        if(Auth::guard('admin')->check())
+        {
+            $admin=Auth::guard('admin')->user()->id;
+            $admin->delete();
+        }
+
+        if(Auth::guard('customer')->check())
+        {
+            $customer=Auth::guard('customer')->user()->id;
+            $customer->delete();
+        }
 
         return back()->with('success', 'Item is deleted successfully');
         

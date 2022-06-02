@@ -49,9 +49,11 @@
                                         <li><a class="active" href="/">Home</a></li>
                                         <li><a href="{{route('events.events')}}">Events<i class="ti-angle-down"></i></a>
                                             <ul class="submenu">
-                                                <li class='test-li'><a href="#">Conferences</a></li>
+                                            
+                                                <li class='test-li'><a href="{{route('events.conferences')}}">Conferences</a></li>
                                                 <li class='test-li'><a href="{{route('events.anniversary')}}">Anniversaries</a></li>
-                                                <li class='test-li'><a href="#">Branding</a></li>
+                                                <li class='test-li'><a href="{{route('events.Branding')}}">Branding</a></li>    
+                                                <li class='test-li'><a href="{{route('events.OpeningEvent')}}">Opening Event</a></li>
                                                 <li class='test-li'><a href="{{route('events.welcomeparty')}}">Welcome Parties</a></li>
                                                 <li class='test-li'><a href="{{route('events.graduation')}}">Graduations</a></li>
                                                 <li class='test-li'><a href="{{route('events.events')}}">View All</a></li>                                              
