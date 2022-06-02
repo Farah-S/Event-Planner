@@ -53,8 +53,8 @@
                                                 <li class='test-li'><a href="{{route('events.anniversary')}}">Anniversaries</a></li>
                                                 <li class='test-li'><a href="#">Branding</a></li>
                                                 <li class='test-li'><a href="{{route('events.welcomeparty')}}">Welcome Parties</a></li>
-                                                <li class='test-li'><a href="#">Graduations</a></li>
-                                                <li class='test-li'><a href="{{route('events.events')}}">View All</a></li>
+                                                <li class='test-li'><a href="{{route('events.graduation')}}">Graduations</a></li>
+                                                <li class='test-li'><a href="{{route('events.events')}}">View All</a></li>                                              
                                             </ul>
                                         </li>
                                         <!-- <li><a href="{{route('events.events')}}">Events</a></li> -->

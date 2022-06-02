@@ -69,6 +69,10 @@ Route::post('/storeNewProduct',[eventController::class,'storeNewProduct'])->name
 
 Route::get('/events/customevent',[customEventController::class,'index'])->name('events.custom');
 
+Route::post('/storeGraduation',[eventController::class,'storeNewGraduation'])->name('events.storeNewGraduation');
+
+Route::get('/events/graduationParty',[eventController::class,'graduationForm'])->name('events.graduation');
+
 /* Route::controller(customEventController::class)->group(function () {
     Route::post('/events/customevent/', 'store')->name('custom.store');
 });
