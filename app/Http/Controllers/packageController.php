@@ -19,7 +19,7 @@ class packageController extends Controller
         $package = DB::table('packages')
             ->join('image_package', 'packages.id', '=', 'image_package.package_id')
             ->join('images', 'image_package.image_id', '=', 'images.id')
-            ->select('packages.*','images.*')
+            ->select('packages.*','images.*','packages.id as packageID')
             ->get();
 
         return view('/productionHouse/decorationspage',['package'=>$package]);
@@ -63,8 +63,9 @@ class packageController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(package $package)
+    public function edit($id)
     {
+        $package = package::find($id);
         return view('productionHouse/editPackage',['package'=>$package]);
     }
 
@@ -97,5 +98,35 @@ class packageController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function showhide()
+    {
+        $packages = DB::table('packages')
+            ->select('packages.*')
+            ->get();
+        return view('productionHouse/showHidePackages',['package'=>$packages]);
+    }
+
+    public function updateShowHide(Request $request)
+    {
+        $names = DB::table('packages')
+            ->select('name','id')
+            ->get();
+        foreach($names as $n){
+            if($request->has([$n->name])){
+                $id=$request[$n->name];
+                $package = package::find($id);
+                $package->hidden=0;
+                $package->save();
+            }
+            else{
+                $id=$n->id;
+                $package = package::find($id);
+                $package->hidden=1;
+                $package->save();
+            }
+        }
+        return redirect()->route('productionHouse.packages');
     }
 }

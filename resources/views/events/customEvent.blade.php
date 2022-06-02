@@ -13,7 +13,7 @@
                 <form class="form-contact contact_form" action="{{route('customEvents.store')}}" method="post" id="customEventForm" enctype="multipart/form-data" novalidate="novalidate">
                     @csrf
                     <!-- user id sent as hidden param -->
-                    <input type="hidden" id="id" name="id" value="2"> 
+                    <!-- <input type="hidden" id="id" name="id" value="2">  -->
                     <div class="row">
                         <!-- diaplay current package image-->
                         <div class="form-group mt-3">

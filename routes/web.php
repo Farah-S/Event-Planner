@@ -40,15 +40,17 @@ Route::get('/signup',[userController::class,'create'])->name('user.signup');
 
 #Route::get('/login',[loginController::class,'index'])->name('user.login');
 
-Route::get('/myprofile',[profileController::class,'show'])->name('user.profile');
+Route::group(['middleware' => 'auth'], function() {
+    Route::get('/myprofile',[profileController::class,'show'])->name('user.profile');
 
-Route::get('/editprofile',[profileController::class,'edit'])->name('user.editProfile');
+    Route::get('/editprofile',[profileController::class,'edit'])->name('user.editProfile');
 
-Route::post('/updateprofile',[profileController::class,'update'])->name('user.update');
+    Route::post('/updateprofile',[profileController::class,'update'])->name('user.update');
 
-Route::post('/deleteprofile',[profileController::class,'delete'])->name('user.deleteProfile');
+    Route::post('/deleteprofile',[profileController::class,'delete'])->name('user.deleteProfile');
 
-Route::get('/logout',[loginController::class,'logout'])->name('user.logout');
+    Route::get('/logout',[loginController::class,'logout'])->name('user.logout');
+});
 
 
 /*-----------------------------------------events files-----------------------------------------*/
@@ -84,7 +86,11 @@ Route::get('/productionHouse',[packageController::class,'index'])->name('product
 Route::group(['middleware' => 'admin'], function() {
     Route::get('/productionHouse/addPackage',function(){return view('productionHouse/addPackage');})->name('productionHouse.addPackage');
 
-    Route::get('/productionHouse/editPackage/{package}',[packageController::class,'edit'])->name('productionHouse.editPackage');
+    Route::get('/productionHouse/editPackage/{id}',[packageController::class,'edit'])->name('productionHouse.editPackage');
+
+    Route::get('/productionHouse/showHide',[packageController::class,'showhide'])->name('productionHouse.showhide');
+
+    Route::post('/updateShowHide',[packageController::class,'updateShowHide'])->name('productionHouse.updateshowhide');
 
     Route::post('/updatePackage/{package}',[packageController::class,'update'])->name('productionHouse.updatePackage');
 });
@@ -105,7 +111,7 @@ Route::group(['middleware' => 'admin'], function() {
 /*-----------------------------------------customer files-----------------------------------------*/
 Route::group(['middleware' => 'customer'], function() {
 
-    Route::get('/myorders',function(){return view('customers/myorders');})->name('customer.myorders');
+    Route::get('/myorders',[orderController::class,'showCustomerOrders'])->name('customer.myorders');
 
 });
 
@@ -130,4 +136,4 @@ Route::view('/customer', 'customer');
 
 /*-----------------------------------------Customer files-----------------------------------------*/
 
-Route::get('/customer/allOrders',[orderController::class,'showCustomerOrders'])->name('cutomer.allOrders');
+// Route::get('/customer/allOrders',[orderController::class,'showCustomerOrders'])->name('cutomer.allOrders');
