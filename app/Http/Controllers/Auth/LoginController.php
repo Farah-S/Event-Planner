@@ -96,7 +96,10 @@ class LoginController extends Controller
                 return redirect()->intended('/');
             }
         }
-        return back()->withInput($request->only('email', 'remember'));
+        // return back()->withInput($request->only('email', 'remember'));
+        return back()
+                ->withInput($request->only('email', 'remember'))
+                ->withErrors();
     }
 
     public function logout()

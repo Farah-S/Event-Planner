@@ -1,4 +1,4 @@
-@extends('layout')
+@extends('redlayout')
 @section('title','Graduation')
 @section('content')
 

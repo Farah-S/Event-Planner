@@ -1,4 +1,4 @@
-@extends('layout')
+@extends('redlayout')
 @section('title','Profile')
 @section('content')
 <div class="slider_area">

@@ -31,7 +31,7 @@
 <body>
     <!-- header-start -->
     <header>
-        <div class="header-area" style="background-color: rgb(0,0,0,0.25);">
+        <div class="header-area" style="background-color: rgb(182, 29, 29);">
             <div id="sticky-header" class="main-header-area">
                 <div class="container-fluid p-0">
                     <div class="row align-items-center no-gutters">
