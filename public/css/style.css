@@ -523,6 +523,35 @@ h3 {
   width: 220px;
 }
 
+.boxed-btn-small {
+  background: #e9eafa;
+  color: #db9797;
+  display: inline-block;
+  padding: 10px 30px;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  border: 0;
+  border: 2px solid #b24cc2;
+  text-align: center;
+  color: #b24cc2 !important;
+  text-transform: capitalize;
+  border-radius: 1px 12px;
+}
+
+/* line 41, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_btn.scss */
+.boxed-btn-small:hover {
+  background: #b24cc2;
+  color: #fff !important;
+  border: 2px solid #fff;
+}
+
+/* line 46, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_btn.scss */
+.boxed-btn-small:focus {
+  outline: none;
+}
+
+
 /* line 53, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_btn.scss */
 .boxed-btn2 {
   background: transparent;
@@ -1090,12 +1119,21 @@ ul:hover>.submenu{
   /* line 140, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_header.scss */
   .header-area .main-header-area.sticky {
     padding: 0 50px;
+    /* padding: 0 30px; */
   }
 }
 
 @media (min-width: 1200px) and (max-width: 1500px) {
   /* line 140, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_header.scss */
   .header-area .main-header-area.sticky {
+    padding: 0 50px;
+    /* padding: 0 10px; */
+  }
+}
+@media (min-width: 1500px) and (max-width: 1900px) {
+  /* line 140, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_header.scss */
+  .header-area .main-header-area.sticky {
+    /* padding: 0 50px; */
     padding: 0 50px;
   }
 }
@@ -3073,6 +3111,17 @@ label.radio-label {
   -ms-user-select: none; /* Internet Explorer/Edge */
 }
 
+label.password {
+  font-size: 15px;
+  color: black;
+  font-family: "Poppins", sans-serif;
+  user-select: none; /* supported by Chrome and Opera */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+}
+    
 
 .image-label{
   width:60px;

@@ -31,7 +31,7 @@
 <body>
     <!-- header-start -->
     <header>
-        <div class="header-area" style="background-color: rgb(0,0,0,0.25);">
+        <div class="header-area" style="background-color: rgb(182, 29, 29);">
             <div id="sticky-header" class="main-header-area">
                 <div class="container-fluid p-0">
                     <div class="row align-items-center no-gutters">
@@ -52,14 +52,8 @@
                                             
                                                 <li class='test-li'><a href="{{route('events.conferences')}}">Conferences</a></li>
                                                 <li class='test-li'><a href="{{route('events.anniversary')}}">Anniversaries</a></li>
-                                                <li class='test-li'><a href="{{route('events.branding')}}">Branding</a></li>
-                                                <!-- uncommented branding is Ahmed's i think -->
-                                                <!-- <li class='test-li'><a href="{{route('events.welcomeparty')}}">Welcome Parties</a></li> -->
-                                                <!-- <li class='test-li'><a href="#">Graduations</a></li> -->
-                                                <li class='test-li'><a href="{{route('events.events')}}">View All</a></li>
-                                                <!-- <li class='test-li'><a href="{{route('events.Branding')}}">Brandings</a></li>     -->
+                                                <li class='test-li'><a href="{{route('events.Branding')}}">Brandings</a></li>    
                                                 <li class='test-li'><a href="{{route('events.OpeningEvent')}}">Openings</a></li>
-                                                <!-- this opening is Mohamed's -->
                                                 <!-- <li class='test-li'><a href="{{route('events.welcomeparty')}}">Welcome Party</a></li> -->
                                                 <!-- <li class='test-li'><a href="{{route('events.graduation')}}">Graduations</a></li> -->
                                                 <li class='test-li'><a href="{{route('events.events')}}">View All</a></li>                                              
@@ -240,7 +234,7 @@
     <script src="{{url('js/passworTest.js')}}"></script>
 
     <!--contact js-->
-    <!--<script src="{{url('js/contact.js')}}"></script>-->
+    <!-- <script src="{{url('js/contact.js')}}"></script> -->
     <script src="{{url('js/jquery.ajaxchimp.min.js')}}"></script>
     <script src="{{url('js/jquery.form.js')}}"></script>
     <script src="{{url('js/jquery.validate.min.js')}}"></script>
@@ -253,7 +247,7 @@
     <script src="{{url('js/custom_event.js')}}"></script>    
     <script src="{{url('js/editPackage.js')}}"></script>
     <script src="{{url('js/login.js')}}"></script>-->
-    <script src="{{url('js/addpackage.js')}}"></script>
+    <!-- <script src="{{url('js/addpackage.js')}}"></script> -->
 
 
 

@@ -104,7 +104,7 @@ a:hover,
 /* line 39, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_reset.scss */
 a,
 button {
-  color: #131313;
+  color: #ffffff;
   outline: medium none;
 }
 
@@ -5876,4 +5876,8 @@ body {
 .test-pad {
   margin-bottom: 15px;
   margin-top: 15px;
+}
+.table-custom_1{
+  background-color: #ffadc1;
+  color:rgb(126, 5, 5)
 }

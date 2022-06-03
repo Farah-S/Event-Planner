@@ -8,6 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class marketing extends item
 {
     use HasFactory;
+    use SoftDeletes;
+    
     protected $table='marketings';
     protected $fillable = [
         'event_id',

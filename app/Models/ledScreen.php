@@ -8,6 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class ledScreen extends item
 {
     use HasFactory;
+    use SoftDeletes;
+
     protected $table='led_screens';
     protected $fillable = [
         'event_id',

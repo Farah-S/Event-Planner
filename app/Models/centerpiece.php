@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class centerpiece extends item
 {
     use HasFactory;
+    use SoftDeletes;
     
     protected $table='centerpieces';
 

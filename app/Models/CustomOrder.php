@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class CustomOrder extends Model
 {
     use HasFactory;
+    use SoftDeletes;
 
     protected $table='custom_event_order';
 

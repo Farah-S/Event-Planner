@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class table extends item
 {
     use HasFactory;
+    use SoftDeletes;
     
     protected $table='tables';
 
