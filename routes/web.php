@@ -37,6 +37,7 @@ Route::get('/about',[homeController::class,'about'])->name('home.about');
 /*-----------------------------------------shared user files-----------------------------------------*/
 
 Route::get('/signup',[userController::class,'create'])->name('user.signup');
+Route::post('/signup',[profileController::class,'store'])->name('user.storesignup');
 
 #Route::get('/login',[loginController::class,'index'])->name('user.login');
 

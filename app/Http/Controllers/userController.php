@@ -72,6 +72,7 @@ class userController extends Controller
         
         $user->user_type='customer';
         $user->save();
+        dd('hello?');
         return redirect()->route('home.home');
     }
 
@@ -113,7 +114,18 @@ class userController extends Controller
         $user->first_name=$data['first_name']; 
         $user->last_name=$data['last_name']; 
         $user->email=$data['email'];
-        $user->password=Hash::make($data['password']);
+        
+        dd($data['password']);
+        if($data['password']==$user->password)
+        {
+            $user->password=$data['password'];
+            
+        }
+        else
+        {
+            $user->password=Hash::make($data['password']);
+        }
+        
         if($request->file('image')!=NULL){
             $image=$request->file('image');
             $user->image_id = app(imageController::class)->store($image);

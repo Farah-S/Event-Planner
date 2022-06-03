@@ -25,20 +25,20 @@ class createUser extends FormRequest
     {
         if($this->hasFile('image')){
             return [
-                        'first_name' => 'required|min:2',
-                        'last_name' => 'required|min:2',
-                        'email' => 'required|email|unique:users',
-                        'password' => 'required|min:8',
-                        'image' => 'mimes:jpeg,png,jpg,gif|size:1024'
+                    'first_name' => 'required|min:2',
+                    'last_name' => 'required|min:2',
+                    'email' => 'required|email|unique:users',
+                    'password' => 'required|min:8',
+                    'image' => 'mimes:jpeg,png,jpg,gif|size:1024'
                     ];
         }
 
-        return [
-            'first_name' => 'required|min:2',
-            'last_name' => 'required|min:2',
-            'email' => 'required|email|unique:users',
-            'password' => 'required|min:8'
-        ];
+            return [
+                    'first_name' => 'required|min:2',
+                    'last_name' => 'required|min:2',
+                    'email' => 'required|email|unique:users',
+                    'password' => 'required|min:8'
+            ];
     }
 
     public function messages()

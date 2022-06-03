@@ -19,7 +19,7 @@
     
             @endphp
 
-            <form class="form-contact contact_form" action="{{route('user.update')}}" method="post" id="editProfileForm" novalidate="novalidate">
+            <form class="form-contact contact_form" action="{{route('user.update')}}" method="post" id="editProfileForm" novalidate="novalidate" enctype="multipart/form-data">
                 @csrf    
                 <div class="row mt-2">
                     @php
@@ -38,17 +38,17 @@
                     $userId= $user->id;
                     @endphp
                     <input type="hidden" id="id" name="id" value="{{$userId}}">
-                    <div class="col-md-6"><label class="labels">Name</label><input type="text" id="first_name" name="first_name" class="form-control" value="{{$user->first_name}}" value=""></div>
-                    <div class="col-md-6"><label class="labels">Surname</label><input type="text" id="last_name" name="last_name" class="form-control" value="{{$user->last_name}}" placeholder="surname"><br></div>
+                    <div class="col-md-6"><label class="password">Name</label><input type="text" id="first_name" name="first_name" class="form-control" value="{{$user->first_name}}" value=""></div>
+                    <div class="col-md-6"><label class="password">Surname</label><input type="text" id="last_name" name="last_name" class="form-control" value="{{$user->last_name}}" placeholder="surname"><br></div>
                 </div>
                 <div class="row mt-3">
-                    <div class="col-md-12"><label class="labels">Email ID</label><input type="text" id="email" name="email" class="form-control" placeholder="enter email id" value="{{$user->email}}"><br></div>
-                    <div class="col-md-12"><label class="labels">Password</label><input type="password" id="password" name="password" class="form-control" placeholder="enter password" value="{{$user->password}}"><br></div>
+                    <div class="col-md-12"><label class="password">Email ID</label><input type="text" id="email" name="email" class="form-control" placeholder="enter email id" value="{{$user->email}}"><br></div>
+                    <div class="col-md-12"><label class="password">Password</label><input type="password" id="password" name="password" class="form-control" placeholder="enter password" value="{{$user->password}}"><br></div>
                    
                 </div>
                 <div class="row mt-3">
                     <label class="button button-contactForm boxed-btn custom-file-upload">
-                                    <input type="file"/>
+                                    <input type="file" name="image" id="image"/>
                                     <i class="fa fa-cloud-upload"></i> Upload Image
                                 </label>
                 </div>

@@ -98,8 +98,8 @@ class LoginController extends Controller
         }
         // return back()->withInput($request->only('email', 'remember'));
         return back()
-                ->withInput($request->only('email', 'remember'))
-                ->withErrors();
+                ->withInput($request->only('email', 'remember'));
+
     }
 
     public function logout()
