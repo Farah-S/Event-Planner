@@ -44,11 +44,11 @@ class imageController extends Controller
    
         $path=$image->getRealPath();
 
-        $destinationPath = 'public\img\Users';
+        $destinationPath = 'img\Users';
         $image->move($destinationPath,$name);
         $model=new Image();
         $model->category='user'; 
-        $model->path=$path; 
+        $model->path=$destinationPath . "\\" .$name ; 
         $model->save();
         return $model->id;
     }
@@ -85,7 +85,7 @@ class imageController extends Controller
         $model->save();
         $modelid=$model->id;
         
-        $event = customEvent::find($id);
+        $event = customEvent::find($eventid);
         $model->customEvent()->attach($event);
                
         
@@ -122,7 +122,7 @@ class imageController extends Controller
         $model->path=$path; 
         $model->save();
         $modelid=$model->id;
-        $package = package::find($id);
+        $package = package::find($packageid);
         $model->package()->attach($package); 
     }
 
@@ -166,8 +166,9 @@ class imageController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy($image)
     {
-        //
+        #dd("deleted");
+        image::destroy($image);
     }
 }

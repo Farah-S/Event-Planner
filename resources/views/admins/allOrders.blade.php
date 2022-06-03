@@ -1,4 +1,4 @@
-@extends('layout')
+@extends('redlayout')
 @section('title','All Orders')
 @section('content')
 <div class="contact-section">

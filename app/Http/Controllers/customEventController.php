@@ -47,7 +47,7 @@ class customEventController extends Controller
         else{
             $event->indoors=false;
         }
-        $userid=$request->id;
+        $userid=Auth::guard('customer')->user()->id;
         $event->save();
         $eventid=$event->id;
         if($request->file('image')!=NULL){

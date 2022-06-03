@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers\Auth;
-
+use Illuminate\Support\Facades\Session;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
@@ -9,6 +9,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\User;
 use Illuminate\Support\Facades\DB;
+
+
 
 class LoginController extends Controller
 {
@@ -94,12 +96,19 @@ class LoginController extends Controller
                 return redirect()->intended('/');
             }
         }
-        return back()->withInput($request->only('email', 'remember'));
+        // return back()->withInput($request->only('email', 'remember'));
+        return back()
+                ->withInput($request->only('email', 'remember'));
+
     }
 
     public function logout()
     {
-        //
+        
+        Session::flush();
+        Auth::logout();
+
+        return redirect('login');
     }
 
     /**

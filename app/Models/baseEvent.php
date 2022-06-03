@@ -8,6 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 abstract class baseEvent extends Model
 {
     use HasFactory;
+    use SoftDeletes;
+    
     protected $type;
 
     /* public function __construct(array $attributes = array())

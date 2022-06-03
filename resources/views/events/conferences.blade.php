@@ -1,15 +1,15 @@
 @extends('redlayout')
-@section('title','Anniversary')
+@section('title','Conferences')
 @section('content')
 
 <div class="contact-section">
     <div class="container border-right border-left">
         <div class="row" style="justify-content:center">
             <div class="col-12">
-                <h3 class="slider center-title-events">Anniversary</h3><br>
+                <h3 class="slider center-title-events">Conferences</h3><br>
             </div>
             <div class="col-lg-8">
-                <form class="form-contact contact_form" action="{{route('events.storeAnniversary')}}" method="post" id="anniversaryForm" enctype="multipart/form-data" novalidate="novalidate">
+                <form class="form-contact contact_form" action="{{route('events.storeNewConferences')}}" method="post" id="ConferencesForm" enctype="multipart/form-data" novalidate="novalidate">
                     @csrf
                     <!-- user id sent as hidden param -->
                     <input type="hidden" id="id" name="id" value="2"> 

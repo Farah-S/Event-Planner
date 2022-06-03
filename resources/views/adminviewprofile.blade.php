@@ -1,4 +1,4 @@
-@extends('layout')
+@extends('redlayout')
 @section('title','Admin View Profile')
 @section('content')
 <div class="speakers_area inc_padd ">

@@ -1,4 +1,4 @@
-@extends('layout')
+@extends('redlayout')
 @section('title','Edit Package')
 @section('content')
 
@@ -15,7 +15,7 @@
                         <!-- diaplay current package image-->
                         <div class="form-group mt-3">
                             <label class="button button-contactForm boxed-btn custom-file-upload2">
-                                <input type="file"/>
+                                <input type="file" name='image' id='image'/>
                                 <i class="fa fa-cloud-upload"></i> Upload Image
                             </label>
                         </div>

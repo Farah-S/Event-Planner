@@ -1,4 +1,4 @@
-@extends('layout')
+@extends('redlayout')
 @section('title','Log in')
 @section('content')
 <section class="contact-section">
@@ -26,13 +26,13 @@
                             <div class="row justify-content-center">
                                 <div class="col-sm-6">
                                     <div class="form-group">
-                                        <input class="form-control valid @error('password') is-invalid @enderror"  name="password" minlength=8 id="password" input type="password" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your Password'" placeholder="Password" required autocomplete="current-password"><br>
-                                        <input type="checkbox" onclick="myFunction()"> Show Password
+                                        <input class="form-control valid @error('password') is-invalid @enderror"  name="password" minlength=8 id="password" input type="password" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your Password'" placeholder="Password" required autocomplete="current-password">
                                         @error('password')
                                             <span class="invalid-feedback" role="alert">
                                                 <strong>{{ $message }}</strong>
                                             </span>
                                         @enderror
+                                        <input type="checkbox" onclick="myFunction()" id='show' name='show'><label for='show' class="password" style='display: inline-block;'>&nbsp; Show password</label>
                                     </div>
                                 </div>
                             </div>

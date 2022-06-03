@@ -8,6 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class decoration extends item
 {
     use HasFactory;
+    use SoftDeletes;
+
     protected $table='decorations';
     protected $fillable = [
         'event_id',

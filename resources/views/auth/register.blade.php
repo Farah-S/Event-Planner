@@ -1,4 +1,4 @@
-@extends('layout')
+@extends('redlayout')
 @section('title','Signup')
 @section('content')
 
@@ -9,7 +9,7 @@
                         <h3 class=" slider slider2 align-mid">Sign Up</h3>
                     </div>
                     <div class="col-lg-8">
-                        <form class="form-contact contact_form" action="{{route('users.store')}}" method="post" id="signupForm" enctype="multipart/form-data" novalidate="novalidate">
+                        <form class="form-contact contact_form" action="{{route('user.storesignup')}}" method="post" id="signupForm" enctype="multipart/form-data" novalidate="novalidate">
                         @csrf    
                         <div class="row justify-content-center">
                             <div class="col-sm-6 justify-content-center">
