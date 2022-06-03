@@ -24,10 +24,19 @@ class createCustomEvent extends FormRequest
      */
     public function rules()
     {
+        if($this->hasFile('image')){
+            return [
+                        'details' => 'required|min:50',
+                        'budget' => 'required',
+                        'cancel' => 'required',
+                        'image' => 'mimes:jpeg,png,jpg,gif|size:1024'
+                    ];
+        }
         return [
-            'details' => 'required|min:50',
-            'budget' => 'required'
-        ];
+                    'details' => 'required|min:50',
+                    'budget' => 'required',
+                    'cancel' => 'required'
+                ];
     }
 
     protected function prepareForValidation(){

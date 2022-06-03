@@ -1,4 +1,4 @@
-@extends('layout')
+@extends('redlayout')
 @section('title','Add Package')
 @section('content')
 
@@ -6,7 +6,7 @@
     <div class="container border-right border-left">
         <div class="row" style="justify-content:center">
             <div class="col-12">
-                <h3 class="slider center-title">Package Name</h3><br>
+                <h3 class="slider center-title">Add Package</h3><br>
             </div>
             <div class="col-lg-8">
                 <form class="form-contact contact_form" action="contact_process.php" method="post" id="addPackageForm" novalidate="novalidate">
@@ -14,12 +14,16 @@
                         
                         <div class="form-group mt-3">
                             <label class="button button-contactForm boxed-btn custom-file-upload2">
-                                <input type="file"/>
+                                <input type="file" name='image' id='image'/>
                                 <i class="fa fa-cloud-upload"></i> Upload Image
                             </label>
                         </div>
                     </div>
-                  
+
+                    <h3 class="slider form-item-title">Package Name</h3>
+                            <div class="form-group">
+                                <textarea class="form-control w-100" minlength=5 name="name" id="name" cols="1" rows="2" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Package Name'" placeholder="Enter Package Name"></textarea>
+                            </div>
                         <h3 class="slider form-item-title">Package Details</h3>
                             <div class="form-group">
                                 <textarea class="form-control w-100" minlength=20 name="message" id="message" cols="30" rows="9" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Package Description'" placeholder="Enter Package Description"></textarea>

@@ -13,4 +13,14 @@ class Image extends Model
         'category',
         'path'
     ];
+
+    public function customEvent()
+    {
+        return $this->belongsToMany(customEvent::class);
+    }
+
+    public function package()
+    {
+        return $this->belongsToMany(package::class);
+    }
 }

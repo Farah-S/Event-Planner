@@ -1,4 +1,4 @@
-@extends('layout')
+@extends('redlayout')
 @section('title','Events')
 @section('content')
 
@@ -11,7 +11,7 @@
                             <img src="img/Events/welcome2.jpg" alt="">
                             <div class="hover_overlay">
                                 <div class="social_icon">
-                                    <a href="#">View</a>
+                                    <a href="{{route('events.welcomeparty')}}">View</a>
                                 </div>
                             </div>
                         </div>
@@ -25,13 +25,28 @@
                             <img src="img/Events/corp2.jpg" alt="">
                             <div class="hover_overlay">
                                 <div class="social_icon">
-                                <a href="#">View</a>
+                                <a href="{{route('events.conferences')}}">View</a>
                                 </div>
                             </div>
                         </div>
                         <div class="speaker_name text-center">
-                            <h3>Corprate</h3>
-                            <p>Pick the Easter Package you like with variable prices</p>
+                            <h3>Confrences</h3>
+                            <p>Customize the event that suits your purposes with variable prices </p>
+                        </div>
+                    </div>
+
+                    <div class="single_speaker">
+                        <div class="speaker_thumb">
+                            <img src="img/Events/pmv-chamara-1kCDtHVl064-unsplash.jpg" alt="">
+                            <div class="hover_overlay">
+                                <div class="social_icon">
+                                <a href="{{route('events.Branding')}}">View</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="speaker_name text-center">
+                            <h3>Branding</h3>
+                            <p>reache more customers by properly branding for your products </p>
                         </div>
                     </div>
                     
@@ -43,13 +58,13 @@
                             <img src="img/Events/ani2.jpg" alt="">
                             <div class="hover_overlay">
                                 <div class="social_icon">
-                                <a href="#">View</a>
+                                <a href="{{route('events.anniversary')}}">View</a>
                                 </div>
                             </div>
                         </div>
                         <div class="speaker_name text-center">
                             <h3>Aniversaries</h3>
-                            <p>Pick the Ramadan Package you like with variable prices</p>
+                            <p>lets us celebrate with you your everlasting aniversaries</p>
                         </div>
                     </div>
                     <div class="single_speaker">
@@ -57,13 +72,28 @@
                             <img src="img/Events/product.jpg" alt="">
                             <div class="hover_overlay">
                                 <div class="social_icon">
-                                <a href="#">View</a>
+                                <a href="{{route('events.newproduct')}}">View</a>
                                 </div>
                             </div>
                         </div>
                         <div class="speaker_name text-center">
                             <h3>New product</h3>
                             <p>Customize your new product reveal conference with variable prices</p>
+                        </div>
+                    </div>
+
+                    <div class="single_speaker">
+                        <div class="speaker_thumb">
+                            <img src="img/Events/2.jpg" alt="">
+                            <div class="hover_overlay">
+                                <div class="social_icon">
+                                <a href="{{route('events.custom')}}" >Customise</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="speaker_name text-center">
+                            <h3>Make custom event</h3>
+                            <p>Something Else you want ? Customise the event you dream of</p>
                         </div>
                     </div>
 
@@ -74,30 +104,30 @@
                             <img src="img/Events/grad2.jpg" alt="">
                             <div class="hover_overlay">
                                 <div class="social_icon">
-                                <a href="#" >View</a>
+                                <a href="{{route('events.graduation')}}" >View</a>
                                 </div>
                             </div>
                         </div>
                         <div class="speaker_name text-center">
                             <h3>Graduation Parties</h3>
-                            <p>Pick the Halloween Package you like with variable prices</p>
+                            <p>let us help you to celebrate your university students graduation</p>
                         </div>
                     </div>
-
                     <div class="single_speaker">
                         <div class="speaker_thumb">
-                            <img src="img/Events/2.jpg" alt="">
+                            <img src="img/Events/alexander-kovacs-GMGdhtYeROY-unsplash.jpg" alt="">
                             <div class="hover_overlay">
                                 <div class="social_icon">
-                                <a href="{{route('events.custom',[2])}}" >Customise</a>
+                                <a href="{{route('events.OpeningEvent')}}">View</a>
                                 </div>
                             </div>
                         </div>
                         <div class="speaker_name text-center">
-                            <h3>Make custom event</h3>
-                            <p>Something Else you want ? Customise the event you dream of</p>
+                            <h3>Opening Event</h3>
+                            <p>celebrate the beginning of your new success story</p>
                         </div>
                     </div>
+
 
                 </div>
 

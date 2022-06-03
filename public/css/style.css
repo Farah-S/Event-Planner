@@ -126,6 +126,32 @@ h6 a {
   color: inherit;
 }
 
+.link h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+  color: brown;
+}
+
+.checkbox-label form-contact  label{
+  color:black;
+  font-size: large;
+}
+
+
+.link{
+  color: #d1667a ; 
+  /* color: blue; */
+}
+.link:hover{
+  color: #d80000 !important;
+}
+.link:visited {
+  color: #d1667a;
+  /* color: blue; */
+}
 /* line 57, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_reset.scss */
 ul {
   margin: 0px;
@@ -147,13 +173,25 @@ p {
   margin-bottom: 13px;
   font-family: "Poppins", sans-serif;
 }
+.disable-select {
+  user-select: none; /* supported by Chrome and Opera */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+}
 
 /* line 73, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_reset.scss */
 label {
-  color: #7e7e7e;
+  color: #f50808;
   cursor: pointer;
   font-size: 14px;
   font-weight: 400;
+}
+
+.required{
+  font-size:16px; 
+  color:black;
 }
 
 /* line 79, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_reset.scss */
@@ -484,6 +522,35 @@ h3 {
 .boxed-btn-red.large-width {
   width: 220px;
 }
+
+.boxed-btn-small {
+  background: #e9eafa;
+  color: #db9797;
+  display: inline-block;
+  padding: 10px 30px;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  border: 0;
+  border: 2px solid #b24cc2;
+  text-align: center;
+  color: #b24cc2 !important;
+  text-transform: capitalize;
+  border-radius: 1px 12px;
+}
+
+/* line 41, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_btn.scss */
+.boxed-btn-small:hover {
+  background: #b24cc2;
+  color: #fff !important;
+  border: 2px solid #fff;
+}
+
+/* line 46, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_btn.scss */
+.boxed-btn-small:focus {
+  outline: none;
+}
+
 
 /* line 53, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_btn.scss */
 .boxed-btn2 {
@@ -1052,12 +1119,21 @@ ul:hover>.submenu{
   /* line 140, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_header.scss */
   .header-area .main-header-area.sticky {
     padding: 0 50px;
+    /* padding: 0 30px; */
   }
 }
 
 @media (min-width: 1200px) and (max-width: 1500px) {
   /* line 140, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_header.scss */
   .header-area .main-header-area.sticky {
+    padding: 0 50px;
+    /* padding: 0 10px; */
+  }
+}
+@media (min-width: 1500px) and (max-width: 1900px) {
+  /* line 140, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_header.scss */
+  .header-area .main-header-area.sticky {
+    /* padding: 0 50px; */
     padding: 0 50px;
   }
 }
@@ -1150,6 +1226,7 @@ ul:hover>.submenu{
   font-family: "Cookie", 'cursive';
 }
 
+
 .slider2{
   font-size: 50px;
   color: #b61d1d;
@@ -1168,23 +1245,86 @@ ul:hover>.submenu{
 text-align: center;
 justify-content: center;
 }
+
 .align-left
 {
 text-align: left;
 justify-content: left;
 padding-left: 15%;
 }
+
 .center-title{
   font-size: 55px;
   color: #b61d1d;
   text-align: center;
 }
+
+.orders-title{
+  font-size: 100px;
+  font-weight: 400;
+  font-family: "Cookie", 'cursive';
+}
+
+.orders-sections{
+  font-size: 45px;
+  font-weight: 200;
+  color: black;
+  text-align: center;
+  font-family: "Cookie", 'cursive';
+}
+
+/* .orders-details{
+  font-size: larger;
+  font-weight: 450;
+  color: black;
+  text-align: center;
+  font-family: "Cookie", 'cursive';
+} */
+
+.center-title-events{
+  font-size: 75px;
+  color: #b61d1d;
+  text-align: center;
+  user-select: none; /* supported by Chrome and Opera */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+}
 .form-item-title{
   font-size: 35px;
   color: black;
   text-align: left;
+  user-select: none; /* supported by Chrome and Opera */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
 }
 
+.inner-form-item-title{
+  font-size: 30px;
+  /* font-family: "Playfair Display", serif; */
+  color: black;
+  text-align: left;
+  user-select: none; /* supported by Chrome and Opera */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+}
+
+.outer-div {
+  /* width: 200px; */
+  margin: 0 auto;
+  /* background-color: yellow; */
+}
+
+.inner-div {
+  margin-left: 9%;
+  /* display:none; */
+  /* background-color: orange; */
+}
 
 @media (max-width: 767px) {
   /* line 22, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_slider.scss */
@@ -1274,6 +1414,8 @@ button.accordion:hover, button.accordion.is-open {
 
 .accordion-content {
   background-color: white;
+  background-color: azure;
+  border-radius: 3.5rem;
   border-left: 1px solid whitesmoke;
   border-right: 1px solid whitesmoke;
   padding: 0 20px;
@@ -2640,7 +2782,7 @@ button.accordion:hover, button.accordion.is-open {
 /* line 139, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_footer.scss */
 .footer .copy-right_text .copy_right {
   font-size: 13px;
-  color: rgb(0, 0, 0);
+  color: rgb(0, 0, 0,0.2);
   margin-bottom: 0;
   font-weight: 400;
 }
@@ -2654,7 +2796,7 @@ button.accordion:hover, button.accordion.is-open {
 
 /* line 147, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_footer.scss */
 .footer .copy-right_text .copy_right a {
-  color: rgb(0, 0, 0);
+  color: rgb(0, 0, 0,0.2);
 }
 
 /* line 152, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_footer.scss */
@@ -2947,6 +3089,40 @@ button.accordion:hover, button.accordion.is-open {
   font-size: 14px;
 }
 
+label.checkbox-label {
+  font-size: 35px;
+  color: black;
+  font-family: "Cookie", 'cursive';
+  user-select: none; /* supported by Chrome and Opera */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+}
+
+label.radio-label {
+  font-size: 28px;
+  color: black;
+  font-family: "Cookie", 'cursive';
+  user-select: none; /* supported by Chrome and Opera */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+}
+
+label.password {
+  font-size: 15px;
+  color: black;
+  font-family: "Poppins", sans-serif;
+  user-select: none; /* supported by Chrome and Opera */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+}
+    
+
 .image-label{
   width:60px;
   display: inline-block;
@@ -2975,7 +3151,17 @@ button.accordion:hover, button.accordion.is-open {
   border: 1px solid #131313;
   border-radius: 10px;
   height: 48px;
-  padding-left: 18px;
+  padding-left: 3%;
+  font-size: 13px;
+  background: white;
+  width: 100%;
+}
+
+.form-contact .white-form-inner{
+  border: 1px solid #131313;
+  border-radius: 10px;
+  height: 42px;
+  padding-left: 3%;
   font-size: 13px;
   background: white;
   width: 100%;
@@ -6134,4 +6320,35 @@ tbody th {
   height:30px;
   text-align: center;
 }
+
+table.order-table{
+  clear: both;
+  border: none;
+  border-style: none;
+  background-color: transparent;
+}
+tr.order-table{
+  border: none;
+  background-color: transparent;
+}
+td.order-table{
+  border: none;
+  background-color: transparent;
+  white-space: -moz-pre-wrap !important;  /* Mozilla, since 1999 */
+  white-space: -pre-wrap;      /* Opera 4-6 */
+  white-space: -o-pre-wrap;    /* Opera 7 */
+  white-space: pre-wrap;       /* css-3 */
+  word-wrap: break-word;       /* Internet Explorer 5.5+ */
+  word-break: break-all;
+  white-space: normal;
+  font-size: larger;
+  font-weight: 400;
+  color: black;
+  text-align: center;
+}
+tbody tr:nth-child(even).order-table {
+  border: none;
+  background-color: transparent;
+}
+
 /*# sourceMappingURL=style.css.map */

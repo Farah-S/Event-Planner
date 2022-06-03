@@ -15,7 +15,7 @@ class customEventController extends Controller
      */
     public function index()
     {
-        return view('events.custom');
+        return view('events/customEvent');
     }
 
     /**
@@ -30,18 +30,31 @@ class customEventController extends Controller
 
     /**
      * Store a newly created resource in storage.
-     *
+     * 
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(createCustomEvent $request, $id)
+    public function store(createCustomEvent $request)
     {
         $data=$request->validated();
-        $user=new customEvent();
-        $user->details=$data['details']; 
-        $user->budget=$data['budget']; 
-        $user->customer_id=$id;
-        $user->save();
+        $event=new customEvent();
+        $event->details=$data['details']; 
+        $event->budget=$data['budget'];
+         
+        if($request->has('indoors')){
+            $event->indoors=true;
+        }
+        else{
+            $event->indoors=false;
+        }
+        $userid=Auth::guard('customer')->user()->id;
+        $event->save();
+        $eventid=$event->id;
+        if($request->file('image')!=NULL){
+            $image=$request->file('image');
+            app(imageController::class)->customEventImageStore($image,$eventid);
+        }
+        app(orderController::class)->create($userid,$eventid,'customEvent');
         return redirect()->route('home.home');
     }
 
@@ -53,7 +66,7 @@ class customEventController extends Controller
      */
     public function show($id)
     {
-        //
+        return $event = customEvent::findOrFail($id);
     }
 
     /**

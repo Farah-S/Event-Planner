@@ -13,4 +13,9 @@ class CustomEventImage extends Model
         'image_id',
         'custom_event_id'
     ];
+
+    public function image()
+    {
+        return $this->belongsToMany(Image::class);
+    }
 }

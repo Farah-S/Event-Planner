@@ -1,8 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
-
-use Illuminate\Http\Request;
+use Illuminate\Http\Request; 
+use App\Models\Contact; 
+use Mail; 
 
 class homeController extends Controller
 {
@@ -18,7 +19,7 @@ class homeController extends Controller
         return view('about');
     }
     public function cancelpolicy(){ //cancel policy
-        return view('cancel');
+        return view('cancelpolicy');
     }
     
 }
