@@ -63,7 +63,7 @@
      
         @foreach ($admins as $admin)
         
-           <tr><td>{{$admin->id}}</td><td>{{$admin->first_name}}</td><td>{{$admin->last_name}}</td><td>{{$admin->user_type}}</td><div class="col-md-2"><button type="submit" class="btn btn-danger btn-sm" value="Delete Profile" onclick="return confirm('Are you sure you want to delete this profile?')">Delete</div></button></tr>
+           <tr><td><a href=" {{route('users.view',['user'=>$user['id']])}}">></a>{{$admin->id}}</td><td>{{$admin->first_name}}</td><td>{{$admin->last_name}}</td><td>{{$admin->user_type}}</td></tr>
            
         @endforeach
         

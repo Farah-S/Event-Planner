@@ -122,6 +122,10 @@ class userController extends Controller
     {
         return view('editProfile',['user'=>$user]);
     }
+    public function view(User $user)
+    {
+        return view('viewProfile',['user'=>$user['id']]);
+    }
 
     /**
      * Update the specified resource in storage.
