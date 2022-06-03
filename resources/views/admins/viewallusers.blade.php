@@ -63,7 +63,7 @@
      
         @foreach ($admins as $admin)
         
-           <tr><td><a href=" {{route('users.view',['user'=>$user['id']])}}">></a>{{$admin->id}}</td><td>{{$admin->first_name}}</td><td>{{$admin->last_name}}</td><td>{{$admin->user_type}}</td></tr>
+           <tr><td>{{$admin->id}}</td><td><a href="{{route('users.view',['user'=>$user->id])}}">{{$admin->first_name}}</a></td><td>{{$admin->last_name}}</td><td>{{$admin->user_type}}</td></tr>
            
         @endforeach
         

@@ -41,7 +41,7 @@ Route::get('/myprofile/{id}',[userController::class,'show'])->name('user.profile
 
 Route::get('/editprofile',[userController::class,'edit'])->name('user.editProfile');
 
-Route::get('/editprofile',[userController::class,'view'])->name('user.viewProfile');
+Route::get('/admin/viewprofile/{id}',[userController::class,'view'])->name('users.viewProfile');
 
 /*-----------------------------------------events files-----------------------------------------*/
 

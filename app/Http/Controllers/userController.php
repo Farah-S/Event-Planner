@@ -122,6 +122,12 @@ class userController extends Controller
     {
         return view('editProfile',['user'=>$user]);
     }
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
     public function view(User $user)
     {
         return view('viewProfile',['user'=>$user['id']]);
