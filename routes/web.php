@@ -102,7 +102,7 @@ Route::group(['middleware' => 'admin'], function() {
     Route::post('/updatePackage/{package}',[packageController::class,'update'])->name('productionHouse.updatePackage');
 });
 
-Route::get('/productionHouse/packagedetails',function(){return view('packagedetails');})->name('productionHouse.packageDetails');
+Route::get('/productionHouse/packagedetails/{id}',[packageController::class,'packagedetails'])->name('productionHouse.packageDetails');
 
 /*-----------------------------------------admin files-----------------------------------------*/
 Route::group(['middleware' => 'admin'], function() {

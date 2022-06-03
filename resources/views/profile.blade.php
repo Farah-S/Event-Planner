@@ -3,6 +3,9 @@
 @section('content')
 <div class="slider_area">
 </div>
+@if (Auth::check()) {
+
+
 <div class="ibcontainer">
     <img src="{{ asset('img/speakers/1.png')}}">
 
@@ -41,7 +44,7 @@
 
 
 </div>
-
+}
 
 
 

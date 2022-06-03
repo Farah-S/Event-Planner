@@ -129,4 +129,16 @@ class packageController extends Controller
         }
         return redirect()->route('productionHouse.packages');
     }
+
+    public function packagedetails($id)
+    {
+        $data= DB::table('packages')
+        ->join('image_package', 'packages.id', '=', 'image_package.package_id')
+        ->join('images', 'image_package.image_id', '=', 'images.id')
+        ->select('packages.*','images.*','packages.id as packageID')
+        ->where('packages.id ','=',$id)
+        ->get();
+        return  view('/packagedetails',['packages'=>$data]);
+
+    }
 }
