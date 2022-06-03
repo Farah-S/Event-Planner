@@ -48,7 +48,7 @@ class imageController extends Controller
         $image->move($destinationPath,$name);
         $model=new Image();
         $model->category='user'; 
-        $model->path=$destinationPath.$name ; 
+        $model->path=$destinationPath . "\\" .$name ; 
         $model->save();
         return $model->id;
     }
@@ -85,7 +85,7 @@ class imageController extends Controller
         $model->save();
         $modelid=$model->id;
         
-        $event = customEvent::find($id);
+        $event = customEvent::find($eventid);
         $model->customEvent()->attach($event);
                
         
@@ -122,7 +122,7 @@ class imageController extends Controller
         $model->path=$path; 
         $model->save();
         $modelid=$model->id;
-        $package = package::find($id);
+        $package = package::find($packageid);
         $model->package()->attach($package); 
     }
 

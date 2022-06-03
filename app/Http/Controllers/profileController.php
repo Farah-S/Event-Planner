@@ -138,7 +138,24 @@ class profileController extends Controller
         $category = User::find($id);
         $category->delete();
 
-        return back()->with('success', 'Item is deleted successfully');
+        return back()->with('success', 'User is deleted successfully');
+        
+    }
+
+    public function addAdmin($id)
+    {
+        $user = User::find($id);
+        $user->user_type='admin'; 
+        $user->save();
+        return redirect()->route('home.home');
+    }
+
+    public function removeAdmin($id)
+    {
+        $user = User::find($id);
+        $user->user_type='customer'; 
+        $user->save();
+        return redirect()->route('home.home');
         
     }
 }

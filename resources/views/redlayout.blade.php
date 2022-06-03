@@ -247,7 +247,7 @@
     <script src="{{url('js/custom_event.js')}}"></script>    
     <script src="{{url('js/editPackage.js')}}"></script>
     <script src="{{url('js/login.js')}}"></script>-->
-    <script src="{{url('js/addpackage.js')}}"></script>
+    <!-- <script src="{{url('js/addpackage.js')}}"></script> -->
 
 
 

@@ -23,6 +23,15 @@ class packageRequest extends FormRequest
      */
     public function rules()
     {
+        if($this->hasFile('image')){
+            return [
+                'name' => 'required|string|min:2',
+                'details'=> 'required|min:20|max:250',
+                'price'=> 'required',
+                'season'=> 'required|string|min:3',
+                'image' => 'mimes:jpeg,png,jpg,gif|size:1024'
+            ];
+        }
         return [
             'name' => 'required|string|min:2',
             'details'=> 'required|min:20|max:250',

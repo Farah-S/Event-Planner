@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 abstract class item extends baseEvent
 {
     use HasFactory;
+    use SoftDeletes;
 
     protected $event;
 
