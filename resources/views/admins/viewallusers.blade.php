@@ -23,7 +23,7 @@
 </div>
 </div>
 </div>
-<div class="container ">
+<div class="container">
 <div class="row">
 <div class="col-md-6">
 <table class="table table-bordered table-dark table-hover">
@@ -63,12 +63,16 @@
      
         @foreach ($admins as $admin)
         
-           <tr><td>{{$admin->id}}</td><td>{{$admin->first_name}}</td><td>{{$admin->last_name}}</td><td>{{$admin->user_type}}</td><div class="btn-inline"><button type="submit" class="btn btn-danger" value="Delete Profile" onclick="return confirm('Are you sure you want to delete this profile?')">Delete</div></button></tr>
+           <tr><td>{{$admin->id}}</td><td>{{$admin->first_name}}</td><td>{{$admin->last_name}}</td><td>{{$admin->user_type}}</td><div class="col-md-2"><button type="submit" class="btn btn-danger btn-sm" value="Delete Profile" onclick="return confirm('Are you sure you want to delete this profile?')">Delete</div></button></tr>
            
         @endforeach
         
     </tbody>
 </table>
+</div>
+<div class="col-md-8">
+    <button type="submit" class="btn btn-danger btn-sm" value="Delete Profile" onclick="return confirm('Are you sure you want to delete this profile?')">Delete
+</button>
 </div>
 </div>
 </div>
