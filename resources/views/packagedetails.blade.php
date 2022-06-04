@@ -11,7 +11,7 @@
                 <div class="col-xl-6 col-md-6">
                     <div class="about_thumb">
                        
-                        <img src="{{$packages->path}}" alt="">
+                        <img src="{{asset($packages->path)}}" alt="">
                     </div>
                 </div>
                 <div class="col-xl-5 offset-xl-1 col-md-6">
