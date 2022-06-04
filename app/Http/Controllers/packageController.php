@@ -33,6 +33,7 @@ class packageController extends Controller
     public function create()
     {
         //return addpackage view
+        return view('/productionHouse/addPackage');
     }
 
     /**
@@ -46,10 +47,11 @@ class packageController extends Controller
         $data=$request->validated();
         
         $package = new package();
-        $package->name=$data['name']; 
-        $package->price=$data['price']; 
+        $package->name=$data['name'];
+        $package->price=$data['price'];
         $package->season=$data['season'];
         $package->details=$data['details'];
+        $package->hidden=0;
         $package->save();
         return redirect()->route('productionHouse.packages');//,$package->id
     }
@@ -144,9 +146,9 @@ class packageController extends Controller
         ->join('image_package', 'packages.id', '=', 'image_package.package_id')
         ->join('images', 'image_package.image_id', '=', 'images.id')
         ->select('packages.*','images.*','packages.id as packageID')
-        ->where('packages.id ','=',$id)
+        ->where('packages.id','=',$id)
         ->get();
-        return  view('/packagedetails',['packages'=>$data]);
+        return  view('/packagedetails',['packages'=>$data[0]]);
 
     }
 }

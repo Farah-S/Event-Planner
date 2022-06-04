@@ -7,6 +7,7 @@ use App\Http\Requests\updateUser;
 use Illuminate\Support\Facades\Hash;
 use App\Http\Requests\createUser;
 use App\Models\User;
+use Illuminate\Support\Facades\DB;
 
 class profileController extends Controller
 {
@@ -68,6 +69,26 @@ class profileController extends Controller
         return view('profile');
     }
 
+    public function showAdmin($id)
+    {
+        // $i=request('id');
+        $user = user::find($id);
+        return view('adminviewprofile',['user'=>$user]);
+    }
+
+    public function allUsers()
+    {
+        $users = DB::table('users')
+            ->select('users.first_name','users.last_name', 'users.user_type','users.id')
+            ->where('user_type', '=' , 'customer')
+            ->get(); 
+        $admins = DB::table('users')
+            ->select('users.first_name','users.last_name', 'users.user_type','users.id')
+            ->where('user_type', '=' , 'admin')
+            ->get();
+            
+            return view('admins/viewallusers',['users'=>$users,'admins'=>$admins]);
+    }
     /**
      * Show the form for editing the specified resource.
      *
@@ -90,8 +111,8 @@ class profileController extends Controller
     {
         $data=$request->validated();
         $user = user::find($data['id']);
-        $user->first_name=$data['first_name']; 
-        $user->last_name=$data['last_name']; 
+        $user->first_name=$data['first_name'];
+        $user->last_name=$data['last_name'];
         $user->email=$data['email'];
         
         if($data['password']==$user->password)

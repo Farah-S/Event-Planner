@@ -18,8 +18,11 @@
                     
                 </div>
                 <div class="col-md-4 text-left">
-
-                <button type="submit" onclick="location.href = '';" class="button button-contactForm boxed-btn">Change User Type</button>
+                @if($user->user_type=='customer')
+                <a href="{{route('admin.addAdmin',['id'=>$user->id])}}"><button type="submit" class="button button-contactForm boxed-btn">Add as Admin</button></a>
+                @elseif($user->user_type=='admin')
+                <a href="{{route('admin.removeAdmin',['id'=>$user->id])}}"><button type="submit" class="button button-contactForm boxed-btn">Remove as Admin</button></a>
+                @endif
 </div>
                             
 <div class="col-md-4 text-left">

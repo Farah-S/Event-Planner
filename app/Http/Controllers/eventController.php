@@ -46,21 +46,10 @@ class eventController extends Controller
         return view('/events/conferences');
     }
 
-    public function OpeningEventForm()
-    {
-        return view('/events/OpeningEvent');
-    }
-    
-    public function BrandingForm()
-    {
-        return view('/events/Branding');
-    }
-
     public function newProductForm()
     {
         return view('/events/newProduct');
     }
-
 
     public function brandingEventForm()
     {
@@ -345,62 +334,6 @@ class eventController extends Controller
         return redirect()->route('home.home');
     }
 
-    
-    public function storeBranding(newProductRequest $request)
-    {
-        $data=$request->validated();
-        $eventID=$this->store($request,'Conferences');
-      
-        $event = Event::find($eventID);
-        
-      
-        $data['event_id'] = $eventID;
-
-        if($request->has('table')){
-            
-            $tables=table::create($data);
-            
-            if($request->elseTableShape!=''){
-                $tables->tableShape=$data['elseTableShape'];
-            }
-            else if($request->tableShape=='else'){
-                $tables->tableShape='any';
-            }
-
-            $event->tables()->save($tables);
-        }
-
-        if($request->has('cp')){
-            $centerpiece=centerpiece::create($data);
-            
-            $event->centerpiece()->save($centerpiece);
-        }
-
-        if($request->has('ledScreen')){
-            $ledScreen=ledScreen::create($data);
-            
-            $event->ledScreen()->save($ledScreen);
-        }
-
-        if($request->has('decorations')){
-            $decorations=new decoration();
-            $decorations->details=$data['decodetails'];
-            $decorations->budget=$data['decoBudget'];
-            $event->decoration()->save($decorations);
-        }
-        
-        if($request->has('market')){
-        
-            $marketing=new marketing();
-            $marketing->budget=$data['marketingBudget'];
-            $marketing->billboardAD=($request->has('billboardAD') ? true : false);
-            $marketing->onlineAD=($request->has('onlineAD') ? true : false);
-            $event->marketing()->save($marketing);
-        } 
-        
-        return redirect()->route('home.home');
-    }
-
     /**
      * Show the form for creating a new resource.
      *
@@ -448,16 +381,16 @@ class eventController extends Controller
         
         $event->save();
         $eventID= $event->id;
-        $userid=$request->id;
+        $userid=Auth::guard('customer')->user()->id;
         
         app(orderController::class)->create($userid,$eventID,'event');
         return $eventID;
     }
 
-    public function storeOpeningEvent(newProductRequest $request)
+    public function storeOpening(newProductRequest $request)
     {
         $data=$request->validated();
-        $eventID=$this->store($request,'New Product');
+        $eventID=$this->store($request,'Opening');
       
         $event = Event::find($eventID);
         
@@ -507,6 +440,11 @@ class eventController extends Controller
         } 
         
         return redirect()->route('home.home');
+    }
+
+    public function table($data,$request)
+    {
+        //
     }
 
     /**

@@ -10,6 +10,7 @@
             <div class="row align-items-center">
                 <div class="col-xl-6 col-md-6">
                     <div class="about_thumb">
+                       
                         <img src="{{$packages->path}}" alt="">
                     </div>
                 </div>
@@ -21,9 +22,11 @@
                         <p class="ibfontsize">{{$packages->details}}</p>
                        
                     </div>
+                    @auth('customer')
                     <div class="form-group mt-3">
-                                <button type="submit" action="{{route('contact.store')}}" class="button button-contactForm boxed-btn">Buy</button>
+                              <a href="{{route('customer.packageorder',['packageid'=>$packages->packageID])}}" class='link'><button type="submit" class="button button-contactForm boxed-btn">Buy Package</button></a>
                             </div>
+                    @endauth
                 </div>
             </div>
     </div>

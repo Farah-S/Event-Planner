@@ -44,7 +44,7 @@ Route::get('/about',[homeController::class,'about'])->name('home.about');
 Route::get('/signup',[userController::class,'create'])->name('user.signup');
 Route::post('/signup',[profileController::class,'store'])->name('user.storesignup');
 
-Route::get('/signup',[userController::class,'store'])->name('user.storesignup');
+// Route::get('/signup',[userController::class,'store'])->name('user.storesignup');
 
 Route::get('/login',[loginController::class,'index'])->name('user.login');
 
@@ -84,13 +84,6 @@ Route::get('/events/graduationParty',[eventController::class,'graduationForm'])-
 Route::post('/storeNewConferences',[eventController::class,'storeNewConferences'])->name('events.storeNewConferences');
 Route::get('/events/conferences',[eventController::class,'ConferencesForm'])->name('events.conferences');
 
-Route::post('/storeOpeningEvent',[eventController::class,'storeOpeningEvent'])->name('events.storeOpeningEvent');
-Route::get('/events/OpeningEvent',[eventController::class,'OpeningEventForm'])->name('events.OpeningEvent');
-
-Route::post('/storeBranding',[eventController::class,'storeBranding'])->name('events.storeBranding');
-Route::get('/events/Branding',[eventController::class,'BrandingForm'])->name('events.Branding');
-
-
 Route::get('/events/brandingevent',[eventController::class,'brandingEventForm'])->name('events.branding');
 
 Route::get('/events/opening',[eventController::class,'openingForm'])->name('events.opening');
@@ -106,7 +99,7 @@ Route::post('/storeOpening',[eventController::class,'storeOpening'])->name('even
 Route::get('/productionHouse',[packageController::class,'index'])->name('productionHouse.packages');
 
 Route::group(['middleware' => 'admin'], function() {
-    Route::get('/productionHouse/addPackage',function(){return view('productionHouse/addPackage');})->name('productionHouse.addPackage');
+    Route::get('/productionHouse/addPackage',[packageController::class,'create'])->name('productionHouse.addPackage');
 
     Route::get('/productionHouse/editPackage/{id}',[packageController::class,'edit'])->name('productionHouse.editPackage');
 
@@ -121,17 +114,18 @@ Route::get('/productionHouse/packagedetails/{id}',[packageController::class,'pac
 
 /*-----------------------------------------admin files-----------------------------------------*/
 Route::group(['middleware' => 'admin'], function() {
-    Route::get('/admin/viewprofile',function(){return view('adminviewprofile');})->name('admin.viewProfile');
+    Route::get('/admin/viewprofile/{id}',[profileController::class,'showAdmin'])->name('admin.viewProfile');
 
-
+    Route::get('/admin/addadmin/{id}',[profileController::class,'addAdmin'])->name('admin.addAdmin');
+    Route::get('/admin/removeadmin/{id}',[profileController::class,'removeAdmin'])->name('admin.removeAdmin');
 // NOTE THE ADMIN AND ADMINS DIFFERENCE IN URL!!!!
 
-Route::get('/admins/viewallusers',[userController::class,'showuserstable'])->name('admin.viewUsers');
+// Route::get('/admins/viewallusers',[userController::class,'showuserstable'])->name('admin.viewUsers');
 
-Route::get('/admin/viewprofile',function(){return view('adminviewprofile');})->name('admin.viewProfile');
+// Route::get('/admin/viewprofile',function(){return view('adminviewprofile');})->name('admin.viewProfile');
     // Route::get('/admin/viewprofiletst',function(){return view('testfile');})->name('admin.viewProfiletst');
 
-    Route::get('/admin/viewallusers',function(){return view('viewallusers');})->name('admin.viewUsers');
+    Route::get('/admin/viewallusers',[profileController::class,'allUsers'])->name('admin.viewUsers');
 
     Route::get('/admin/allOrders',[orderController::class,'index'])->name('admin.allOrders');
 });
@@ -140,6 +134,8 @@ Route::get('/admin/viewprofile',function(){return view('adminviewprofile');})->n
 Route::group(['middleware' => 'customer'], function() {
 
     Route::get('/myorders',[orderController::class,'showCustomerOrders'])->name('customer.myorders');
+
+    Route::get('/packageorder/{packageid}',[orderController::class,'packageorder'])->name('customer.packageorder');
 
 });
 

@@ -52,8 +52,8 @@
                                             
                                                 <li class='test-li'><a href="{{route('events.conferences')}}">Conferences</a></li>
                                                 <li class='test-li'><a href="{{route('events.anniversary')}}">Anniversaries</a></li>
-                                                <li class='test-li'><a href="{{route('events.Branding')}}">Brandings</a></li>    
-                                                <li class='test-li'><a href="{{route('events.OpeningEvent')}}">Openings</a></li>
+                                                <li class='test-li'><a href="{{route('events.branding')}}">Brandings</a></li>
+                                                <li class='test-li'><a href="{{route('events.opening')}}">Openings</a></li>
                                                 <!-- <li class='test-li'><a href="{{route('events.welcomeparty')}}">Welcome Party</a></li> -->
                                                 <!-- <li class='test-li'><a href="{{route('events.graduation')}}">Graduations</a></li> -->
                                                 <li class='test-li'><a href="{{route('events.events')}}">View All</a></li>                                              
@@ -63,7 +63,7 @@
                                         <li><a href="{{route('productionHouse.packages')}}">Production House</a></li>
                                         <li><a href="{{route('home.about')}}">About us</a></li>
                                         <li><a href="{{route('home.contact')}}">Contact us</a></li>
-                                        <li><a href="#">Cancel Policy</a></li>
+                                        <li><a href="{{route('home.cancelpolicy')}}">Cancel Policy</a></li>
 
                                         @auth('customer')
                                         <li><a href="{{route('user.profile')}}"><span class="fa-solid fa-circle-user"></span></a>

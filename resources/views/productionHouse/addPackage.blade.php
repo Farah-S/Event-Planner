@@ -9,7 +9,7 @@
                 <h3 class="slider center-title">Add Package</h3><br>
             </div>
             <div class="col-lg-8">
-                <form class="form-contact contact_form" action="contact_process.php" method="post" id="addPackageForm" novalidate="novalidate">
+                <form class="form-contact contact_form" action="" method="post" id="addPackageForm" novalidate="novalidate">
                     <div class="row">
                         
                         <div class="form-group mt-3">

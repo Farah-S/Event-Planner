@@ -58,7 +58,7 @@
                                     <img src="{{$package[$i]->path}}" alt="">
                                     <div class="hover_overlay">
                                         <div class="social_icon">
-                                            <a href="{{route('packageController.packagedetails')}}">Read More</a>
+                                            <a href="{{route('productionHouse.packageDetails',['id'=>$package[$i]->packageID])}}">Read More</a>
                                         </div>
                                     </div>
                                 </div>

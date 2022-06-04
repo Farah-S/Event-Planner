@@ -288,33 +288,9 @@ class orderController extends Controller
         //
     }
 
-    public function packageorder($id) { 
-
-        $events = DB::table('users')
-        ->join('orders', 'users.id', '=', 'orders.customer_id')
-        ->join('event_order', 'event_order.order_id', '=', 'orders.id')
-        ->join('events', 'event_order.event_id', '=', 'events.id')
-        ->select('users.first_name','users.last_name', 'orders.id AS orderID','events.*','orders.order_type')
-        ->orderBy('orders.id', 'desc')
-        ->get(); 
-        
-        // $this->validate($request, [
-        //     'name' => 'required',
-        //     'email' => 'required|email',
-        //     'subject' => 'required',
-        //     'message' => 'required'
-        // ]);
-
-        // $contact = new Contact;
-
-        // $contact->name = $request->name;
-        // $contact->email = $request->email;
-        // $contact->subject = $request->subject;
-        // $contact->message = $request->message;
-
-        // $contact->save();
-        
-        return back()->with('success', 'Thank you for contacting us!');
-
+    public function packageorder($packageid) { 
+        $user=Auth::guard('customer')->user()->id;
+        $this->create($user,$packageid,'package');
+        return redirect()->route('home.home');
     }
 }

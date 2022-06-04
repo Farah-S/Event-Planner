@@ -40,7 +40,7 @@
                             <img src="img/Events/pmv-chamara-1kCDtHVl064-unsplash.jpg" alt="">
                             <div class="hover_overlay">
                                 <div class="social_icon">
-                                <a href="{{route('events.Branding')}}">View</a>
+                                <a href="{{route('events.branding')}}">View</a>
                                 </div>
                             </div>
                         </div>
@@ -118,7 +118,7 @@
                             <img src="img/Events/alexander-kovacs-GMGdhtYeROY-unsplash.jpg" alt="">
                             <div class="hover_overlay">
                                 <div class="social_icon">
-                                <a href="{{route('events.OpeningEvent')}}">View</a>
+                                <a href="{{route('events.opening')}}">View</a>
                                 </div>
                             </div>
                         </div>

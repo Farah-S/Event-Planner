@@ -9,7 +9,7 @@
                         </div>
                     <!-- </div> -->
 <div class="container">
-<input class="form-control" id="searchbar" type="text" placeholder="Search..">
+<!-- <input class="form-control" id="searchbar" type="text" placeholder="Search.."> -->
 <div class="row">
 <div class="col-md-12 text-right">
   <!-- <div class="dropdown">
@@ -40,7 +40,10 @@
      
         @foreach ($users as $user)
         
-           <tr><td>{{$user->id}}</td><td>{{$user->first_name}}</td><td>{{$user->last_name}}</td><td>{{$user->user_type}}</td></tr>
+           <tr><td>{{$user->id}}</td>
+           <td><a href="{{route('admin.viewProfile',['id'=>$user->id])}}" class='blink'>{{$user->first_name}}</a></td>
+           <td><a href="{{route('admin.viewProfile',['id'=>$user->id])}}" class='blink'>{{$user->last_name}}</a></td>
+           <td>{{$user->user_type}}</td></tr>
            
         @endforeach
         
@@ -63,7 +66,10 @@
      
         @foreach ($admins as $admin)
         
-           <tr><td>{{$admin->id}}</td><td><a href="{{route('users.view',['user'=>$user->id])}}">{{$admin->first_name}}</a></td><td>{{$admin->last_name}}</td><td>{{$admin->user_type}}</td></tr>
+           <tr><td>{{$admin->id}}</td>
+           <td><a href="{{route('admin.viewProfile',['id'=>$admin->id])}}" class='blink'>{{$admin->first_name}}</a></td>
+           <td><a href="{{route('admin.viewProfile',['id'=>$admin->id])}}" class='blink'>{{$admin->last_name}}</a></td>
+           <td>{{$admin->user_type}}</td></tr>
            
         @endforeach
         
@@ -71,8 +77,7 @@
 </table>
 </div>
 <div class="col-md-8">
-    <button type="submit" class="btn btn-danger btn-sm" value="Delete Profile" onclick="return confirm('Are you sure you want to delete this profile?')">Delete
-</button>
+    
 </div>
 </div>
 </div>

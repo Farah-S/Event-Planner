@@ -135,6 +135,15 @@ h6 a {
   color: brown;
 }
 
+.blink h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+  color: #b7ffce;
+}
+
 .checkbox-label form-contact  label{
   color:black;
   font-size: large;
@@ -151,6 +160,13 @@ h6 a {
 .link:visited {
   color: #d1667a;
   /* color: blue; */
+}
+.blink{
+  color: #b7ffce;
+  /* color: blue; */
+}
+.blink:hover{
+  color: #e67676 !important;
 }
 /* line 57, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_reset.scss */
 ul {
