@@ -43,13 +43,11 @@
                         <div class="about_info">
                             <div class="section_title">
                                 <h3>Name</h3>
-                                <h4>Ibrahim Baher</h4>
+                                <h4>{{ $user->first_name }} {{ $user->last_name }}</h4>
                                 <h3>Email</h3>
-                                <h4>Ibrahim.baher@email.com</h4>
-                                <h3>Phone Number</h3>
-                                <h4>+201092171234</h4>
+                                <h4>{{ $user->email }}</h4>
                                 <h3>User Type</h3>
-                                <h4>Client</h4>
+                                <h4>{{ $user->user_type }}</h4>
                             </div>
                         </div>
                     </div>

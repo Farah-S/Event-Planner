@@ -27,6 +27,7 @@
                               <a href="{{route('customer.packageorder',['packageid'=>$packages->packageID])}}" class='link'><button type="submit" class="button button-contactForm boxed-btn">Buy Package</button></a>
                             </div>
                     @endauth
+                    
                 </div>
             </div>
     </div>

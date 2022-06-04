@@ -64,59 +64,32 @@ class eventController extends Controller
     public function storeBrandingForm(brandingFormRequest $request)
     {
         $data=$request->validated();
-        $eventID=$this->store($request,'New Product');
+        $eventID=$this->store($request,'Branding');
         // $eventID=12;
         $event = Event::find($eventID);
         
         // $data = $request->all();
         $data['event_id'] = $eventID;
-
+        
         if($request->has('table')){
-            //$tables=new table();
-            //$data['event_id']=
-            $tables=table::create($data);
-            //$tables->event_id=$eventID;
-            //dd($data);
-            if($request->elseTableShape!=''){
-                $tables->tableShape=$data['elseTableShape'];
-            }
-            else if($request->tableShape=='else'){
-                $tables->tableShape='any';
-            }
-
-            $event->tables()->save($tables);
+            $this->table($data,$request,$event);
         }
 
         if($request->has('cp')){
-            $centerpiece=centerpiece::create($data);
-            // $centerpiece->event_id=$eventID;
-            $event->centerpiece()->save($centerpiece);
+            $this->centerpiece($data,$request,$event);
         }
 
         if($request->has('ledScreen')){
-            $ledScreen=ledScreen::create($data);
-            //dd($ledScreen);
-            // $ledScreen->event_id=$eventID;
-            $event->ledScreen()->save($ledScreen);
+            $this->ledScreen($data,$request,$event);
         }
 
         if($request->has('decorations')){
-            $decorations=new decoration();
-            $decorations->details=$data['decodetails'];
-            $decorations->budget=$data['decoBudget'];
-            $event->decoration()->save($decorations);
+            $this->decorations($data,$request,$event);        
         }
-        
+
         if($request->has('market')){
-            // $marketing=marketing::create($data);
-            $marketing=new marketing();
-            //dd($request);
-            $marketing->budget=$data['marketingBudget'];
-            $marketing->billboardAD=($request->has('billboardAD') ? true : false);
-            $marketing->onlineAD=($request->has('onlineAD') ? true : false);
-            $event->marketing()->save($marketing);
+            $this->marketing($data,$request,$event);  
         } 
-        
         return redirect()->route('home.home');
     }
 
@@ -132,47 +105,24 @@ class eventController extends Controller
         $data['event_id'] = $eventID;
 
         if($request->has('table')){
-            
-            $tables=table::create($data);
-            
-            if($request->elseTableShape!=''){
-                $tables->tableShape=$data['elseTableShape'];
-            }
-            else if($request->tableShape=='else'){
-                $tables->tableShape='any';
-            }
-
-            $event->tables()->save($tables);
+            $this->table($data,$request,$event);
         }
 
         if($request->has('cp')){
-            $centerpiece=centerpiece::create($data);
-            
-            $event->centerpiece()->save($centerpiece);
+            $this->centerpiece($data,$request,$event);
         }
 
         if($request->has('ledScreen')){
-            $ledScreen=ledScreen::create($data);
-            
-            $event->ledScreen()->save($ledScreen);
+            $this->ledScreen($data,$request,$event);
         }
 
         if($request->has('decorations')){
-            $decorations=new decoration();
-            $decorations->details=$data['decodetails'];
-            $decorations->budget=$data['decoBudget'];
-            $event->decoration()->save($decorations);
+            $this->decorations($data,$request,$event);        
         }
-        
+
         if($request->has('market')){
-        
-            $marketing=new marketing();
-            $marketing->budget=$data['marketingBudget'];
-            $marketing->billboardAD=($request->has('billboardAD') ? true : false);
-            $marketing->onlineAD=($request->has('onlineAD') ? true : false);
-            $event->marketing()->save($marketing);
+            $this->marketing($data,$request,$event);  
         } 
-        
         return redirect()->route('home.home');
     }
 
@@ -185,12 +135,9 @@ class eventController extends Controller
         $data['event_id'] = $eventID;
 
         if($request->has('ledScreen')){
-            $ledScreen=ledScreen::create($data);
-            
-            $event->ledScreen()->save($ledScreen);
+            $this->ledScreen($data,$request,$event);
         }
-        
-        
+
         return redirect()->route('home.home');
     }
 
@@ -202,31 +149,19 @@ class eventController extends Controller
         
         $data['event_id'] = $eventID;
 
+    
         if($request->has('table')){
-            $tables=table::create($data);
-
-            if($request->elseTableShape!=''){
-                $tables->tableShape=$data['elseTableShape'];
-            }
-            else if($request->tableShape=='else'){
-                $tables->tableShape='any';
-            }
-
-            $event->tables()->save($tables);
+            $this->table($data,$request,$event);
         }
 
         if($request->has('cp')){
-            $centerpiece=centerpiece::create($data);
-            $event->centerpiece()->save($centerpiece);
+            $this->centerpiece($data,$request,$event);
         }
 
         if($request->has('decorations')){
-            $decorations=new decoration();
-            $decorations->details=$data['decodetails'];
-            $decorations->budget=$data['decoBudget'];
-            $event->decoration()->save($decorations);
+            $this->decorations($data,$request,$event);        
         }
-     
+
         return redirect()->route('home.home');
     }
 
@@ -239,41 +174,21 @@ class eventController extends Controller
         $data['event_id'] = $eventID;
 
         if($request->has('table')){
-            
-            $tables=table::create($data);
-            
-            if($request->elseTableShape!=''){
-                $tables->tableShape=$data['elseTableShape'];
-            }
-            else if($request->tableShape=='else'){
-                $tables->tableShape='any';
-            }
-
-            $event->tables()->save($tables);
+            $this->table($data,$request,$event);
         }
 
         if($request->has('cp')){
-            $centerpiece=centerpiece::create($data);
-            // $centerpiece->event_id=$eventID;
-            
-            $event->centerpiece()->save($centerpiece);
+            $this->centerpiece($data,$request,$event);
         }
 
         if($request->has('ledScreen')){
-            $ledScreen=ledScreen::create($data);
-            //dd($ledScreen);
-            // $ledScreen->event_id=$eventID;
-            
-            $event->ledScreen()->save($ledScreen);
+            $this->ledScreen($data,$request,$event);
         }
 
         if($request->has('decorations')){
-            $decorations=new decoration();
-            $decorations->details=$data['decodetails'];
-            $decorations->budget=$data['decoBudget'];
-            $event->decoration()->save($decorations);
+            $this->decorations($data,$request,$event);        
         }
-        
+
         
         return redirect()->route('home.home');
     }
@@ -281,7 +196,7 @@ class eventController extends Controller
     public function storeNewConferences(newProductRequest $request)
     {
         $data=$request->validated();
-        $eventID=$this->store($request,'Conferences');
+        $eventID=$this->store($request,'Conference');
       
         $event = Event::find($eventID);
         
@@ -289,46 +204,23 @@ class eventController extends Controller
         $data['event_id'] = $eventID;
 
         if($request->has('table')){
-            
-            $tables=table::create($data);
-            
-            if($request->elseTableShape!=''){
-                $tables->tableShape=$data['elseTableShape'];
-            }
-            else if($request->tableShape=='else'){
-                $tables->tableShape='any';
-            }
-
-            $event->tables()->save($tables);
+            $this->table($data,$request,$event);
         }
 
         if($request->has('cp')){
-            $centerpiece=centerpiece::create($data);
-            
-            $event->centerpiece()->save($centerpiece);
+            $this->centerpiece($data,$request,$event);
         }
 
         if($request->has('ledScreen')){
-            $ledScreen=ledScreen::create($data);
-            
-            $event->ledScreen()->save($ledScreen);
+            $this->ledScreen($data,$request,$event);
         }
 
         if($request->has('decorations')){
-            $decorations=new decoration();
-            $decorations->details=$data['decodetails'];
-            $decorations->budget=$data['decoBudget'];
-            $event->decoration()->save($decorations);
+            $this->decorations($data,$request,$event);        
         }
-        
+
         if($request->has('market')){
-            // $marketing=marketing::create($data);
-            $marketing=new marketing();
-            //dd($request);
-            $marketing->budget=$data['marketingBudget'];
-            $marketing->billboardAD=($request->has('billboardAD') ? true : false);
-            $marketing->onlineAD=($request->has('onlineAD') ? true : false);
-            $event->marketing()->save($marketing);
+            $this->marketing($data,$request,$event);  
         } 
         
         return redirect()->route('home.home');
@@ -394,58 +286,80 @@ class eventController extends Controller
       
         $event = Event::find($eventID);
         
-      
         $data['event_id'] = $eventID;
 
         if($request->has('table')){
-            
-            $tables=table::create($data);
-            
-            if($request->elseTableShape!=''){
-                $tables->tableShape=$data['elseTableShape'];
-            }
-            else if($request->tableShape=='else'){
-                $tables->tableShape='any';
-            }
-
-            $event->tables()->save($tables);
+            $this->table($data,$request,$event);
         }
 
         if($request->has('cp')){
-            $centerpiece=centerpiece::create($data);
-            
-            $event->centerpiece()->save($centerpiece);
+            $this->centerpiece($data,$request,$event);
         }
 
         if($request->has('ledScreen')){
-            $ledScreen=ledScreen::create($data);
-            
-            $event->ledScreen()->save($ledScreen);
+            $this->ledScreen($data,$request,$event);
         }
 
         if($request->has('decorations')){
-            $decorations=new decoration();
-            $decorations->details=$data['decodetails'];
-            $decorations->budget=$data['decoBudget'];
-            $event->decoration()->save($decorations);
+            $this->decorations($data,$request,$event);        
         }
-        
+
         if($request->has('market')){
-        
-            $marketing=new marketing();
-            $marketing->budget=$data['marketingBudget'];
-            $marketing->billboardAD=($request->has('billboardAD') ? true : false);
-            $marketing->onlineAD=($request->has('onlineAD') ? true : false);
-            $event->marketing()->save($marketing);
+            $this->marketing($data,$request,$event);  
         } 
         
         return redirect()->route('home.home');
     }
 
-    public function table($data,$request)
+    public function table($data,$request,$event)
     {
-        //
+        $tables=table::create($data);
+        
+        if($request->elseTableShape!=''){
+            $tables->tableShape=$data['elseTableShape'];
+        }
+        else if($request->tableShape=='else'){
+            $tables->tableShape='any';
+        }
+
+        $event->tables()->save($tables);
+        
+        // return $event;
     }
+
+    public function centerpiece($data,$request,$event){
+        
+        $centerpiece=centerpiece::create($data);
+        
+        $event->centerpiece()->save($centerpiece);
+        
+    }
+
+    public function ledScreen($data,$request,$event){
+        
+        $ledScreen=ledScreen::create($data);
+        
+        $event->ledScreen()->save($ledScreen);
+        
+    }
+
+    public function decorations($data,$request,$event){
+    
+        $decorations=new decoration();
+        $decorations->details=$data['decodetails'];
+        $decorations->budget=$data['decoBudget'];
+        $event->decoration()->save($decorations);
+        
+    }
+
+    public function marketing($data,$request,$event){
+        $marketing=new marketing();
+        $marketing->budget=$data['marketingBudget'];
+        $marketing->billboardAD=($request->has('billboardAD') ? true : false);
+        $marketing->onlineAD=($request->has('onlineAD') ? true : false);
+        $event->marketing()->save($marketing);
+    }
+
 
     /**
      * Display the specified resource.

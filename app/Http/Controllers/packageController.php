@@ -20,6 +20,7 @@ class packageController extends Controller
             ->join('image_package', 'packages.id', '=', 'image_package.package_id')
             ->join('images', 'image_package.image_id', '=', 'images.id')
             ->select('packages.*','images.*','packages.id as packageID')
+            ->where('packages.deleted_at','=',NULL)
             ->get();
 
         return view('/productionHouse/decorationspage',['package'=>$package]);
@@ -105,9 +106,31 @@ class packageController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Request $request)
     {
-        //
+        $pks = DB::table('packages')
+            ->select('name','id')
+            ->get();
+        foreach($pks as $n){
+            if($request->has([$n->name])){
+                $id=$request[$n->name];
+                package::where('id',$id)->delete();
+                // $package = package::find($id);
+                // $package->delete();
+            }
+        }
+        return redirect()->route('productionHouse.packages');
+    }
+
+    public function deletepackages()
+    {
+        $package = DB::table('packages')
+            ->join('image_package', 'packages.id', '=', 'image_package.package_id')
+            ->join('images', 'image_package.image_id', '=', 'images.id')
+            ->select('packages.*','images.*','packages.id as packageID')
+            ->get();
+
+        return view('/productionHouse/deletePackages',['package'=>$package]);
     }
 
     public function showhide()

@@ -19,7 +19,7 @@
                     <a href="{{route('productionHouse.addPackage')}}" class="boxed-btn-small trnsp_bg">Add Package</a>
                 </div>
                 <div class="order-column">
-                    <a href="#" class="boxed-btn-small trnsp_bg">Delete Packages</a>
+                    <a href="{{route('productionHouse.deletePackages')}}" class="boxed-btn-small trnsp_bg">Delete Packages</a>
                 </div>     
             </div>
         </div>
@@ -34,7 +34,7 @@
                     <a href="{{route('productionHouse.addPackage')}}" class="boxed-btn-small trnsp_bg">Add Package</a>
                 </div>
                 <div class="order-column">
-                    <a href="#" class="boxed-btn-small trnsp_bg">Delete Packages</a>
+                    <a href="{{route('productionHouse.addPackage')}}" class="boxed-btn-small trnsp_bg">Delete Packages</a>
                 </div>   
             </div>
         </div>
@@ -55,7 +55,7 @@
                         <div class="column">
                             <div class="single_speaker">
                                 <div class="speaker_thumb">
-                                    <img src="{{$package[$i]->path}}" alt="">
+                                    <img src="{{asset($package[$i]->path)}}" alt="">
                                     <div class="hover_overlay">
                                         <div class="social_icon">
                                             <a href="{{route('productionHouse.packageDetails',['id'=>$package[$i]->packageID])}}">Read More</a>
@@ -64,7 +64,7 @@
                                 </div>
                                 <div class="speaker_name text-center">
                                     <h3>{{$package[$i]->name}}</h3>
-                                    <p>{{$package[$i]->details}}</p>
+                                    <!-- <p>{{$package[$i]->details}}</p> -->
                                     @auth('owner')
                                         <a href="{{route('productionHouse.editPackage',['id'=>$package[$i]->packageID])}}" class="boxed-btn-small trnsp_bg">Edit Package</a>
                                     @endauth

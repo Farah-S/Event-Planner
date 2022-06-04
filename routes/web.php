@@ -108,6 +108,10 @@ Route::group(['middleware' => 'admin'], function() {
     Route::post('/updateShowHide',[packageController::class,'updateShowHide'])->name('productionHouse.updateshowhide');
 
     Route::post('/updatePackage/{package}',[packageController::class,'update'])->name('productionHouse.updatePackage');
+
+    Route::get('/deletePackages',[packageController::class,'deletepackages'])->name('productionHouse.deletePackages');
+
+    Route::delete('/deletePackage',[packageController::class,'destroy'])->name('productionHouse.delete');
 });
 
 Route::get('/productionHouse/packagedetails/{id}',[packageController::class,'packagedetails'])->name('productionHouse.packageDetails');
@@ -117,6 +121,7 @@ Route::group(['middleware' => 'admin'], function() {
     Route::get('/admin/viewprofile/{id}',[profileController::class,'showAdmin'])->name('admin.viewProfile');
 
     Route::get('/admin/addadmin/{id}',[profileController::class,'addAdmin'])->name('admin.addAdmin');
+    
     Route::get('/admin/removeadmin/{id}',[profileController::class,'removeAdmin'])->name('admin.removeAdmin');
 // NOTE THE ADMIN AND ADMINS DIFFERENCE IN URL!!!!
 
